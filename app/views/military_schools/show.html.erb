@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Military history:</b>
+  <%= @military_school.military_history_id %>
+</p>
+
+<p>
+  <b>Name of school:</b>
+  <%= @military_school.name_of_school %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%= @military_school.location %>
+</p>
+
+<p>
+  <b>Date of attendance:</b>
+  <%= @military_school.date_of_attendance %>
+</p>
+
+<p>
+  <b>Nature of training:</b>
+  <%= @military_school.nature_of_training %>
+</p>
+
+<p>
+  <b>Rating:</b>
+  <%= @military_school.rating %>
+</p>
+
+
+<%= link_to 'Edit', edit_military_school_path(@military_school) %> |
+<%= link_to 'Back', military_schools_path %>

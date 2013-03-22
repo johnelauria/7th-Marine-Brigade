@@ -1,0 +1,31 @@
+<%= form_for(@important_unit_assignment) do |f| %>
+  <% if @important_unit_assignment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@important_unit_assignment.errors.count, "error") %> prohibited this important_unit_assignment from being saved:</h2>
+
+      <ul>
+      <% @important_unit_assignment.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <%= f.hidden_field :military_history_id, value: @military_history.id %>
+
+  <div class="field">
+    <%= f.label :unit %><br />
+    <%= f.text_field :unit %>
+  </div>
+  <div class="field">
+    <%= f.label :starting_date %><br />
+    <%= f.date_select :date1, start_year: Date.today.strftime("%Y").to_i - 65, end_year: Date.today.strftime("%Y").to_i %>
+  </div>
+  <div class="field">
+    <%= f.label :date_finished %><br />
+    <%= f.date_select :date2, start_year: Date.today.strftime("%Y").to_i - 65, end_year: Date.today.strftime("%Y").to_i %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Save", class: "btn" %>
+  </div>
+<% end %>

@@ -1,0 +1,31 @@
+<%= form_for(@place_of_residence) do |f| %>
+  <% if @place_of_residence.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@place_of_residence.errors.count, "error") %> prohibited this place_of_residence from being saved:</h2>
+
+      <ul>
+      <% @place_of_residence.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= f.hidden_field :personal_detail_id, value: @personal_detail.id if @place_of_residence.personal_detail_id.nil? %>
+
+  <div class="field">
+    <%= f.label :starting_date %><br />
+    <%= f.date_select :starting_date, start_year: 1960, end_year: Date.today.strftime("%Y").to_i %>
+  </div>
+  <div class="field">
+    <%= f.label :date_left %><br />
+    <%= f.date_select :date_left, start_year: 1960, end_year: Date.today.strftime("%Y").to_i %>
+  </div>
+  <div class="field">
+    <%= f.label :complete_address %><br />
+    <%= f.text_area :complete_address, rows: 2 %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Save", class: "btn" %>
+  </div>
+<% end %>

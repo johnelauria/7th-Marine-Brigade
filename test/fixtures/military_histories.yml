@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  date_of_cad: 2013-03-21
+  date_commission: 2013-03-21
+
+two:
+  date_of_cad: 2013-03-21
+  date_commission: 2013-03-21

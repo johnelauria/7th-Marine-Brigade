@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  marital_histories_id: 1
+  name: MyString
+  birth_date: 2013-03-19
+  address: MyText
+
+two:
+  marital_histories_id: 1
+  name: MyString
+  birth_date: 2013-03-19
+  address: MyText

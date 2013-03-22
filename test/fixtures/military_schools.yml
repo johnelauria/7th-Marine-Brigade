@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  military_history_id: 1
+  name_of_school: MyString
+  location: MyText
+  date_of_attendance: 2013-03-21
+  nature_of_training: MyString
+  rating: MyString
+
+two:
+  military_history_id: 1
+  name_of_school: MyString
+  location: MyText
+  date_of_attendance: 2013-03-21
+  nature_of_training: MyString
+  rating: MyString

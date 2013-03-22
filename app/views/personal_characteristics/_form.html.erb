@@ -1,0 +1,70 @@
+<%= form_for(@personal_characteristic) do |f| %>
+  <% if @personal_characteristic.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@personal_characteristic.errors.count, "error") %> prohibited this personal_characteristic from being saved:</h2>
+
+      <ul>
+      <% @personal_characteristic.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <div class="row">
+      <div class="span6">
+<legend>Description</legend>
+  <%= f.hidden_field :personal_detail_id, value: @personal_detail.id if @personal_characteristic.personal_detail_id.nil? %>
+  <div class="field">
+    <%= f.label :sex %><br />
+    <%= f.select :sex, "<option>Male</option><option>Female</option>".html_safe, prompt: "Please select gender" %>
+  </div>
+  <div class="field">
+    <%= f.label :age %><br />
+    <%= f.number_field :age %>
+  </div>
+  <div class="field">
+    <%= f.label :height %><br />
+    <%= f.text_field :height %>
+  </div>
+  <div class="field">
+    <%= f.label :weight %><br />
+    <%= f.text_field :weight %>
+  </div>
+  <div class="field">
+    <%= f.label :build %><br />
+    <%= f.select :build, "<option>Heavy</option><option>Medium</option><option>Slight</option>".html_safe, prompt: "Please select build" %>
+  </div>
+  <div class="field">
+    <%= f.label :color_of_eyes %><br />
+    <%= f.text_field :color_of_eyes %>
+  </div>
+  <div class="field">
+    <%= f.label :color_of_hair %><br />
+    <%= f.text_field :color_of_hair %>
+  </div>
+  <div class="field">
+    <%= f.label :scars_or_marks_and_other_distinguishing_features %><br />
+    <%= f.text_field :scars_or_marks %>
+  </div>
+</div>
+<div class="span6">
+<legend>Physical Condition</legend>
+  <div class="field">
+    <%= f.label :Present_state_of_health %>
+    <%= f.select :state_of_health , "<option>Excellent</option><option>Good</option><option>Poor</option>".html_safe, prompt: "Please select" %><br />
+  </div>
+  <div class="field">
+    <%= f.label :physical_or_mental_defect %><br />
+    <%= f.text_field :physical_or_mental_defect %>
+  </div>
+  <div class="field">
+    <%= f.label :recent_serious_illness %><br />
+    <%= f.text_field :recent_serious_illness %>
+  </div>
+</div>
+</div>
+  <div class="actions">
+    <%= f.submit "Save", class: "btn" %>
+  </div>
+<% end %>

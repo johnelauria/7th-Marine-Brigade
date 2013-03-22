@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Marital status:</b>
+  <%= @marital_history.marital_status %>
+</p>
+
+<p>
+  <b>Name of spouse:</b>
+  <%= @marital_history.name_of_spouse %>
+</p>
+
+<p>
+  <b>Date and place of marriage:</b>
+  <%= @marital_history.date_and_place_of_marriage %>
+</p>
+
+<p>
+  <b>Birth date place:</b>
+  <%= @marital_history.birth_date_place %>
+</p>
+
+<p>
+  <b>Occupation and place employment:</b>
+  <%= @marital_history.occupation_and_place_employment %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @marital_history.name %>
+</p>
+
+<p>
+  <b>Birthdate:</b>
+  <%= @marital_history.birthdate %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @marital_history.address %>
+</p>
+
+
+<%= link_to 'Edit', edit_marital_history_path(@marital_history) %> |
+<%= link_to 'Back', marital_histories_path %>

@@ -1,0 +1,41 @@
+<h1>Listing personal_characteristics</h1>
+
+<table class="table">
+  <tr>
+    <th>Sex</th>
+    <th>Age</th>
+    <th>Height</th>
+    <th>Weight</th>
+    <th>Build</th>
+    <th>Color of eyes</th>
+    <th>Color of hair</th>
+    <th>Scars or marks</th>
+    <th>State of health</th>
+    <th>Physical or mental defect</th>
+    <th>Recent serious illness</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @personal_characteristics.each do |personal_characteristic| %>
+  <tr>
+    <td><%= personal_characteristic.sex %></td>
+    <td><%= personal_characteristic.age %></td>
+    <td><%= personal_characteristic.height %></td>
+    <td><%= personal_characteristic.weight %></td>
+    <td><%= personal_characteristic.build %></td>
+    <td><%= personal_characteristic.color_of_eyes %></td>
+    <td><%= personal_characteristic.color_of_hair %></td>
+    <td><%= personal_characteristic.scars_or_marks %></td>
+    <td><%= personal_characteristic.state_of_health %></td>
+    <td><%= personal_characteristic.physical_or_mental_defect %></td>
+    <td><%= personal_characteristic.recent_serious_illness %></td>
+    <td><%= link_to 'Show', personal_characteristic %></td>
+    <td><%= link_to 'Edit', edit_personal_characteristic_path(personal_characteristic) %></td>
+    <td><%= link_to 'Delete', personal_characteristic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />

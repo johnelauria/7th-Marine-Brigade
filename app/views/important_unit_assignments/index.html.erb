@@ -1,0 +1,29 @@
+<h1>Listing important_unit_assignments</h1>
+
+<table>
+  <tr>
+    <th>Military history</th>
+    <th>Unit</th>
+    <th>Date1</th>
+    <th>Date2</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @important_unit_assignments.each do |important_unit_assignment| %>
+  <tr>
+    <td><%= important_unit_assignment.military_history_id %></td>
+    <td><%= important_unit_assignment.unit %></td>
+    <td><%= important_unit_assignment.date1 %></td>
+    <td><%= important_unit_assignment.date2 %></td>
+    <td><%= link_to 'Show', important_unit_assignment %></td>
+    <td><%= link_to 'Edit', edit_important_unit_assignment_path(important_unit_assignment) %></td>
+    <td><%= link_to 'Delete', important_unit_assignment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Important unit assignment', new_important_unit_assignment_path %>

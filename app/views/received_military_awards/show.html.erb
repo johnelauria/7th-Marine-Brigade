@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Military history:</b>
+  <%= @received_military_award.military_history_id %>
+</p>
+
+<p>
+  <b>Awards:</b>
+  <%= @received_military_award.awards %>
+</p>
+
+
+<%= link_to 'Edit', edit_received_military_award_path(@received_military_award) %> |
+<%= link_to 'Back', received_military_awards_path %>

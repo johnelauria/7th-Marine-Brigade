@@ -1,0 +1,53 @@
+<h1>Personal Details</h1>
+
+<table class="table">
+  <tr>
+    <th>Last name</th>
+    <th>First name</th>
+    <th>Middle name</th>
+    <th>Rank</th>
+    <th>AFPSN</th>
+    <th>BR/SVC</th>
+    <th>Assignment</th>
+    <th>Duty address</th>
+    <th>Telephone</th>
+    <th>Home address</th>
+    <th>Birthdate</th>
+    <th>Place of birth</th>
+    <th>Change in name</th>
+    <th>Nationality</th>
+    <th>Tin</th>
+    <th>National reg cards no</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @personal_details.each do |personal_detail| %>
+  <tr>
+    <td><%= personal_detail.last_name %></td>
+    <td><%= personal_detail.first_name %></td>
+    <td><%= personal_detail.middle_name %></td>
+    <td><%= personal_detail.rank %></td>
+    <td><%= personal_detail.AFPSN %></td>
+    <td><%= personal_detail.BR_SVC %></td>
+    <td><%= personal_detail.assignment %></td>
+    <td><%= personal_detail.duty_address %></td>
+    <td><%= personal_detail.telephone %></td>
+    <td><%= personal_detail.home_address %></td>
+    <td><%= personal_detail.birthdate %></td>
+    <td><%= personal_detail.place_of_birth %></td>
+    <td><%= personal_detail.change_in_name %></td>
+    <td><%= personal_detail.nationality %></td>
+    <td><%= personal_detail.tin %></td>
+    <td><%= personal_detail.national_reg_cards_no %></td>
+    <td><%= link_to 'Show', personal_detail %></td>
+    <td><%= link_to 'Edit', edit_personal_detail_path(personal_detail) %></td>
+    <td><%= link_to 'Delete', personal_detail, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Personal detail', new_personal_detail_path %>

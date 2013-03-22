@@ -1,0 +1,23 @@
+<%= form_for(@received_military_award) do |f| %>
+  <% if @received_military_award.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@received_military_award.errors.count, "error") %> prohibited this received_military_award from being saved:</h2>
+
+      <ul>
+      <% @received_military_award.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <%= f.hidden_field :military_history_id, value: @military_history.id %>
+
+  <div class="field">
+    <%= f.label :awards %><br />
+    <%= f.text_area :awards, rows: 2 %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Save", class: "btn" %>
+  </div>
+<% end %>

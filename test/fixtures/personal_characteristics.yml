@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  sex: MyString
+  age: 1
+  height: MyString
+  weight: MyString
+  build: MyString
+  color_of_eyes: MyString
+  color_of_hair: MyString
+  scars_or_marks: MyString
+  state_of_health: MyString
+  physical_or_mental_defect: MyString
+  recent_serious_illness: MyString
+
+two:
+  sex: MyString
+  age: 1
+  height: MyString
+  weight: MyString
+  build: MyString
+  color_of_eyes: MyString
+  color_of_hair: MyString
+  scars_or_marks: MyString
+  state_of_health: MyString
+  physical_or_mental_defect: MyString
+  recent_serious_illness: MyString

@@ -1,0 +1,183 @@
+<%= form_for(@family_history) do |f| %>
+  <% if @family_history.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@family_history.errors.count, "error") %> prohibited this family_history from being saved:</h2>
+
+      <ul>
+      <% @family_history.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <legend>Father</legend>
+    <%= f.hidden_field :personal_detail_id, value: @personal_detail.id if @family_history.personal_detail_id.nil? %>
+  <div class="field">
+    <%= f.label :father_name %><br />
+    <%= f.text_field :father_name, placeholder: "Please Enter full name" %>
+  </div>
+  <div class="field">
+    <%= f.label :father_date_of_birth %><br />
+    <%= f.date_select :father_date_of_birth, start_year: Date.today.strftime("%Y").to_i - 99, end_year: Date.today.strftime("%Y").to_i %>
+  </div>
+  <div class="field">
+    <%= f.label :father_place_of_birth %><br />
+    <%= f.text_field :father_place_of_birth %>
+  </div>
+  <div class="field">
+    <%= f.label :father_address %><br />
+    <%= f.text_area :father_address, rows: 2 %>
+  </div>
+  <div class="field">
+    <%= f.label :father_occupation %><br />
+    <%= f.text_field :father_occupation %>
+  </div>
+  <div class="field">
+    <%= f.label :father_place_of_employment %><br />
+    <%= f.text_field :father_place_of_employment %>
+  </div>
+  <div class="field">
+    <%= f.label :father_citizenship %><br />
+    <%= f.text_field :father_citizenship %>
+  </div>
+  <div class="field">
+    <label>Father naturalized
+    <%= f.check_box :father_naturalized %></label><br>
+  </div>
+  <div class="field">
+    <%= f.label :father_naturalized_date %><br />
+    <%= f.date_select :father_naturalized_date, start_year: Date.today.strftime("%Y").to_i - 99, end_year: Date.today.strftime("%Y").to_i %>
+  </div>
+  <div class="field">
+    <%= f.label :father_naturalized_place %><br />
+    <%= f.text_field :father_naturalized_place %>
+  </div>
+
+    <legend>Mother</legend>
+  <div class="field">
+    <%= f.label :mother_name %><br />
+    <%= f.text_field :mother_name %>
+  </div>
+  <div class="field">
+    <%= f.label :mother_date_of_birth %><br />
+    <%= f.date_select :mother_date_of_birth, start_year: Date.today.strftime("%Y").to_i - 99, end_year: Date.today.strftime("%Y").to_i %>
+  </div>
+  <div class="field">
+    <%= f.label :mother_place_of_birth %><br />
+    <%= f.text_field :mother_place_of_birth %>
+  </div>
+  <div class="field">
+    <%= f.label :mother_address %><br />
+    <%= f.text_area :mother_address, rows: 2 %>
+  </div>
+  <div class="field">
+    <%= f.label :mother_occupation %><br />
+    <%= f.text_field :mother_occupation %>
+  </div>
+  <div class="field">
+    <%= f.label :mother_place_of_employment %><br />
+    <%= f.text_field :mother_place_of_employment %>
+  </div>
+  <div class="field">
+    <%= f.label :mother_citizenship %><br />
+    <%= f.text_field :mother_citizenship %>
+  </div>
+  <div class="field">
+    <label>Mother Naturalized
+    <%= f.check_box :mother_naturalized %></label><br>
+  </div>
+  <div class="field">
+    <%= f.label :mother_naturalized_date %><br />
+    <%= f.date_select :mother_naturalized_date, start_year: Date.today.strftime("%Y").to_i - 99, end_year: Date.today.strftime("%Y").to_i %>
+  </div>
+  <div class="field">
+    <%= f.label :mother_naturalized_place %><br />
+    <%= f.text_field :mother_naturalized_place %>
+  </div>
+    <legend>Father in law</legend>
+  <div class="field">
+    <%= f.label :father_in_law_name %><br />
+    <%= f.text_field :father_in_law_name %>
+  </div>
+  <div class="field">
+    <%= f.label :father_in_law_birth_date %><br />
+    <%= f.date_select :father_in_law_birth_date, start_year: Date.today.strftime("%Y").to_i - 99, end_year: Date.today.strftime("%Y").to_i %>
+  </div>
+  <div class="field">
+    <%= f.label :father_in_law_place_of_birth %><br />
+    <%= f.text_field :father_in_law_place_of_birth %>
+  </div>
+  <div class="field">
+    <%= f.label :father_in_law_address %><br />
+    <%= f.text_area :father_in_law_address, rows: 2 %>
+  </div>
+  <div class="field">
+    <%= f.label :father_in_law_occupation %><br />
+    <%= f.text_field :father_in_law_occupation %>
+  </div>
+  <div class="field">
+    <%= f.label :father_in_law_place_of_employment %><br />
+    <%= f.text_field :father_in_law_place_of_employment %>
+  </div>
+  <div class="field">
+    <%= f.label :father_in_law_citizenship %><br />
+    <%= f.text_field :father_in_law_citizenship %>
+  </div>
+  <div class="field">
+    <label>Father-in-law Naturalized
+    <%= f.check_box :father_in_law_naturalized %></label><br>
+  </div>
+  <div class="field">
+    <%= f.label :father_in_law_naturalized_date %><br />
+    <%= f.date_select :father_in_law_naturalized_date, start_year: Date.today.strftime("%Y").to_i - 99, end_year: Date.today.strftime("%Y").to_i %>
+  </div>
+  <div class="field">
+    <%= f.label :father_in_law_naturalized_place %><br />
+    <%= f.text_field :father_in_law_naturalized_place %>
+  </div>
+    <legend>Mother in law</legend>
+  <div class="field">
+    <%= f.label :mother_in_law_name %><br />
+    <%= f.text_field :mother_in_law_name %>
+  </div>
+  <div class="field">
+    <%= f.label :mother_in_law_birth_date %><br />
+    <%= f.date_select :mother_in_law_birth_date, start_year: Date.today.strftime("%Y").to_i - 99, end_year: Date.today.strftime("%Y").to_i %>
+  </div>
+  <div class="field">
+    <%= f.label :mother_in_law_place_of_birth %><br />
+    <%= f.text_field :mother_in_law_place_of_birth %>
+  </div>
+  <div class="field">
+    <%= f.label :mother_in_law_address %><br />
+    <%= f.text_area :mother_in_law_address, rows: 2 %>
+  </div>
+  <div class="field">
+    <%= f.label :mother_in_law_occupation %><br />
+    <%= f.text_field :mother_in_law_occupation %>
+  </div>
+  <div class="field">
+    <%= f.label :mother_in_law_place_of_employment %><br />
+    <%= f.text_field :mother_in_law_place_of_employment %>
+  </div>
+  <div class="field">
+    <%= f.label :mother_in_law_citizenship %><br />
+    <%= f.text_field :mother_in_law_citizenship %>
+  </div>
+  <div class="field">
+    <label>Mother-in-law Naturalized
+    <%= f.check_box :mother_in_law_naturalized %></label><br>
+  </div>
+  <div class="field">
+    <%= f.label :mother_in_law_naturalized_date %><br />
+    <%= f.date_select :mother_in_law_naturalized_date, start_year: Date.today.strftime("%Y").to_i - 99, end_year: Date.today.strftime("%Y").to_i %>
+  </div>
+  <div class="field">
+    <%= f.label :mother_in_law_naturalized_place %><br />
+    <%= f.text_field :mother_in_law_naturalized_place %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Save", class: "btn" %>
+  </div>
+<% end %>

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  starting_date: 2013-03-21
+  date_left: 2013-03-21
+  complete_address: MyText
+
+two:
+  starting_date: 2013-03-21
+  date_left: 2013-03-21
+  complete_address: MyText

@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  marital_status: MyString
+  name_of_spouse: MyString
+  date_and_place_of_marriage: MyString
+  birth_date_place: MyString
+  occupation_and_place_employment: MyString
+  name: MyString
+  birthdate: 2013-03-19
+  address: MyText
+
+two:
+  marital_status: MyString
+  name_of_spouse: MyString
+  date_and_place_of_marriage: MyString
+  birth_date_place: MyString
+  occupation_and_place_employment: MyString
+  name: MyString
+  birthdate: 2013-03-19
+  address: MyText

@@ -1,0 +1,306 @@
+<p id="notice"><%= notice %></p>
+
+<%= @personal_detail.rank %> <%= @personal_detail.first_name %>
+
+<div class="row">
+  <div class="span3">
+    <ul class="nav nav-pills nav-stacked">
+      <li class="active"><a href="#personalDetails" data-toggle="tab">Personal Details</a></li>
+      <li><a href="#personalCharacteristics" data-toggle="tab">Personal Characteristics</a></li>
+      <li><a href="#maritalHistory" data-toggle="tab">Marital History</a></li>
+      <li><a href="#familyHistory" data-toggle="tab">Family History and Information</a></li>
+      <li><a href="#placeOfResidence" data-toggle="tab">Place of Residence</a></li>
+      <li><a href="#educationalBackground" data-toggle="tab">Educational Background</a></li>
+    </ul>
+  </div>
+  <div class="span9">
+    <div class="tab-content">
+      <div class="tab-pane active" id="personalDetails">
+        <p>
+          <b>Last name:</b>
+          <%= @personal_detail.last_name %>
+        </p>
+
+        <p>
+          <b>First name:</b>
+          <%= @personal_detail.first_name %>
+        </p>
+
+        <p>
+          <b>Middle name:</b>
+          <%= @personal_detail.middle_name %>
+        </p>
+
+        <p>
+          <b>Rank:</b>
+          <%= @personal_detail.rank %>
+        </p>
+
+        <p>
+          <b>Afpsn:</b>
+          <%= @personal_detail.AFPSN %>
+        </p>
+
+        <p>
+          <b>Br svc:</b>
+          <%= @personal_detail.BR_SVC %>
+        </p>
+
+        <p>
+          <b>Assignment:</b>
+          <%= @personal_detail.assignment %>
+        </p>
+
+        <p>
+          <b>Duty address:</b>
+          <%= @personal_detail.duty_address %>
+        </p>
+
+        <p>
+          <b>Telephone:</b>
+          <%= @personal_detail.telephone %>
+        </p>
+
+        <p>
+          <b>Home address:</b>
+          <%= @personal_detail.home_address %>
+        </p>
+
+        <p>
+          <b>Birthdate:</b>
+          <%= @personal_detail.birthdate %>
+        </p>
+
+        <p>
+          <b>Place of birth:</b>
+          <%= @personal_detail.place_of_birth %>
+        </p>
+
+        <p>
+          <b>Change in name:</b>
+          <%= @personal_detail.change_in_name %>
+        </p>
+
+        <p>
+          <b>Nationality:</b>
+          <%= @personal_detail.nationality %>
+        </p>
+
+        <p>
+          <b>Tin:</b>
+          <%= @personal_detail.tin %>
+        </p>
+
+        <p>
+          <b>National reg cards no:</b>
+          <%= @personal_detail.national_reg_cards_no %>
+        </p>
+
+        <%= link_to "Edit personal details record", edit_personal_detail_path(@personal_detail) %>
+        </div>
+
+      <div class="tab-pane" id="personalCharacteristics">
+        <% if @characteristic.nil? %>
+            <%= render 'personal_characteristics/form' %>
+        <% else %>
+            <legend>Description</legend>
+            <p><b>Sex: </b><%= @characteristic.sex %></p>
+            <p><b>Age: </b><%= @characteristic.age %></p>
+            <p><b>Height: </b><%= @characteristic.height %></p>
+            <p><b>Weight: </b><%= @characteristic.weight %></p>
+            <p><b>Build: </b><%= @characteristic.build %></p>
+            <p><b>Color of eyes: </b><%= @characteristic.color_of_eyes %></p>
+            <p><b>Color of hair: </b><%= @characteristic.color_of_hair %></p>
+            <p><b>Scars or marks and other distinguishing features: </b><%= @characteristic.scars_or_marks %></p>
+            <legend>Physical Condition</legend>
+            <p><b>Present State of health: </b> <%= @characteristic.state_of_health %></p>
+            <p><b>Physical or Mental Defect: </b><%= @characteristic.physical_or_mental_defect %></p>
+            <p><b>Recent Serious Illness: </b><%= @characteristic.recent_serious_illness %></p>
+            <%= link_to "Edit Personal Characteristics record", edit_personal_characteristic_path(@characteristic) %>
+        <% end %>
+      </div>
+      <div id="maritalHistory" class="tab-pane">
+        <% if @marital.nil? %>
+            <%= render 'marital_histories/form' %>
+        <% else %>
+            <p><b>Marital Status: </b><%= @marital.marital_status %></p>
+            <p><b>Name of Spouse: </b><%= @marital.name_of_spouse %></p>
+            <p><b>Place of marriage: </b><%= @marital.place_of_marriage %></p>
+            <p><b>Date of marriage: </b><%= @marital.date_of_marriage %></p>
+            <p><b>Place of marriage: </b><%= @marital.place_of_marriage %></p>
+            <p><b>Date of birth: </b><%= @marital.birth_date %></p>
+            <p><b>Place of birth: </b><%= @marital.birth_place %></p>
+            <p><b>Occupation: </b><%= @marital.occupation %></p>
+            <p><b>Place of employment: </b><%= @marital.place_of_employment %></p>
+            <p><%= link_to "Edit Marital history record", edit_marital_history_path(@marital) %></p><br>
+            <legend>Children</legend>
+            <div class="accordion" id="childForm">
+              <div class="accordion-group">
+                <div class="accordion-heading">
+                  <a class="accordion-toggle" data-toggle="collapse" data-parent="#childForm" href="#addChild">
+                    Add child
+                  </a>
+                </div>
+                <div id="addChild" class="accordion-body collapse">
+                  <div class="accordion-inner">
+                    <%= render 'children/form' %>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <table class="table table-bordered">
+              <tr>
+                <th>Name</th>
+                <th>Birth date</th>
+                <th>Address</th>
+              </tr>
+              <% MaritalHistory.find_by_personal_detail_id(@personal_detail.id).children.each do |child| %>
+                  <td><%= child.name %></td>
+                  <td><%= child.birth_date %></td>
+                  <td><%= child.address %></td>
+              <% end %>
+            </table>
+        <% end %>
+       </div>
+      <div id="familyHistory" class="tab-pane">
+        <% if @family.nil? %>
+            <%= render 'family_histories/form' %>
+        <% else %>
+            <legend>Father</legend>
+            <p><b>Father: </b><%= @family.father_name %></p>
+            <p><b>Date and Place of Birth: </b><%= @family.father_date_of_birth.strftime("%m-%d-%Y") %> from <%= @family.father_place_of_birth %></p>
+            <p><b>Address: </b><%= @family.father_address %></p>
+            <p><b>Occupation & Place of Employment: </b><%= @family.father_occupation %> at <%= @family.father_place_of_employment %></p>
+            <p><b>Citizenship: </b><%= @family.father_citizenship %></p>
+            <p><b>Naturalized: </b><%= @family.father_naturalized ? "Yes" : "No" %></p>
+            <% if @family.father_naturalized? %>
+                <p><b>Place of naturalization: </b><%= @family.father_naturalized_date %></p>
+                <p><b>Date of naturalization: </b><%= @family.father_naturalized_place %></p>
+            <% end %>
+            <legend>Mother</legend>
+            <p><b>Mother: </b><%= @family.mother_name %></p>
+            <p><b>Date and Place of Birth: </b><%= @family.mother_date_of_birth.strftime("%m-%d-%Y") %> from <%= @family.mother_place_of_birth %></p>
+            <p><b>Address: </b><%= @family.mother_address %></p>
+            <p><b>Occupation & Place of Employment: </b><%= @family.mother_occupation %> at <%= @family.mother_place_of_employment %></p>
+            <p><b>Citizenship: </b><%= @family.mother_citizenship %></p>
+            <p><b>Naturalized: </b><%= @family.mother_naturalized ? "Yes" : "No" %></p>
+            <% if @family.mother_naturalized? %>
+                <p><b>Place of naturalization: </b><%= @family.mother_naturalized_date %></p>
+                <p><b>Date of naturalization: </b><%= @family.mother_naturalized_place %></p>
+            <% end %>
+            <legend>Brothers and Sisters</legend>
+            <div class="accordion" id="siblingForm">
+              <div class="accordion-group">
+                <div class="accordion-heading">
+                  <a class="accordion-toggle" data-toggle="collapse" data-parent="#siblingForm" href="#addSibling">
+                    Add brother / sister
+                  </a>
+                </div>
+                <div id="addSibling" class="accordion-body collapse">
+                  <div class="accordion-inner">
+                    <%= render 'brothers_and_sisters/form' %>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <table class="table table-bordered">
+              <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Address</th>
+                <th>Occupation</th>
+                <th></th>
+              </tr>
+              <% @personal_detail.family_history.brothers_and_sisters.each do |sibling| %>
+                <tr>
+                  <td><%= sibling.name %></td>
+                  <td><%= sibling.age %></td>
+                  <td><%= truncate(strip_tags(sibling.address), length: 40) %></td>
+                  <td><%= sibling.occupation %></td>
+                  <td>
+                    <%= link_to edit_brothers_and_sister_path(sibling), class: "btn btn-mini btn-warning", title: "Edit" do %>
+                        <i class="icon icon-edit icon-white"></i>
+                    <% end %>
+                    <%= link_to sibling, method: :delete, class: "btn btn-mini btn-danger", data: { confirm: "You are about to delete this record. Are you sure?" }, title: "Delete" do %>
+                        <i class="icon icon-trash icon-white"></i>
+                    <% end %>
+                  </td>
+                </tr>
+              <% end %>
+            </table>
+            <legend>Father-in-law</legend>
+            <p><b>Father-in-law: </b><%= @family.father_in_law_name %></p>
+            <p><b>Date and Place of Birth: </b><%= @family.father_in_law_birth_date.strftime("%m-%d-%Y") %> from <%= @family.father_in_law_place_of_birth %></p>
+            <p><b>Address: </b><%= @family.father_in_law_address %></p>
+            <p><b>Occupation & Place of Employment: </b><%= @family.father_in_law_occupation %> at <%= @family.father_in_law_place_of_employment %></p>
+            <p><b>Citizenship: </b><%= @family.father_in_law_citizenship %></p>
+            <p><b>Naturalized: </b><%= @family.father_in_law_naturalized ? "Yes" : "No" %></p>
+            <% if @family.father_in_law_naturalized? %>
+                <p><b>Place of naturalization: </b><%= @family.father_in_law_naturalized_date %></p>
+                <p><b>Date of naturalization: </b><%= @family.father_in_law_naturalized_place %></p>
+            <% end %>
+            <legend>Mother-in-law</legend>
+            <p><b>Mother-in-law: </b><%= @family.mother_in_law_name %></p>
+            <p><b>Date and Place of Birth: </b><%= @family.mother_in_law_birth_date.strftime("%m-%d-%Y") %> from <%= @family.mother_in_law_place_of_birth %></p>
+            <p><b>Address: </b><%= @family.mother_in_law_address %></p>
+            <p><b>Occupation & Place of Employment: </b><%= @family.mother_in_law_occupation %> at <%= @family.mother_in_law_place_of_employment %></p>
+            <p><b>Citizenship: </b><%= @family.mother_in_law_citizenship %></p>
+            <p><b>Naturalized: </b><%= @family.mother_in_law_naturalized ? "Yes" : "No" %></p>
+            <% if @family.mother_in_law_naturalized? %>
+                <p><b>Place of naturalization: </b><%= @family.mother_in_law_naturalized_date %></p>
+                <p><b>Date of naturalization: </b><%= @family.mother_in_law_naturalized_place %></p>
+            <% end %>
+
+            <%= link_to "Edit Family History and Information Record", edit_family_history_path(@family) %>
+        <% end %>
+      </div>
+    <div id="placeOfResidence" class="tab-pane">
+      <div class="accordion" id="residence">
+        <div class="accordion-group">
+          <div class="accordion-heading">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#childForm" href="#residenceForm">
+              Add Place of Residence
+            </a>
+          </div>
+          <div id="residenceForm" class="accordion-body collapse">
+            <div class="accordion-inner">
+              <%= render 'place_of_residences/form' %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <table class="table table-bordered">
+        <tr>
+          <th>Inclusive Dates</th>
+          <th>Complete Address</th>
+        </tr>
+        <% @personal_detail.place_of_residences.each do |residence| %>
+            <tr>
+                <td>From <%= residence.starting_date %> until <%= residence.date_left %></td>
+                <td><%= residence.complete_address %></td>
+            </tr>
+        <% end %>
+      </table>
+      </div>
+      <div id="educationalBackground" class="tab-pane">
+        <legend>Elementary</legend>
+        <% unless @personal_detail.educational_background.nil? %>
+        <table class="table table-bordered">
+          <tr>
+            <th>Location</th>
+            <th>Date of Attendance</th>
+            <th>Year Graduate</th>
+          </tr>
+            <tr>
+              <td>@personal_detail.educational_background.elementary_location %></td>
+              <td>From <%= @personal_detail.educational_background.elementary_date_of_attendance1.strftime("%m-%d-%Y") %> until <%= education.elementary_date_of_attendance2.strftime("%m-%d-%Y") %></td>
+              <td><%= @personal_detail.educational_background.elementary_year_graduate %></td>
+            </tr>
+        </table>
+        <% else %>
+            <%= render 'educational_backgrounds/form' %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,33 @@
+<%= form_for(@brothers_and_sister) do |f| %>
+  <% if @brothers_and_sister.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@brothers_and_sister.errors.count, "error") %> prohibited this brothers_and_sister from being saved:</h2>
+
+      <ul>
+      <% @brothers_and_sister.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+    <%= f.hidden_field :family_history_id, value: @personal_detail.family_history.id if @brothers_and_sister.family_history_id.nil? %>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :age %><br />
+    <%= f.number_field :age %>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br />
+    <%= f.text_area :address, rows: 2 %>
+  </div>
+  <div class="field">
+    <%= f.label :occupation %><br />
+    <%= f.text_field :occupation %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Save", class: "btn" %>
+  </div>
+<% end %>

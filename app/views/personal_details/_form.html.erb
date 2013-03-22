@@ -1,0 +1,69 @@
+<%= form_for(@personal_detail) do |f| %>
+  <% if @personal_detail.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@personal_detail.errors.count, "error") %> prohibited this personal_detail from being saved:</h2>
+
+      <ul>
+      <% @personal_detail.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Name %><br />
+    <%= f.text_field :last_name, placeholder: "Last Name" %>
+    <%= f.text_field :first_name, placeholder: "First Name" %>
+    <%= f.text_field :middle_name, placeholder: "Middle Name" %>
+  </div>
+  <div class="field">
+    <%= f.label :rank %><br />
+    <%= f.text_field :rank, placeholder: "Rank" %>
+    <%= f.text_field :AFPSN, placeholder: "AFPSN" %>
+    <%= f.text_field :BR_SVC, placeholder: "BR/SVC" %>
+  </div>
+  <div class="field">
+    <label>Present Job / Assignment</label><br />
+    <%= f.text_field :assignment %>
+  </div>
+  <div class="field">
+    <%= f.label :duty_address %><br />
+    <%= f.text_field :duty_address %>
+  </div>
+  <div class="field">
+    <%= f.label :telephone %><br />
+    <%= f.text_field :telephone %>
+  </div>
+  <div class="field">
+    <%= f.label :home_address %><br />
+    <%= f.text_field :home_address %>
+  </div>
+  <div class="field">
+    <%= f.label :birthdate %><br />
+    <%= f.date_select :birthdate, start_year: Date.today.strftime("%Y").to_i - 65, end_year: Date.today.strftime("%Y").to_i %>
+  </div>
+  <div class="field">
+    <%= f.label :place_of_birth %><br />
+    <%= f.text_field :place_of_birth %>
+  </div>
+  <div class="field">
+    <%= f.label :change_in_name %><br />
+    <%= f.text_field :change_in_name %>
+  </div>
+  <div class="field">
+    <%= f.label :nationality %><br />
+    <%= f.text_field :nationality %>
+  </div>
+  <div class="field">
+    <%= f.label :tin %><br />
+    <%= f.text_field :tin %>
+  </div>
+  <div class="field">
+    <%= f.label :national_reg_cards_no %><br />
+    <%= f.text_field :national_reg_cards_no %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Save", class: "btn" %>
+  </div>
+<% end %>

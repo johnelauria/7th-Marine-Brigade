@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Starting date:</b>
+  <%= @place_of_residence.starting_date %>
+</p>
+
+<p>
+  <b>Date left:</b>
+  <%= @place_of_residence.date_left %>
+</p>
+
+<p>
+  <b>Complete address:</b>
+  <%= @place_of_residence.complete_address %>
+</p>
+
+
+<%= link_to 'Edit', edit_place_of_residence_path(@place_of_residence) %> |
+<%= link_to 'Back', place_of_residences_path %>

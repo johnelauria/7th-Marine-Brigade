@@ -1,0 +1,47 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  elementary_location: MyString
+  elementary_date_of_attendance1: 2013-03-21
+  elementary_date_of_attendance2: 2013-03-21
+  elementary_year_graduate: 1
+  high_school_location: MyString
+  high_school_date_of_attendance1: 2013-03-21
+  high_school_date_of_attendance2: 2013-03-21
+  high_school_year_graduate: 1
+  college_location: MyString
+  college_date_of_attendance1: 2013-03-21
+  college_date_of_attendance2: 2013-03-21
+  college_year_graduate: 1
+  post_graduate_location: MyString
+  post_graduate_date_of_attendance1: 2013-03-21
+  post_graduate_date_of_attendance2: 2013-03-21
+  post_graduate_year_graduate: 1
+  other_location: MyString
+  other_date_of_attendance1: 2013-03-21
+  other_date_of_attendance2: 2013-03-21
+  other_year_graduate: MyString
+  civil_service_eligibility: MyText
+
+two:
+  elementary_location: MyString
+  elementary_date_of_attendance1: 2013-03-21
+  elementary_date_of_attendance2: 2013-03-21
+  elementary_year_graduate: 1
+  high_school_location: MyString
+  high_school_date_of_attendance1: 2013-03-21
+  high_school_date_of_attendance2: 2013-03-21
+  high_school_year_graduate: 1
+  college_location: MyString
+  college_date_of_attendance1: 2013-03-21
+  college_date_of_attendance2: 2013-03-21
+  college_year_graduate: 1
+  post_graduate_location: MyString
+  post_graduate_date_of_attendance1: 2013-03-21
+  post_graduate_date_of_attendance2: 2013-03-21
+  post_graduate_year_graduate: 1
+  other_location: MyString
+  other_date_of_attendance1: 2013-03-21
+  other_date_of_attendance2: 2013-03-21
+  other_year_graduate: MyString
+  civil_service_eligibility: MyText

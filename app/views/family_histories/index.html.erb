@@ -1,0 +1,101 @@
+<h1>Listing family_histories</h1>
+
+<table class="table">
+  <tr>
+    <th>Father name</th>
+    <th>Father date of birth</th>
+    <th>Father place of birth</th>
+    <th>Address</th>
+    <th>Father occupation</th>
+    <th>Father place of employment</th>
+    <th>Father citizenship</th>
+    <th>Father naturalized</th>
+    <th>Father naturalized date</th>
+    <th>Father naturalized place</th>
+    <th>Mother name</th>
+    <th>Mother date of birth</th>
+    <th>Mother place of birth</th>
+    <th>Address</th>
+    <th>Mother occupation</th>
+    <th>Mother place of employment</th>
+    <th>Mother citizenship</th>
+    <th>Mother naturalized</th>
+    <th>Mother naturalized date</th>
+    <th>Mother naturalized place</th>
+    <th>Father in law name</th>
+    <th>Father in law birth date</th>
+    <th>Father in law place of birth</th>
+    <th>Father in law address</th>
+    <th>Father in law occupation</th>
+    <th>Father in law place of employment</th>
+    <th>Father in law citizenship</th>
+    <th>Father in law naturalized</th>
+    <th>Father in law naturalized date</th>
+    <th>Father in law naturalized place</th>
+    <th>Mother in law name</th>
+    <th>Mother in law birth date</th>
+    <th>Mother in law place of birth</th>
+    <th>Mother in law address</th>
+    <th>Mother in law occupation</th>
+    <th>Mother in law place of employment</th>
+    <th>Mother in law citizenship</th>
+    <th>Mother in law naturalized</th>
+    <th>Mother in law naturalized date</th>
+    <th>Mother in law naturalized place</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @family_histories.each do |family_history| %>
+  <tr>
+    <td><%= family_history.father_name %></td>
+    <td><%= family_history.father_date_of_birth %></td>
+    <td><%= family_history.father_place_of_birth %></td>
+    <td><%= family_history.father_address %></td>
+    <td><%= family_history.father_occupation %></td>
+    <td><%= family_history.father_place_of_employment %></td>
+    <td><%= family_history.father_citizenship %></td>
+    <td><%= family_history.father_naturalized %></td>
+    <td><%= family_history.father_naturalized_date %></td>
+    <td><%= family_history.father_naturalized_place %></td>
+    <td><%= family_history.mother_name %></td>
+    <td><%= family_history.mother_date_of_birth %></td>
+    <td><%= family_history.mother_place_of_birth %></td>
+    <td><%= family_history.mother_address %></td>
+    <td><%= family_history.mother_occupation %></td>
+    <td><%= family_history.mother_place_of_employment %></td>
+    <td><%= family_history.mother_citizenship %></td>
+    <td><%= family_history.mother_naturalized %></td>
+    <td><%= family_history.mother_naturalized_date %></td>
+    <td><%= family_history.mother_naturalized_place %></td>
+    <td><%= family_history.father_in_law_name %></td>
+    <td><%= family_history.father_in_law_birth_date %></td>
+    <td><%= family_history.father_in_law_place_of_birth %></td>
+    <td><%= family_history.father_in_law_address %></td>
+    <td><%= family_history.father_in_law_occupation %></td>
+    <td><%= family_history.father_in_law_place_of_employment %></td>
+    <td><%= family_history.father_in_law_citizenship %></td>
+    <td><%= family_history.father_in_law_naturalized %></td>
+    <td><%= family_history.father_in_law_naturalized_date %></td>
+    <td><%= family_history.father_in_law_naturalized_place %></td>
+    <td><%= family_history.mother_in_law_name %></td>
+    <td><%= family_history.mother_in_law_birth_date %></td>
+    <td><%= family_history.mother_in_law_place_of_birth %></td>
+    <td><%= family_history.mother_in_law_address %></td>
+    <td><%= family_history.mother_in_law_occupation %></td>
+    <td><%= family_history.mother_in_law_place_of_employment %></td>
+    <td><%= family_history.mother_in_law_citizenship %></td>
+    <td><%= family_history.mother_in_law_naturalized %></td>
+    <td><%= family_history.mother_in_law_naturalized_date %></td>
+    <td><%= family_history.mother_in_law_naturalized_place %></td>
+    <td><%= link_to 'Show', family_history %></td>
+    <td><%= link_to 'Edit', edit_family_history_path(family_history) %></td>
+    <td><%= link_to 'Destroy', family_history, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Family history', new_family_history_path %>

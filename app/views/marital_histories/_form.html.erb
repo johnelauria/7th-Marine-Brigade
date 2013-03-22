@@ -1,0 +1,56 @@
+<%= form_for(@marital_history) do |f| %>
+  <% if @marital_history.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@marital_history.errors.count, "error") %> prohibited this marital_history from being saved:</h2>
+
+      <ul>
+      <% @marital_history.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <%= f.hidden_field :personal_detail_id, value: @personal_detail.id if @marital_history.personal_detail_id.nil? %>
+  <div class="field">
+    <%= f.label :marital_status %><br />
+    <%= f.select :marital_status, "<option>Single</option><option>Married</option><option>Separated</option><option>Divorced</option>".html_safe %>
+  </div>
+
+    <div class="row">
+      <div class="span6">
+<legend>Spouse</legend>
+  <div class="field">
+    <%= f.label :name_of_spouse %><br />
+    <%= f.text_field :name_of_spouse %>
+  </div>
+  <div class="field">
+    <%= f.label :date_of_marriage %><br />
+    <%= f.date_select :date_of_marriage, start_year: Date.today.strftime("%Y").to_i - 65, end_year: Date.today.strftime("%Y").to_i %>
+  </div>
+    <div class="field">
+      <%= f.label :place_of_marriage %><br />
+      <%= f.text_area :place_of_marriage, rows: 2 %>
+    </div>
+  <div class="field">
+    <%= f.label :birth_date %><br />
+    <%= f.date_select :birth_date, start_year: Date.today.strftime("%Y").to_i - 65, end_year: Date.today.strftime("%Y").to_i %>
+  </div>
+    <div class="field">
+      <%= f.label :birth_place %><br />
+      <%= f.text_area :birth_place, rows: 2 %>
+    </div>
+  <div class="field">
+    <%= f.label :occupation %><br />
+    <%= f.text_field :occupation %>
+  </div>
+    <div class="field">
+      <%= f.label :place_of_employment %><br />
+      <%= f.text_area :place_of_employment, rows: 2 %>
+    </div>
+</div>
+<div class="span6">
+</div></div>
+  <div class="actions">
+    <%= f.submit "Save", class: "btn" %>
+  </div>
+<% end %>

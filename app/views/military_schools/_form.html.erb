@@ -1,0 +1,39 @@
+<%= form_for(@military_school) do |f| %>
+  <% if @military_school.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@military_school.errors.count, "error") %> prohibited this military_school from being saved:</h2>
+
+      <ul>
+      <% @military_school.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <%= f.hidden_field :military_history_id, value: @military_history.id %>
+
+  <div class="field">
+    <%= f.label :name_of_school %><br />
+    <%= f.text_field :name_of_school %>
+  </div>
+  <div class="field">
+    <%= f.label :location %><br />
+    <%= f.text_area :location, rows: 2 %>
+  </div>
+  <div class="field">
+    <%= f.label :date_of_attendance %><br />
+    <%= f.date_select :date_of_attendance, start_year: Date.today.strftime("%Y").to_i - 65, end_year: Date.today.strftime("%Y").to_i %>
+  </div>
+  <div class="field">
+    <%= f.label :nature_of_training %><br />
+    <%= f.text_field :nature_of_training %>
+  </div>
+  <div class="field">
+    <%= f.label :rating %><br />
+    <%= f.text_field :rating %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Save", class: "btn" %>
+  </div>
+<% end %>

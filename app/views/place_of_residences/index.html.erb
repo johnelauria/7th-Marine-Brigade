@@ -1,0 +1,27 @@
+<h1>Listing Place of residences</h1>
+
+<table class="table">
+  <tr>
+    <th>Starting date</th>
+    <th>Date left</th>
+    <th>Complete address</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @place_of_residences.each do |place_of_residence| %>
+  <tr>
+    <td><%= place_of_residence.starting_date %></td>
+    <td><%= place_of_residence.date_left %></td>
+    <td><%= place_of_residence.complete_address %></td>
+    <td><%= link_to 'Show', place_of_residence %></td>
+    <td><%= link_to 'Edit', edit_place_of_residence_path(place_of_residence) %></td>
+    <td><%= link_to 'Destroy', place_of_residence, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Place of residence', new_place_of_residence_path %>

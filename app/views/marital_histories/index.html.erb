@@ -1,0 +1,41 @@
+<h1>Listing marital_histories</h1>
+
+<table class="table">
+  <tr>
+    <th>Marital status</th>
+    <th>Name of spouse</th>
+    <th>Date of marriage</th>
+    <th>Place of Marriage</th>
+    <th>Birth date place</th>
+    <th>Occupation</th>
+    <th>Place of Employment</th>
+    <th>Name</th>
+    <th>Birth date</th>
+    <th>Address</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @marital_histories.each do |marital_history| %>
+  <tr>
+    <td><%= marital_history.marital_status %></td>
+    <td><%= marital_history.name_of_spouse %></td>
+    <td><%= marital_history.date_of_marriage %></td>
+    <td><%= marital_history.place_of_marriage %></td>
+    <td><%= marital_history.birth_date %></td>
+    <td><%= marital_history.birth_place %></td>
+    <td><%= marital_history.occupation %></td>
+    <td><%= marital_history.place_of_employment %></td>
+    <td><%= marital_history.name %></td>
+    <td><%= marital_history.address %></td>
+    <td><%= link_to 'Show', marital_history %></td>
+    <td><%= link_to 'Edit', edit_marital_history_path(marital_history) %></td>
+    <td><%= link_to 'Delete', marital_history, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Marital history', new_marital_history_path %>

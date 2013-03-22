@@ -1,0 +1,33 @@
+<h1>Listing military_schools</h1>
+
+<table>
+  <tr>
+    <th>Military history</th>
+    <th>Name of school</th>
+    <th>Location</th>
+    <th>Date of attendance</th>
+    <th>Nature of training</th>
+    <th>Rating</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @military_schools.each do |military_school| %>
+  <tr>
+    <td><%= military_school.military_history_id %></td>
+    <td><%= military_school.name_of_school %></td>
+    <td><%= military_school.location %></td>
+    <td><%= military_school.date_of_attendance %></td>
+    <td><%= military_school.nature_of_training %></td>
+    <td><%= military_school.rating %></td>
+    <td><%= link_to 'Show', military_school %></td>
+    <td><%= link_to 'Edit', edit_military_school_path(military_school) %></td>
+    <td><%= link_to 'Destroy', military_school, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Military school', new_military_school_path %>

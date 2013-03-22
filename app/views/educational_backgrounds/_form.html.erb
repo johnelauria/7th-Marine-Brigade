@@ -1,0 +1,107 @@
+<%= form_for(@educational_background) do |f| %>
+  <% if @educational_background.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@educational_background.errors.count, "error") %> prohibited this educational_background from being saved:</h2>
+
+      <ul>
+      <% @educational_background.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<legend>Elementary</legend>
+  <%= f.hidden_field :personal_detail_id, value: @personal_detail.id %>
+  <div class="field">
+    <%= f.label :location %><br />
+    <%= f.text_field :elementary_location %>
+  </div>
+  <div class="field">
+    <%= f.label :from %><br />
+    <%= f.date_select :elementary_date_of_attendance1 %>
+  </div>
+  <div class="field">
+    <%= f.label :until %><br />
+    <%= f.date_select :elementary_date_of_attendance2 %>
+  </div>
+  <div class="field">
+    <%= f.label :year_graduate %><br />
+    <%= f.number_field :elementary_year_graduate %>
+  </div>
+    <legend>High School</legend>
+  <div class="field">
+    <%= f.label :location %><br />
+    <%= f.text_field :high_school_location %>
+  </div>
+  <div class="field">
+    <%= f.label :from %><br />
+    <%= f.date_select :high_school_date_of_attendance1 %>
+  </div>
+  <div class="field">
+    <%= f.label :until %><br />
+    <%= f.date_select :high_school_date_of_attendance2 %>
+  </div>
+  <div class="field">
+    <%= f.label :year_graduate %><br />
+    <%= f.number_field :high_school_year_graduate %>
+  </div>
+    <legend>College</legend>
+  <div class="field">
+    <%= f.label :location %><br />
+    <%= f.text_field :college_location %>
+  </div>
+  <div class="field">
+    <%= f.label :from %><br />
+    <%= f.date_select :college_date_of_attendance1 %>
+  </div>
+  <div class="field">
+    <%= f.label :until %><br />
+    <%= f.date_select :college_date_of_attendance2 %>
+  </div>
+  <div class="field">
+    <%= f.label :year_graduate %><br />
+    <%= f.number_field :college_year_graduate %>
+  </div>
+    <legend>Post Graduate</legend>
+  <div class="field">
+    <%= f.label :location %><br />
+    <%= f.text_field :post_graduate_location %>
+  </div>
+  <div class="field">
+    <%= f.label :from %><br />
+    <%= f.date_select :post_graduate_date_of_attendance1 %>
+  </div>
+  <div class="field">
+    <%= f.label :until %><br />
+    <%= f.date_select :post_graduate_date_of_attendance2 %>
+  </div>
+  <div class="field">
+    <%= f.label :year_graduate %><br />
+    <%= f.number_field :post_graduate_year_graduate %>
+  </div>
+    <legend>Other School Attended</legend>
+  <div class="field">
+    <%= f.label :location %><br />
+    <%= f.text_field :other_location %>
+  </div>
+  <div class="field">
+    <%= f.label :from %><br />
+    <%= f.date_select :other_date_of_attendance1 %>
+  </div>
+  <div class="field">
+    <%= f.label :until %><br />
+    <%= f.date_select :other_date_of_attendance2 %>
+  </div>
+  <div class="field">
+    <%= f.label :year_graduate %><br />
+    <%= f.text_field :other_year_graduate %>
+  </div>
+    <legend>Civil Service Eligibility</legend>
+  <div class="field">
+    <label>If any and other seminar qualification acquired:</label><br />
+    <%= f.text_area :civil_service_eligibility, rows: 4 %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Save", class: "btn" %>
+  </div>
+<% end %>

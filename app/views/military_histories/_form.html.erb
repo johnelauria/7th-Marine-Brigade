@@ -1,0 +1,25 @@
+<%= form_for(@military_history) do |f| %>
+  <% if @military_history.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@military_history.errors.count, "error") %> prohibited this military_history from being saved:</h2>
+
+      <ul>
+      <% @military_history.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <label>Date of AD / Enlisted in the AFP: </label><br />
+    <%= f.date_select :date_of_cad, start_year: 1950, end_year: Date.today.strftime("%Y").to_i %>
+  </div>
+  <div class="field">
+    <label>Date Commission / Enlistment: </label><br />
+    <%= f.date_select :date_commission, start_year: 1950, end_year: Date.today.strftime("%Y").to_i %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Save", class: "btn" %>
+  </div>
+<% end %>

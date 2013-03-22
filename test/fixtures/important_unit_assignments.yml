@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  military_history_id: 1
+  unit: MyString
+  date1: 2013-03-21
+  date2: 2013-03-21
+
+two:
+  military_history_id: 1
+  unit: MyString
+  date1: 2013-03-21
+  date2: 2013-03-21

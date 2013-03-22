@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Family history:</b>
+  <%= @brothers_and_sister.family_history_id %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @brothers_and_sister.name %>
+</p>
+
+<p>
+  <b>Age:</b>
+  <%= @brothers_and_sister.age %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @brothers_and_sister.address %>
+</p>
+
+<p>
+  <b>Occupation:</b>
+  <%= @brothers_and_sister.occupation %>
+</p>
+
+
+<%= link_to 'Edit', edit_brothers_and_sister_path(@brothers_and_sister) %> |
+<%= link_to 'Back', brothers_and_sisters_path %>

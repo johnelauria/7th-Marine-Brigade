@@ -1,0 +1,63 @@
+<h1>Listing educational_backgrounds</h1>
+
+<table class="table">
+  <tr>
+    <th>Elementary location</th>
+    <th>Elementary date of attendance1</th>
+    <th>Elementary date of attendance2</th>
+    <th>Elementary year graduate</th>
+    <th>High school location</th>
+    <th>High school date of attendance1</th>
+    <th>High school date of attendance2</th>
+    <th>High school year graduate</th>
+    <th>College location</th>
+    <th>College date of attendance1</th>
+    <th>College date of attendance2</th>
+    <th>College year graduate</th>
+    <th>Post graduate location</th>
+    <th>Post graduate date of attendance1</th>
+    <th>Post graduate date of attendance2</th>
+    <th>Post graduate year graduate</th>
+    <th>Other location</th>
+    <th>Other date of attendance1</th>
+    <th>Other date of attendance2</th>
+    <th>Other year graduate</th>
+    <th>Civil service eligibility</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @educational_backgrounds.each do |educational_background| %>
+  <tr>
+    <td><%= educational_background.elementary_location %></td>
+    <td><%= educational_background.elementary_date_of_attendance1 %></td>
+    <td><%= educational_background.elementary_date_of_attendance2 %></td>
+    <td><%= educational_background.elementary_year_graduate %></td>
+    <td><%= educational_background.high_school_location %></td>
+    <td><%= educational_background.high_school_date_of_attendance1 %></td>
+    <td><%= educational_background.high_school_date_of_attendance2 %></td>
+    <td><%= educational_background.high_school_year_graduate %></td>
+    <td><%= educational_background.college_location %></td>
+    <td><%= educational_background.college_date_of_attendance1 %></td>
+    <td><%= educational_background.college_date_of_attendance2 %></td>
+    <td><%= educational_background.college_year_graduate %></td>
+    <td><%= educational_background.post_graduate_location %></td>
+    <td><%= educational_background.post_graduate_date_of_attendance1 %></td>
+    <td><%= educational_background.post_graduate_date_of_attendance2 %></td>
+    <td><%= educational_background.post_graduate_year_graduate %></td>
+    <td><%= educational_background.other_location %></td>
+    <td><%= educational_background.other_date_of_attendance1 %></td>
+    <td><%= educational_background.other_date_of_attendance2 %></td>
+    <td><%= educational_background.other_year_graduate %></td>
+    <td><%= educational_background.civil_service_eligibility %></td>
+    <td><%= link_to 'Show', educational_background %></td>
+    <td><%= link_to 'Edit', edit_educational_background_path(educational_background) %></td>
+    <td><%= link_to 'Destroy', educational_background, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Educational background', new_educational_background_path %>
