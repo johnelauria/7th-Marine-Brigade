@@ -1,4 +1,10 @@
 MarineBrigade::Application.routes.draw do
+  resources :foreign_country_visiteds
+
+
+  resources :employments
+
+
   resources :brothers_and_sisters
 
 

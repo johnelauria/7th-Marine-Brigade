@@ -11,6 +11,9 @@
       <li><a href="#familyHistory" data-toggle="tab">Family History and Information</a></li>
       <li><a href="#placeOfResidence" data-toggle="tab">Place of Residence</a></li>
       <li><a href="#educationalBackground" data-toggle="tab">Educational Background</a></li>
+      <li><a href="#militaryHistory" data-toggle="tab">Military History</a></li>
+      <li><a href="#employment" data-toggle="tab">Employment</a></li>
+      <li><a href="#foreignCountryVisited" data-toggle="tab">Foreign Country Visited</a></li>
     </ul>
   </div>
   <div class="span9">
@@ -283,24 +286,169 @@
       </table>
       </div>
       <div id="educationalBackground" class="tab-pane">
-        <legend>Elementary</legend>
         <% unless @personal_detail.educational_background.nil? %>
-        <table class="table table-bordered">
-          <tr>
-            <th>Location</th>
-            <th>Date of Attendance</th>
-            <th>Year Graduate</th>
-          </tr>
-            <tr>
-              <td>@personal_detail.educational_background.elementary_location %></td>
-              <td>From <%= @personal_detail.educational_background.elementary_date_of_attendance1.strftime("%m-%d-%Y") %> until <%= education.elementary_date_of_attendance2.strftime("%m-%d-%Y") %></td>
-              <td><%= @personal_detail.educational_background.elementary_year_graduate %></td>
-            </tr>
-        </table>
+            <legend>Elementary</legend>
+            <table class="table table-bordered">
+              <tr>
+                <th>Location</th>
+                <th>Date of Attendance</th>
+                <th>Year Graduate</th>
+              </tr>
+                <tr>
+                  <td><%= @personal_detail.educational_background.elementary_location %></td>
+                  <td>From <%= @personal_detail.educational_background.elementary_date_of_attendance1.strftime("%m-%d-%Y") %> until <%= @personal_detail.educational_background.elementary_date_of_attendance2.strftime("%m-%d-%Y") %></td>
+                  <td><%= @personal_detail.educational_background.elementary_year_graduate %></td>
+                </tr>
+            </table>
+            <% unless @personal_detail.educational_background.high_school_location == "" %>
+            <legend>High School</legend>
+            <table class="table table-bordered">
+              <tr>
+                <th>Location</th>
+                <th>Date of Attendance</th>
+                <th>Year Graduate</th>
+              </tr>
+              <tr>
+                <td><%= @personal_detail.educational_background.high_school_location %></td>
+                <td>From <%= @personal_detail.educational_background.high_school_date_of_attendance1.strftime("%m-%d-%Y") %> until <%= @personal_detail.educational_background.high_school_date_of_attendance2.strftime("%m-%d-%Y") %></td>
+                <td><%= @personal_detail.educational_background.high_school_year_graduate %></td>
+              </tr>
+            </table>
+            <% end %>
+            <% unless @personal_detail.educational_background.college_location == "" %>
+            <legend>College</legend>
+            <table class="table table-bordered">
+              <tr>
+                <th>Location</th>
+                <th>Date of Attendance</th>
+                <th>Year Graduate</th>
+              </tr>
+              <tr>
+                <td><%= @personal_detail.educational_background.college_location %></td>
+                <td>From <%= @personal_detail.educational_background.college_date_of_attendance1.strftime("%m-%d-%Y") %> until <%= @personal_detail.educational_background.college_date_of_attendance2.strftime("%m-%d-%Y") %></td>
+                <td><%= @personal_detail.educational_background.college_year_graduate %></td>
+              </tr>
+            </table>
+            <% end %>
+            <% unless @personal_detail.educational_background.post_graduate_location == "" %>
+                <legend>Post Graduate</legend>
+                <table class="table table-bordered">
+                  <tr>
+                    <th>Location</th>
+                    <th>Date of Attendance</th>
+                    <th>Year Graduate</th>
+                  </tr>
+                  <tr>
+                    <td><%= @personal_detail.educational_background.post_graduate_location %></td>
+                    <td>From <%= @personal_detail.educational_background.post_graduate_date_of_attendance1.strftime("%m-%d-%Y") %> until <%= @personal_detail.educational_background.post_graduate_date_of_attendance2.strftime("%m-%d-%Y") %></td>
+                    <td><%= @personal_detail.educational_background.post_graduate_year_graduate %></td>
+                  </tr>
+                </table>
+            <% end %>
+            <% unless @personal_detail.educational_background.other_location == "" %>
+                <legend>Other School Attended</legend>
+                <table class="table table-bordered">
+                  <tr>
+                    <th>Location</th>
+                    <th>Date of Attendance</th>
+                    <th>Year Graduate</th>
+                  </tr>
+                  <tr>
+                    <td><%= @personal_detail.educational_background.other_location %></td>
+                    <td>From <%= @personal_detail.educational_background.other_date_of_attendance1.strftime("%m-%d-%Y") %> until <%= @personal_detail.educational_background.other_date_of_attendance2.strftime("%m-%d-%Y") %></td>
+                    <td><%= @personal_detail.educational_background.other_year_graduate %></td>
+                  </tr>
+                </table>
+            <% end %>
+            <p><b>CIVIL SERVICE ELIGIBILITY: </b><%= @personal_detail.educational_background.civil_service_eligibility %></p>
+            <%= link_to "Edit Educational Background", edit_educational_background_path(@personal_detail.educational_background) %>
         <% else %>
             <%= render 'educational_backgrounds/form' %>
         <% end %>
       </div>
+    <div id="militaryHistory" class="tab-pane">
+      <% if @personal_detail.military_history.nil? %>
+          <%= render 'military_histories/form' %>
+      <% else %>
+          <%= render 'military_histories/show' %>
+      <% end %>
+    </div>
+    <div id="employment" class="tab-pane">
+      <% if @personal_detail.employments.first.nil? %>
+        <%= render 'employments/form' %>
+      <% else %>
+          <div class="accordion" id="employmentAccordion">
+            <div class="accordion-group">
+              <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#employmentAccordion" href="#addEmployment">
+                  Add Employment Record
+                </a>
+              </div>
+              <div id="addEmployment" class="accordion-body collapse">
+                <div class="accordion-inner">
+                  <%= render 'employments/form' %>
+                </div>
+              </div>
+            </div>
+          </div>
+        <table class="table table-bordered">
+          <tr>
+            <th>Inclusive Date</th>
+            <th>Type of employment</th>
+            <th>Name & Address of Employment</th>
+            <th>Nature of Leaving</th>
+            <th></th>
+          </tr>
+          <% @personal_detail.employments.each do |employment| %>
+          <tr>
+            <td>From <%= employment.employment_date.strftime("%m-%d-%Y") %> until <%= employment.retirement.strftime("%m-%d-%Y") %></td>
+            <td><%= employment.type_of_employment %></td>
+            <td><%= employment.name %>, <%= employment.address %></td>
+            <td><%= employment.nature_of_leaving %></td>
+            <td>
+              <%= link_to employment, method: :delete, data: { confirm: "Are you sure you want to delete this employment record?" }, class: "btn btn-mini btn-danger", title: "delete" do %>
+                <i class="icon-trash icon-white"></i>
+              <% end %>
+            </td>
+          </tr>
+          </table>
+        <% end %>
+      <% end %>
+    </div>
+    <div id="foreignCountryVisited" class="tab-pane">
+      <% if @personal_detail.foreign_country_visiteds.first.nil? %>
+        <%= render 'foreign_country_visiteds/form' %>
+      <% else %>
+          <div class="accordion" id="countryForm">
+            <div class="accordion-group">
+              <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#countryForm" href="#addCountry">
+                  Add Foreign Country Visited
+                </a>
+              </div>
+              <div id="addCountry" class="accordion-body collapse">
+                <div class="accordion-inner">
+                  <%= render 'foreign_country_visiteds/form' %>
+                </div>
+              </div>
+            </div>
+          </div>
+        <table class="table table-bordered">
+          <tr>
+            <th>Inclusive Date</th>
+            <th>Country Visited</th>
+            <th>Purpose Of visit</th>
+          </tr>
+          <% @personal_detail.foreign_country_visiteds.each do |country| %>
+            <tr>
+                <td>From <%= country.start_date %> until <%= country.end_date %></td>
+                <td><%= country.country_visited %></td>
+                <td><%= country.purpose_of_visit %></td>
+            </tr>
+          <% end %>
+        </table>
+      <% end %>
+    </div>
     </div>
   </div>
 </div>

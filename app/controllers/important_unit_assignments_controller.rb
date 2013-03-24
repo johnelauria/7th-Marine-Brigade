@@ -44,7 +44,7 @@ class ImportantUnitAssignmentsController < ApplicationController
 
     respond_to do |format|
       if @important_unit_assignment.save
-        format.html { redirect_to MilitaryHistory.find(@important_unit_assignment.military_history_id), notice: 'Important unit assignment was successfully created.' }
+        format.html { redirect_to @important_unit_assignment.military_history.personal_detail, notice: 'Important unit assignment was successfully created.' }
         format.json { render json: @important_unit_assignment, status: :created, location: @important_unit_assignment }
       else
         format.html { render action: "new" }
@@ -76,7 +76,7 @@ class ImportantUnitAssignmentsController < ApplicationController
     @important_unit_assignment.destroy
 
     respond_to do |format|
-      format.html { redirect_to MilitaryHistory.find(@important_unit_assignment.military_history_id) }
+      format.html { redirect_to @important_unit_assignment.military_history.personal_detail }
       format.json { head :no_content }
     end
   end

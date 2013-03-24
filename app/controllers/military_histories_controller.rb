@@ -13,7 +13,7 @@ class MilitaryHistoriesController < ApplicationController
   # GET /military_histories/1
   # GET /military_histories/1.json
   def show
-    @military_history = MilitaryHistory.find(params[:id])
+    @military_history_show = MilitaryHistory.find(params[:id])
     @important_unit_assignment = ImportantUnitAssignment.new
     @military_school = MilitarySchool.new
     @received_military_award = ReceivedMilitaryAward.new
@@ -47,7 +47,7 @@ class MilitaryHistoriesController < ApplicationController
 
     respond_to do |format|
       if @military_history.save
-        format.html { redirect_to MilitaryHistory.find(@military_history.id), notice: 'Military history was successfully created.' }
+        format.html { redirect_to @military_history.personal_detail, notice: 'Military history was successfully created.' }
         format.json { render json: @military_history, status: :created, location: @military_history }
       else
         format.html { render action: "new" }
@@ -63,7 +63,7 @@ class MilitaryHistoriesController < ApplicationController
 
     respond_to do |format|
       if @military_history.update_attributes(params[:military_history])
-        format.html { redirect_to @military_history, notice: 'Military history was successfully updated.' }
+        format.html { redirect_to @military_history.personal_detail, notice: 'Military history was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
@@ -79,7 +79,7 @@ class MilitaryHistoriesController < ApplicationController
     @military_history.destroy
 
     respond_to do |format|
-      format.html { redirect_to military_histories_url }
+      format.html { redirect_to @military_history.personal_detail }
       format.json { head :no_content }
     end
   end

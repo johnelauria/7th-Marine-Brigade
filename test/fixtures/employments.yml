@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  personal_detail_id: 1
+  employment_date: 2013-03-24
+  retirement: 2013-03-24
+  type_of_employment: MyString
+  name: MyString
+  address: MyText
+  nature_of_leaving: MyText
+
+two:
+  personal_detail_id: 1
+  employment_date: 2013-03-24
+  retirement: 2013-03-24
+  type_of_employment: MyString
+  name: MyString
+  address: MyText
+  nature_of_leaving: MyText

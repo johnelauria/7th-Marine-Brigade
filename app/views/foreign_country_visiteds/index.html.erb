@@ -1,0 +1,31 @@
+<h1>Listing foreign_country_visiteds</h1>
+
+<table>
+  <tr>
+    <th>Personal detail</th>
+    <th>Start date</th>
+    <th>End date</th>
+    <th>Country visited</th>
+    <th>Purpose of visit</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @foreign_country_visiteds.each do |foreign_country_visited| %>
+  <tr>
+    <td><%= foreign_country_visited.personal_detail_id %></td>
+    <td><%= foreign_country_visited.start_date %></td>
+    <td><%= foreign_country_visited.end_date %></td>
+    <td><%= foreign_country_visited.country_visited %></td>
+    <td><%= foreign_country_visited.purpose_of_visit %></td>
+    <td><%= link_to 'Show', foreign_country_visited %></td>
+    <td><%= link_to 'Edit', edit_foreign_country_visited_path(foreign_country_visited) %></td>
+    <td><%= link_to 'Destroy', foreign_country_visited, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Foreign country visited', new_foreign_country_visited_path %>

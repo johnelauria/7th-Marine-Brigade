@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Personal detail:</b>
+  <%= @foreign_country_visited.personal_detail_id %>
+</p>
+
+<p>
+  <b>Start date:</b>
+  <%= @foreign_country_visited.start_date %>
+</p>
+
+<p>
+  <b>End date:</b>
+  <%= @foreign_country_visited.end_date %>
+</p>
+
+<p>
+  <b>Country visited:</b>
+  <%= @foreign_country_visited.country_visited %>
+</p>
+
+<p>
+  <b>Purpose of visit:</b>
+  <%= @foreign_country_visited.purpose_of_visit %>
+</p>
+
+
+<%= link_to 'Edit', edit_foreign_country_visited_path(@foreign_country_visited) %> |
+<%= link_to 'Back', foreign_country_visiteds_path %>

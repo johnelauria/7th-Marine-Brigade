@@ -6,4 +6,6 @@ class PersonalDetail < ActiveRecord::Base
   has_many :place_of_residences
   has_one :educational_background
   has_one :military_history
+  has_many :employments
+  has_many :foreign_country_visiteds
 end

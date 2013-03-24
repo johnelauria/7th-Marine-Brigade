@@ -1,0 +1,84 @@
+<%= link_to 'Edit', edit_military_history_path(@military_history_show) %>
+<p>
+  <b>Date of CAD / Enlisted in the AFP:</b>
+  <%= @military_history_show.date_of_cad.strftime("%m-%d-%Y") %>
+</p>
+
+<p>
+  <b>Date Commission / Enlistment:</b>
+  <%= @military_history_show.date_commission.strftime("%m-%d-%Y") %>
+</p>
+
+<b>Important Unit assignment since CAD/Enlistment in the service</b>
+<div class="tab-content">
+  <div id="theForm" class="tab-pane">
+    <a href="#unitAssignment" class="btn btn-mini" data-toggle="tab">Close</a>
+    <%= render 'important_unit_assignments/form' %>
+  </div>
+  <div id="unitAssignment" class="tab-pane active">
+    <a href="#theForm" class="btn btn-mini" data-toggle="tab">Add Unit</a>
+    <table class="table table-bordered">
+      <tr>
+        <th>Unit</th>
+        <th>Date Covered</th>
+        <th></th>
+      </tr>
+      <% @military_history_show.important_unit_assignments.each do |unit| %>
+          <tr>
+            <td><%= unit.unit %></td>
+            <td>From <%= unit.date1.strftime("%m-%d-%Y") %> until <%= unit.date2.strftime("%m-%d-%Y") %></td>
+            <td>
+              <%= link_to unit, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-mini btn-danger" do %>
+                  <i class="icon-trash icon-white"></i>
+              <% end %></td>
+          </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
+<b>Military Schools Attended</b><br>
+<div class="tab-content">
+  <div id="newMilitarySchool" class="tab-pane">
+    <a href="#militarySchool" class="btn btn-mini" data-toggle="tab">Close</a>
+    <%= render 'military_schools/form' %>
+  </div>
+  <div id="militarySchool" class="tab-pane active">
+    <a href="#newMilitarySchool" class="btn btn-mini" data-toggle="tab">Add Military School</a>
+    <table class="table table-bordered">
+      <tr>
+        <th>Name of school</th>
+        <th>Location</th>
+        <th>Date of attendance</th>
+        <th>Nature of training</th>
+        <th>Rating</th>
+      </tr>
+
+      <% @military_history_show.military_schools.each do |military_school| %>
+          <tr>
+            <td><%= military_school.name_of_school %></td>
+            <td><%= military_school.location %></td>
+            <td><%= military_school.date_of_attendance %></td>
+            <td><%= military_school.nature_of_training %></td>
+            <td><%= military_school.rating %></td>
+          </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
+<b>Awards, Decorations and Commendations Received:</b><br>
+<div class="tab-content">
+  <div id="newAward" class="tab-pane">
+    <a href="#awards" class="btn btn-mini" data-toggle="tab">Close</a>
+    <%= render 'received_military_awards/form' %>
+  </div>
+  <div id="awards" class="tab-pane-active">
+    <a href="#newAward" class="btn btn-mini" data-toggle="tab">Add award</a>
+    <table class="table table-bordered">
+      <% @military_history_show.received_military_awards.each do |award| %>
+          <tr>
+            <td><%= image_tag("award.jpg", size: "40x40") %><%= award.awards %></td>
+          </tr>
+      <% end %>
+    </table>
+  </div>
+</div>

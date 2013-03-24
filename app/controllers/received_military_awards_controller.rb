@@ -44,7 +44,7 @@ class ReceivedMilitaryAwardsController < ApplicationController
 
     respond_to do |format|
       if @received_military_award.save
-        format.html { redirect_to @received_military_award, notice: 'Received military award was successfully created.' }
+        format.html { redirect_to @received_military_award.military_history.personal_detail, notice: 'Received military award was successfully created.' }
         format.json { render json: @received_military_award, status: :created, location: @received_military_award }
       else
         format.html { render action: "new" }

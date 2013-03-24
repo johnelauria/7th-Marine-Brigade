@@ -11,7 +11,7 @@
     </div>
   <% end %>
 
-    <%= f.hidden_field :military_history_id, value: @military_history.id %>
+    <%= f.hidden_field :military_history_id, value: @personal_detail.military_history.id if @military_school.military_history_id.nil? %>
 
   <div class="field">
     <%= f.label :name_of_school %><br />

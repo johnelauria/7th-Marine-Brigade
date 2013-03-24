@@ -25,6 +25,13 @@ class PersonalDetailsController < ApplicationController
     @sibling = @family_history.brothers_and_sisters
     @place_of_residence = PlaceOfResidence.new
     @educational_background = EducationalBackground.new
+    @military_history = MilitaryHistory.new
+    @military_history_show = @personal_detail.military_history
+    @important_unit_assignment = ImportantUnitAssignment.new
+    @military_school = MilitarySchool.new
+    @received_military_award = ReceivedMilitaryAward.new
+    @employment = Employment.new
+    @foreign_country_visited = ForeignCountryVisited.new
 
     respond_to do |format|
       format.html # show.html.erb

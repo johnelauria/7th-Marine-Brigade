@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130322051115) do
+ActiveRecord::Schema.define(:version => 20130324145549) do
 
   create_table "brothers_and_sisters", :force => true do |t|
     t.integer  "family_history_id"
@@ -59,6 +59,18 @@ ActiveRecord::Schema.define(:version => 20130322051115) do
     t.integer  "personal_detail_id"
   end
 
+  create_table "employments", :force => true do |t|
+    t.integer  "personal_detail_id"
+    t.date     "employment_date"
+    t.date     "retirement"
+    t.string   "type_of_employment"
+    t.string   "name"
+    t.text     "address"
+    t.text     "nature_of_leaving"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+  end
+
   create_table "family_histories", :force => true do |t|
     t.string   "father_name"
     t.date     "father_date_of_birth"
@@ -103,6 +115,16 @@ ActiveRecord::Schema.define(:version => 20130322051115) do
     t.datetime "created_at",                        :null => false
     t.datetime "updated_at",                        :null => false
     t.integer  "personal_detail_id"
+  end
+
+  create_table "foreign_country_visiteds", :force => true do |t|
+    t.integer  "personal_detail_id"
+    t.date     "start_date"
+    t.date     "end_date"
+    t.string   "country_visited"
+    t.string   "purpose_of_visit"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
   end
 
   create_table "important_unit_assignments", :force => true do |t|

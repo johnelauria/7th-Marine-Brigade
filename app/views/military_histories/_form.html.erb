@@ -11,6 +11,8 @@
     </div>
   <% end %>
 
+  <%= f.hidden_field :personal_detail_id, value: @personal_detail.id if @military_history.personal_detail_id.nil? %>
+
   <div class="field">
     <label>Date of AD / Enlisted in the AFP: </label><br />
     <%= f.date_select :date_of_cad, start_year: 1950, end_year: Date.today.strftime("%Y").to_i %>

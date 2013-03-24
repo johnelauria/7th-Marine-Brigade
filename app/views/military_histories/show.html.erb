@@ -5,12 +5,12 @@
 <%= link_to 'Edit', edit_military_history_path(@military_history) %>
 <p>
   <b>Date of CAD / Enlisted in the AFP:</b>
-  <%= @military_history.date_of_cad.strftime("%m-%d-%Y") %>
+  <%= @military_history_show.date_of_cad.strftime("%m-%d-%Y") %>
 </p>
 
 <p>
   <b>Date Commission / Enlistment:</b>
-  <%= @military_history.date_commission.strftime("%m-%d-%Y") %>
+  <%= @military_history_show.date_commission.strftime("%m-%d-%Y") %>
 </p>
 
 <b>Important Unit assignment since CAD/Enlistment in the service</b>
@@ -27,7 +27,7 @@
                 <th>Date Covered</th>
                 <th></th>
               </tr>
-              <% @military_history.important_unit_assignments.each do |unit| %>
+              <% @military_history_show.important_unit_assignments.each do |unit| %>
                 <tr>
                   <td><%= unit.unit %></td>
                   <td>From <%= unit.date1.strftime("%m-%d-%Y") %> until <%= unit.date2.strftime("%m-%d-%Y") %></td>
@@ -54,7 +54,7 @@
                 <th>Rating</th>
               </tr>
 
-              <% @military_history.military_schools.each do |military_school| %>
+              <% @military_history_show.military_schools.each do |military_school| %>
                   <tr>
                     <td><%= military_school.name_of_school %></td>
                     <td><%= military_school.location %></td>
@@ -75,7 +75,7 @@
       <div id="awards" class="tab-pane-active">
         <a href="#newAward" class="btn btn-mini" data-toggle="tab">Add award</a>
         <table class="table table-bordered">
-          <% @military_history.received_military_awards.each do |award| %>
+          <% @military_history_show.received_military_awards.each do |award| %>
           <tr>
             <td><%= award.awards %></td>
           </tr>

@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Personal detail:</b>
+  <%= @employment.personal_detail_id %>
+</p>
+
+<p>
+  <b>Employment date:</b>
+  <%= @employment.employment_date %>
+</p>
+
+<p>
+  <b>Retirement:</b>
+  <%= @employment.retirement %>
+</p>
+
+<p>
+  <b>Type of employment:</b>
+  <%= @employment.type_of_employment %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @employment.name %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @employment.address %>
+</p>
+
+<p>
+  <b>Nature of leaving:</b>
+  <%= @employment.nature_of_leaving %>
+</p>
+
+
+<%= link_to 'Edit', edit_employment_path(@employment) %> |
+<%= link_to 'Back', employments_path %>

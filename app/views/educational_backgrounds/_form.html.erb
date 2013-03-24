@@ -11,18 +11,18 @@
     </div>
   <% end %>
 <legend>Elementary</legend>
-  <%= f.hidden_field :personal_detail_id, value: @personal_detail.id %>
+  <%= f.hidden_field :personal_detail_id, value: @personal_detail.id if @educational_background.personal_detail_id.nil? %>
   <div class="field">
     <%= f.label :location %><br />
     <%= f.text_field :elementary_location %>
   </div>
   <div class="field">
     <%= f.label :from %><br />
-    <%= f.date_select :elementary_date_of_attendance1 %>
+    <%= f.date_select :elementary_date_of_attendance1, start_year: Date.today.strftime("%Y").to_i - 65, end_year: Date.today.strftime("%Y").to_i %>
   </div>
   <div class="field">
     <%= f.label :until %><br />
-    <%= f.date_select :elementary_date_of_attendance2 %>
+    <%= f.date_select :elementary_date_of_attendance2, start_year: Date.today.strftime("%Y").to_i - 65, end_year: Date.today.strftime("%Y").to_i %>
   </div>
   <div class="field">
     <%= f.label :year_graduate %><br />
@@ -31,15 +31,15 @@
     <legend>High School</legend>
   <div class="field">
     <%= f.label :location %><br />
-    <%= f.text_field :high_school_location %>
+    <%= f.text_field :high_school_location, placeholder: "Leave blank if not applicable" %>
   </div>
   <div class="field">
     <%= f.label :from %><br />
-    <%= f.date_select :high_school_date_of_attendance1 %>
+    <%= f.date_select :high_school_date_of_attendance1, start_year: Date.today.strftime("%Y").to_i - 65, end_year: Date.today.strftime("%Y").to_i %>
   </div>
   <div class="field">
     <%= f.label :until %><br />
-    <%= f.date_select :high_school_date_of_attendance2 %>
+    <%= f.date_select :high_school_date_of_attendance2, start_year: Date.today.strftime("%Y").to_i - 65, end_year: Date.today.strftime("%Y").to_i %>
   </div>
   <div class="field">
     <%= f.label :year_graduate %><br />
@@ -48,15 +48,15 @@
     <legend>College</legend>
   <div class="field">
     <%= f.label :location %><br />
-    <%= f.text_field :college_location %>
+    <%= f.text_field :college_location, placeholder: "Leave blank if not applicable" %>
   </div>
   <div class="field">
     <%= f.label :from %><br />
-    <%= f.date_select :college_date_of_attendance1 %>
+    <%= f.date_select :college_date_of_attendance1, start_year: Date.today.strftime("%Y").to_i - 65, end_year: Date.today.strftime("%Y").to_i %>
   </div>
   <div class="field">
     <%= f.label :until %><br />
-    <%= f.date_select :college_date_of_attendance2 %>
+    <%= f.date_select :college_date_of_attendance2, start_year: Date.today.strftime("%Y").to_i - 65, end_year: Date.today.strftime("%Y").to_i %>
   </div>
   <div class="field">
     <%= f.label :year_graduate %><br />
@@ -65,15 +65,15 @@
     <legend>Post Graduate</legend>
   <div class="field">
     <%= f.label :location %><br />
-    <%= f.text_field :post_graduate_location %>
+    <%= f.text_field :post_graduate_location, placeholder: "Leave blank if not applicable" %>
   </div>
   <div class="field">
     <%= f.label :from %><br />
-    <%= f.date_select :post_graduate_date_of_attendance1 %>
+    <%= f.date_select :post_graduate_date_of_attendance1, start_year: Date.today.strftime("%Y").to_i - 65, end_year: Date.today.strftime("%Y").to_i %>
   </div>
   <div class="field">
     <%= f.label :until %><br />
-    <%= f.date_select :post_graduate_date_of_attendance2 %>
+    <%= f.date_select :post_graduate_date_of_attendance2, start_year: Date.today.strftime("%Y").to_i - 65, end_year: Date.today.strftime("%Y").to_i %>
   </div>
   <div class="field">
     <%= f.label :year_graduate %><br />
@@ -82,15 +82,15 @@
     <legend>Other School Attended</legend>
   <div class="field">
     <%= f.label :location %><br />
-    <%= f.text_field :other_location %>
+    <%= f.text_field :other_location, placeholder: "Leave blank if not applicable" %>
   </div>
   <div class="field">
     <%= f.label :from %><br />
-    <%= f.date_select :other_date_of_attendance1 %>
+    <%= f.date_select :other_date_of_attendance1, start_year: Date.today.strftime("%Y").to_i - 65, end_year: Date.today.strftime("%Y").to_i %>
   </div>
   <div class="field">
     <%= f.label :until %><br />
-    <%= f.date_select :other_date_of_attendance2 %>
+    <%= f.date_select :other_date_of_attendance2, start_year: Date.today.strftime("%Y").to_i - 65, end_year: Date.today.strftime("%Y").to_i %>
   </div>
   <div class="field">
     <%= f.label :year_graduate %><br />

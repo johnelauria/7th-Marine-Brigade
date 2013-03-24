@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  personal_detail_id: 1
+  start_date: 2013-03-24
+  end_date: 2013-03-24
+  country_visited: MyString
+  purpose_of_visit: MyString
+
+two:
+  personal_detail_id: 1
+  start_date: 2013-03-24
+  end_date: 2013-03-24
+  country_visited: MyString
+  purpose_of_visit: MyString

@@ -44,7 +44,7 @@ class MilitarySchoolsController < ApplicationController
 
     respond_to do |format|
       if @military_school.save
-        format.html { redirect_to MilitaryHistory.find(@military_school.military_history_id), notice: 'Military school was successfully created.' }
+        format.html { redirect_to @military_school.military_history.personal_detail, notice: 'Military school was successfully created.' }
         format.json { render json: @military_school, status: :created, location: @military_school }
       else
         format.html { render action: "new" }

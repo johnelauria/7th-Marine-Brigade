@@ -47,7 +47,7 @@ class EducationalBackgroundsController < ApplicationController
         format.html { redirect_to @educational_background.personal_detail, notice: 'Educational background was successfully created.' }
         format.json { render json: @educational_background, status: :created, location: @educational_background }
       else
-        format.html { render action: "new" }
+        format.html { redirect_to @educational_background.personal_detail }
         format.json { render json: @educational_background.errors, status: :unprocessable_entity }
       end
     end
@@ -60,7 +60,7 @@ class EducationalBackgroundsController < ApplicationController
 
     respond_to do |format|
       if @educational_background.update_attributes(params[:educational_background])
-        format.html { redirect_to @educational_background, notice: 'Educational background was successfully updated.' }
+        format.html { redirect_to @educational_background.personal_detail, notice: 'Educational background was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
@@ -76,7 +76,7 @@ class EducationalBackgroundsController < ApplicationController
     @educational_background.destroy
 
     respond_to do |format|
-      format.html { redirect_to educational_backgrounds_url }
+      format.html { redirect_to @educational_background.personal_detail }
       format.json { head :no_content }
     end
   end
