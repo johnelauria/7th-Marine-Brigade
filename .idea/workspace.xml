@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="93a0be8b-6d4e-4ad9-8ff7-c56d84ccb073" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/marine_brigade.iml" afterPath="$PROJECT_DIR$/.idea/marine_brigade.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/personal_details_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/personal_details_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/personal_detail.rb" afterPath="$PROJECT_DIR$/app/models/personal_detail.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/personal_details/show.html.erb" afterPath="$PROJECT_DIR$/app/views/personal_details/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
     </list>
     <ignored path="marine_brigade.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,10 +24,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="show.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/personal_details/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="483" column="49" selection-start="23095" selection-end="23095" vertical-scroll-proportion="0.59300184">
+            <state line="470" column="41" selection-start="22461" selection-end="22461" vertical-scroll-proportion="-15.653846">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Gemfile" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Gemfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="43" selection-start="381" selection-end="381" vertical-scroll-proportion="-0.513089">
               <folding />
             </state>
           </provider>
@@ -60,7 +67,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/models/employment.rb" />
         <option value="$PROJECT_DIR$/app/views/employments/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/employments_controller.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20130324145549_create_foreign_country_visiteds.rb" />
@@ -76,6 +82,7 @@
         <option value="$PROJECT_DIR$/app/views/credit_reputations/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/models/credit_reputation.rb" />
         <option value="$PROJECT_DIR$/app/views/personal_details/show.html.erb" />
+        <option value="$PROJECT_DIR$/Gemfile" />
       </list>
     </option>
   </component>
@@ -687,7 +694,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294893" sideWeight="0.4969325" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294893" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3294893" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294893" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -753,11 +760,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/models/foreign_country_visited.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="29" selection-start="177" selection-end="177" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/foreign_country_visiteds_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="78" column="72" selection-start="2709" selection-end="2709" vertical-scroll-proportion="0.0" />
@@ -873,7 +875,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/personal_details/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="483" column="49" selection-start="23095" selection-end="23095" vertical-scroll-proportion="0.59300184">
+        <state line="470" column="41" selection-start="22461" selection-end="22461" vertical-scroll-proportion="-15.653846">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="43" selection-start="381" selection-end="381" vertical-scroll-proportion="-0.513089">
           <folding />
         </state>
       </provider>
