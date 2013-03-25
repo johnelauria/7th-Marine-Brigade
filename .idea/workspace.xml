@@ -3,22 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="93a0be8b-6d4e-4ad9-8ff7-c56d84ccb073" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/educational_backgrounds_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/educational_backgrounds_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/important_unit_assignments_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/important_unit_assignments_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/military_histories_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/military_histories_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/military_schools_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/military_schools_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/personal_details_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/personal_details_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/received_military_awards_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/received_military_awards_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/educational_background.rb" afterPath="$PROJECT_DIR$/app/models/educational_background.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/personal_detail.rb" afterPath="$PROJECT_DIR$/app/models/personal_detail.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/educational_backgrounds/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/educational_backgrounds/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/important_unit_assignments/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/important_unit_assignments/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/military_histories/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/military_histories/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/military_histories/show.html.erb" afterPath="$PROJECT_DIR$/app/views/military_histories/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/military_schools/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/military_schools/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/personal_characteristics/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/personal_characteristics/edit.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/personal_details/show.html.erb" afterPath="$PROJECT_DIR$/app/views/personal_details/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/received_military_awards/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/received_military_awards/_form.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
     </list>
@@ -42,70 +29,16 @@
       <file leaf-file-name="show.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/personal_details/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="439" column="22" selection-start="20677" selection-end="20677" vertical-scroll-proportion="0.8310139">
+            <state line="483" column="49" selection-start="23095" selection-end="23095" vertical-scroll-proportion="0.59300184">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_form.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/foreign_country_visiteds/_form.html.erb">
+      <file leaf-file-name="credit_reputations_controller.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/credit_reputations_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="36" selection-start="1183" selection-end="1183" vertical-scroll-proportion="-13.461538">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="personal_details_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/personal_details_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="56" selection-start="1307" selection-end="1307" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="foreign_country_visited.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/foreign_country_visited.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="29" selection-start="177" selection-end="177" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="foreign_country_visiteds_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/foreign_country_visiteds_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="78" column="72" selection-start="2709" selection-end="2709" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_form.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/employments/_form.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="36" selection-start="1205" selection-end="1205" vertical-scroll-proportion="-16.346153">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="employments_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/employments_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="61" selection-start="1618" selection-end="1618" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="employment.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/employment.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="29" selection-start="194" selection-end="194" vertical-scroll-proportion="0.0">
+            <state line="65" column="42" selection-start="2048" selection-end="2048" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -127,21 +60,21 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/controllers/important_unit_assignments_controller.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/military_schools_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/military_schools/_form.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/received_military_awards/_form.html.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/received_military_awards_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/military_histories/_show.html.erb" />
         <option value="$PROJECT_DIR$/app/models/employment.rb" />
         <option value="$PROJECT_DIR$/app/views/employments/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/employments_controller.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20130324145549_create_foreign_country_visiteds.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/personal_details_controller.rb" />
         <option value="$PROJECT_DIR$/app/models/foreign_country_visited.rb" />
-        <option value="$PROJECT_DIR$/app/models/personal_detail.rb" />
         <option value="$PROJECT_DIR$/app/controllers/foreign_country_visiteds_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/foreign_country_visiteds/_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/military_histories/show.html.erb" />
+        <option value="$PROJECT_DIR$/db/migrate/20130324235207_create_credit_reputations.rb" />
+        <option value="$PROJECT_DIR$/app/models/personal_detail.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/personal_details_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/credit_reputations/edit.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/credit_reputations_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/credit_reputations/_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/models/credit_reputation.rb" />
         <option value="$PROJECT_DIR$/app/views/personal_details/show.html.erb" />
       </list>
     </option>
@@ -346,6 +279,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="credit_reputations" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="marine_brigade" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="marine_brigade" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -417,7 +372,7 @@
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="dynamic.classpath" value="false" />
   </component>
-  <component name="RunManager" selected="Rake.db:migrate">
+  <component name="RunManager" selected="Rails.Development: marine_brigade">
     <configuration default="false" name="db:migrate" type="RakeRunConfigurationType" factoryName="Rake" temporary="true">
       <module name="marine_brigade" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
@@ -726,10 +681,9 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294893" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294893" sideWeight="0.49591002" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294893" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28323108" sideWeight="0.6705107" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28936607" sideWeight="0.6705107" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294893" sideWeight="0.4969325" order="9" side_tool="true" content_ui="tabs" />
@@ -738,6 +692,7 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294893" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294893" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -798,39 +753,29 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/controllers/received_military_awards_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/models/foreign_country_visited.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="55" selection-start="2469" selection-end="2469" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="2" column="29" selection-start="177" selection-end="177" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/military_histories/_show.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/foreign_country_visiteds_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="25" selection-start="2955" selection-end="2955" vertical-scroll-proportion="-26.653847">
-          <folding />
-        </state>
+        <state line="78" column="72" selection-start="2709" selection-end="2709" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/received_military_awards/show.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/military_histories/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="21" column="98" selection-start="822" selection-end="880" vertical-scroll-proportion="0.5944334" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20130324141705_create_employments.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/foreign_country_visiteds/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="30" selection-start="320" selection-end="320" vertical-scroll-proportion="0.32130584">
-          <folding />
-        </state>
+        <state line="32" column="36" selection-start="1183" selection-end="1183" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/employment.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/military_histories/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="29" selection-start="194" selection-end="194" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="69" column="43" selection-start="2831" selection-end="2831" vertical-scroll-proportion="0.62390673" />
       </provider>
     </entry>
     <entry file="uml://RailsDependency/#marine_brigade">
@@ -839,146 +784,96 @@
           <ID>RailsDependency</ID>
           <OriginalElement>#marine_brigade</OriginalElement>
           <nodes>
-            <node x="761.0" y="2460.95467032967">ImportantUnitAssignment</node>
-            <node x="390.5" y="0.0">FamilyHistory</node>
-            <node x="761.0" y="2609.95467032967">MilitarySchool</node>
-            <node x="416.5" y="909.0">PersonalCharacteristic</node>
-            <node x="763.0" y="1308.0">Child</node>
-            <node x="366.0" y="2434.0">MilitaryHistory</node>
-            <node x="424.0" y="1547.0">Employment</node>
-            <node x="424.0" y="2285.0">PlaceOfResidence</node>
-            <node x="0.0" y="1351.70467032967">PersonalDetail</node>
-            <node x="392.5" y="1776.0">EducationalBackground</node>
-            <node x="766.0" y="370.0">BrothersAndSister</node>
-            <node x="761.0" y="2244.6080586080584">ReceivedMilitaryAward</node>
-            <node x="424.0" y="1218.0">MaritalHistory</node>
+            <node x="" y="">ImportantUnitAssignment</node>
+            <node x="" y="">FamilyHistory</node>
+            <node x="" y="">MilitarySchool</node>
+            <node x="" y="">PersonalCharacteristic</node>
+            <node x="" y="">Child</node>
+            <node x="" y="">MilitaryHistory</node>
+            <node x="" y="">Employment</node>
+            <node x="" y="">PlaceOfResidence</node>
+            <node x="" y="">PersonalDetail</node>
+            <node x="" y="">ForeignCountryVisited</node>
+            <node x="" y="">CreditReputation</node>
+            <node x="" y="">EducationalBackground</node>
+            <node x="" y="">BrothersAndSister</node>
+            <node x="" y="">ReceivedMilitaryAward</node>
+            <node x="" y="">MaritalHistory</node>
           </nodes>
           <notes />
-          <edges>
-            <edge source="PersonalDetail" target="MilitaryHistory">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="MilitaryHistory" target="ReceivedMilitaryAward">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="MilitaryHistory" target="MilitarySchool">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="MilitaryHistory" target="ImportantUnitAssignment">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="PersonalDetail" target="Employment">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="PersonalDetail" target="FamilyHistory">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="PersonalDetail" target="PlaceOfResidence">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="PersonalDetail" target="EducationalBackground">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="PersonalDetail" target="MaritalHistory">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="PersonalDetail" target="PersonalCharacteristic">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="MaritalHistory" target="Child">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="FamilyHistory" target="BrothersAndSister">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="0.7997121266642677" x="143.10799136069113" y="1566.1079913606911" />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.868769716088328" x="445.0" y="1612.0" />
           <SelectedNodes />
           <Categories>
-            <Category>Association fields</Category>
             <Category>Migration fields</Category>
+            <Category>Association fields</Category>
           </Categories>
+          <SCOPE>All</SCOPE>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/employments/_form.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/models/personal_detail.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="36" selection-start="1205" selection-end="1205" vertical-scroll-proportion="-16.346153">
+        <state line="10" column="28" selection-start="538" selection-end="538" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20130324235207_create_credit_reputations.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="38" selection-start="555" selection-end="555" vertical-scroll-proportion="0.4089347" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/credit_reputations/edit.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="22" selection-start="56" selection-end="56" vertical-scroll-proportion="0.063432835">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/employments_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/educational_backgrounds_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="61" selection-start="1618" selection-end="1618" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20130324145549_create_foreign_country_visiteds.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="58" selection-start="207" selection-end="207" vertical-scroll-proportion="0.23480663">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.3005464">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/personal_details_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="56" selection-start="1307" selection-end="1307" vertical-scroll-proportion="0.0">
+        <state line="24" column="28" selection-start="824" selection-end="824" vertical-scroll-proportion="-0.61020035">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/personal_detail.rb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/received_military_awards_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="36" selection-start="509" selection-end="509" vertical-scroll-proportion="0.27868852">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.3005464">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/foreign_country_visited.rb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/credit_reputations_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="29" selection-start="177" selection-end="177" vertical-scroll-proportion="0.0">
+        <state line="65" column="42" selection-start="2048" selection-end="2048" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/foreign_country_visiteds_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/models/credit_reputation.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="72" selection-start="2709" selection-end="2709" vertical-scroll-proportion="0.0">
+        <state line="17" column="14" selection-start="794" selection-end="794" vertical-scroll-proportion="0.66548043">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/military_histories/_form.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/credit_reputations/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="98" selection-start="822" selection-end="880" vertical-scroll-proportion="0.5944334">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/foreign_country_visiteds/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="36" selection-start="1183" selection-end="1183" vertical-scroll-proportion="-13.461538">
+        <state line="54" column="56" selection-start="2111" selection-end="2111" vertical-scroll-proportion="0.71823204">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/personal_details/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="439" column="22" selection-start="20677" selection-end="20677" vertical-scroll-proportion="0.8310139">
+        <state line="483" column="49" selection-start="23095" selection-end="23095" vertical-scroll-proportion="0.59300184">
           <folding />
         </state>
       </provider>

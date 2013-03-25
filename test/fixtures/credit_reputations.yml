@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  personal_detail_id: 1
+  salary_defendant: false
+  other_income: MyText
+  name_address_of_banks: MyText
+  filed_assets_liabilities: false
+  what_agency: MyString
+
+two:
+  personal_detail_id: 1
+  salary_defendant: false
+  other_income: MyText
+  name_address_of_banks: MyText
+  filed_assets_liabilities: false
+  what_agency: MyString

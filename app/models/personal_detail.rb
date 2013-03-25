@@ -8,4 +8,5 @@ class PersonalDetail < ActiveRecord::Base
   has_one :military_history
   has_many :employments
   has_many :foreign_country_visiteds
+  has_one :credit_reputation
 end

@@ -14,6 +14,7 @@
       <li><a href="#militaryHistory" data-toggle="tab">Military History</a></li>
       <li><a href="#employment" data-toggle="tab">Employment</a></li>
       <li><a href="#foreignCountryVisited" data-toggle="tab">Foreign Country Visited</a></li>
+      <li><a href="#creditReputation" data-toggle="tab">Credit Reputation</a></li>
     </ul>
   </div>
   <div class="span9">
@@ -447,6 +448,42 @@
             </tr>
           <% end %>
         </table>
+      <% end %>
+    </div>
+    <div id="creditReputation" class="tab-pane">
+      <% if @personal_detail.credit_reputation.nil? %>
+        <%= render 'credit_reputations/form' %>
+      <% else %>
+        <p><b>Salary Dependent: </b> <%= @personal_detail.credit_reputation.salary_defendant ? "Yes" : "No" %></p>
+        <% unless @personal_detail.credit_reputation.salary_defendant? %>
+        <p><b>Other sources of income:</b><%= @personal_detail.credit_reputation.other_income %></p>
+        <% end %>
+        <p><b>Name and address of Banks or credit institutions with accounts/loans: </b><%= @personal_detail.credit_reputation.name_address_of_banks %></p>
+        <p><b>Filed statements of assets and liabilities with any government agency: </b><%= @personal_detail.credit_reputation.filed_assets_liabilities ? "Yes" : "No" %></p>
+        <% if @personal_detail.credit_reputation.filed_assets_liabilities? %>
+          <p><b>Agency: </b><%= @personal_detail.credit_reputation.what_agency %></p>
+        <% end %>
+        <p><b>Filed Income tax return: </b><%= @personal_detail.credit_reputation.filed_income_tax_return ? "Yes" : "No" %></p>
+        <p><b>3 Credit References in the Philippines: </b></p>
+        <table class="table table-bordered">
+          <tr>
+            <th>Name</th>
+            <th>Address</th>
+          </tr>
+          <tr>
+            <td><%= @personal_detail.credit_reputation.credit_reference_name1 %></td>
+            <td><%= @personal_detail.credit_reputation.credit_reference_address1 %></td>
+          </tr>
+          <tr>
+            <td><%= @personal_detail.credit_reputation.credit_reference_name2 %></td>
+            <td><%= @personal_detail.credit_reputation.credit_reference_address2 %></td>
+          </tr>
+          <tr>
+            <td><%= @personal_detail.credit_reputation.credit_reference_name3 %></td>
+            <td><%= @personal_detail.credit_reputation.credit_reference_address3 %></td>
+          </tr>
+        </table>
+          <%= link_to "Edit Credit Reputation", edit_credit_reputation_path(@personal_detail.credit_reputation) %>
       <% end %>
     </div>
     </div>

@@ -32,6 +32,7 @@ class PersonalDetailsController < ApplicationController
     @received_military_award = ReceivedMilitaryAward.new
     @employment = Employment.new
     @foreign_country_visited = ForeignCountryVisited.new
+    @credit_reputation = CreditReputation.new
 
     respond_to do |format|
       format.html # show.html.erb

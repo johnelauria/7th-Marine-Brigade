@@ -1,4 +1,7 @@
 MarineBrigade::Application.routes.draw do
+  resources :credit_reputations
+
+
   resources :foreign_country_visiteds
 
 

@@ -1,0 +1,2 @@
+module CreditReputationsHelper
+end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130324145549) do
+ActiveRecord::Schema.define(:version => 20130324235207) do
 
   create_table "brothers_and_sisters", :force => true do |t|
     t.integer  "family_history_id"
@@ -30,6 +30,24 @@ ActiveRecord::Schema.define(:version => 20130324145549) do
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false
     t.integer  "marital_history_id"
+  end
+
+  create_table "credit_reputations", :force => true do |t|
+    t.integer  "personal_detail_id"
+    t.boolean  "salary_defendant"
+    t.text     "other_income"
+    t.text     "name_address_of_banks"
+    t.boolean  "filed_assets_liabilities"
+    t.string   "what_agency"
+    t.boolean  "filed_income_tax_return"
+    t.string   "credit_reference_name1"
+    t.text     "credit_reference_address1"
+    t.string   "credit_reference_name2"
+    t.string   "credit_reference_address2"
+    t.string   "credit_reference_name3"
+    t.text     "credit_reference_address3"
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
   end
 
   create_table "educational_backgrounds", :force => true do |t|

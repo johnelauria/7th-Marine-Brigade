@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Personal detail:</b>
+  <%= @credit_reputation.personal_detail_id %>
+</p>
+
+<p>
+  <b>Salary defendant:</b>
+  <%= @credit_reputation.salary_defendant %>
+</p>
+
+<p>
+  <b>Other income:</b>
+  <%= @credit_reputation.other_income %>
+</p>
+
+<p>
+  <b>Name address of banks:</b>
+  <%= @credit_reputation.name_address_of_banks %>
+</p>
+
+<p>
+  <b>Filed assets liabilities:</b>
+  <%= @credit_reputation.filed_assets_liabilities %>
+</p>
+
+<p>
+  <b>What agency:</b>
+  <%= @credit_reputation.what_agency %>
+</p>
+
+
+<%= link_to 'Edit', edit_credit_reputation_path(@credit_reputation) %> |
+<%= link_to 'Back', credit_reputations_path %>

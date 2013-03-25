@@ -1,0 +1,33 @@
+<h1>Listing credit_reputations</h1>
+
+<table>
+  <tr>
+    <th>Personal detail</th>
+    <th>Salary defendant</th>
+    <th>Other income</th>
+    <th>Name address of banks</th>
+    <th>Filed assets liabilities</th>
+    <th>What agency</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @credit_reputations.each do |credit_reputation| %>
+  <tr>
+    <td><%= credit_reputation.personal_detail_id %></td>
+    <td><%= credit_reputation.salary_defendant %></td>
+    <td><%= credit_reputation.other_income %></td>
+    <td><%= credit_reputation.name_address_of_banks %></td>
+    <td><%= credit_reputation.filed_assets_liabilities %></td>
+    <td><%= credit_reputation.what_agency %></td>
+    <td><%= link_to 'Show', credit_reputation %></td>
+    <td><%= link_to 'Edit', edit_credit_reputation_path(credit_reputation) %></td>
+    <td><%= link_to 'Destroy', credit_reputation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Credit reputation', new_credit_reputation_path %>

@@ -1,0 +1,57 @@
+<%= form_for(@credit_reputation) do |f| %>
+  <% if @credit_reputation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@credit_reputation.errors.count, "error") %> prohibited this credit_reputation from being saved:</h2>
+
+      <ul>
+      <% @credit_reputation.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <%= f.hidden_field :personal_detail_id, value: @personal_detail.id if @credit_reputation.personal_detail_id.nil? %>
+
+  <div class="field">
+    <label>Are you entirely salary Dependent?
+    <%= f.check_box :salary_defendant %></label>
+  </div>
+  <div class="field">
+    <label>If no, state other sources of income</label>
+    <%= f.text_area :other_income, rows: 2, placeholder: "Leave blank if you are not salary dependent" %>
+  </div>
+  <div class="field">
+    <label>Name and address of Banks or credit institutions with which you have accounts/loans:</label><br />
+    <%= f.text_area :name_address_of_banks, rows: 2 %>
+  </div>
+  <div class="field">
+    <label>Have you filed a statement of your assets and liabilities with any government agency?
+    <%= f.check_box :filed_assets_liabilities %></label>
+  </div>
+  <div class="field">
+    <label>If so, what agency?</label><br />
+    <%= f.text_field :what_agency, rows: 2, placeholder: "Leave blank if you did not file" %>
+  </div>
+  <label>Give three (3) Credit References in the Philippines</label>
+    <table class="table table-bordered">
+      <tr>
+        <th>Name</th>
+        <th>Address</th>
+      </tr>
+      <tr>
+        <td><%= f.text_field :credit_reference_name1 %></td>
+        <td><%= f.text_area :credit_reference_address1, rows: 2 %></td>
+      </tr>
+      <tr>
+        <td><%= f.text_field :credit_reference_name2 %></td>
+        <td><%= f.text_area :credit_reference_address2, rows: 2 %></td>
+      </tr>      <tr>
+      <td><%= f.text_field :credit_reference_name3 %></td>
+      <td><%= f.text_area :credit_reference_address3, rows: 2 %></td>
+    </tr>
+    </table>
+  <div class="actions">
+    <%= f.submit "Save", class: "btn" %>
+  </div>
+<% end %>
