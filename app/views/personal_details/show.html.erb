@@ -15,6 +15,10 @@
       <li><a href="#employment" data-toggle="tab">Employment</a></li>
       <li><a href="#foreignCountryVisited" data-toggle="tab">Foreign Country Visited</a></li>
       <li><a href="#creditReputation" data-toggle="tab">Credit Reputation</a></li>
+      <li><a href="#arrestRecordAndConduct" data-toggle="tab">Arrest Record and Conduct</a></li>
+      <li><a href="#generalInformation" data-toggle="tab">General Information</a></li>
+      <li><a href="#organization" data-toggle="tab">Organizations</a></li>
+      <li><a href="#miscellaneous" data-toggle="tab">Miscellanous</a> </li>
     </ul>
   </div>
   <div class="span9">
@@ -484,6 +488,169 @@
           </tr>
         </table>
           <%= link_to "Edit Credit Reputation", edit_credit_reputation_path(@personal_detail.credit_reputation) %>
+      <% end %>
+    </div>
+    <div id="arrestRecordAndConduct" class="tab-pane">
+      <% if @personal_detail.arrest_record_and_conduct.nil? %>
+        <%= render 'arrest_record_and_conducts/form' %>
+      <% else %>
+        <p><b>Investigated, indicted or convicted for any violation of the law: </b><%= @personal_detail.arrest_record_and_conduct.convicted_for_violation ? "Yes" : "No" %></p>
+        <% unless @personal_detail.arrest_record_and_conduct.name_of_court.nil? %>
+        <p><b>Name of Court, nature of offenses and disposition of the case: </b><%= @personal_detail.arrest_record_and_conduct.name_of_court %></p>
+        <% end %>
+        <p><b>Family member investigated/arrested, indicated or convicted for violation of the law: </b><%= @personal_detail.arrest_record_and_conduct.family_member_convicted ? "Yes" : "No" %></p>
+        <% if @personal_detail.arrest_record_and_conduct.family_member_convicted? %>
+          <p><b>Name of court, nature of the offense and disposition of the case: </b><%= @personal_detail.arrest_record_and_conduct.family_name_of_court %></p>
+        <% end %>
+        <p><b>Charged in any administrative case: </b><%= @personal_detail.arrest_record_and_conduct.administrative_case_charged ? "Yes" : "No" %></p>
+        <% if @personal_detail.arrest_record_and_conduct.administrative_case_charged? %>
+          <p><b>Details: </b><%= @personal_detail.arrest_record_and_conduct.explain_administrative_charge %></p>
+        <% end %>
+        <p><b>Arrested or detained in pursuant to the provision of PD 1081 and it's implementation orders (GO, SO, LOI): </b><%= @personal_detail.arrest_record_and_conduct.arrested_or_detained_pd ? "Yes" : "No" %></p>
+        <% if @personal_detail.arrest_record_and_conduct.arrested_or_detained_pd? %>
+        <p><b>Nature of the case and place of detention: </b><%= @personal_detail.arrest_record_and_conduct.case_nature_place_of_detention %></p>
+        <% end %>
+        <p><b>Taking Liquor or Narcotics: </b><%= @personal_detail.arrest_record_and_conduct.taking_liquor_or_narcotic %></p>
+        <%= link_to "Edit Arrest record and conduct information", edit_arrest_record_and_conduct_path(@personal_detail.arrest_record_and_conduct) %>
+      <% end %>
+    </div>
+    <div id="generalInformation" class="tab-pane">
+      <% if @personal_detail.general_information.nil? %>
+        <%= render 'general_informations/form' %>
+      <% else %>
+        <b>Five (5) Character References known for three (3) years or longer that is not related to <%= @personal_detail.rank %> <%= @personal_detail.first_name %></b>
+        <table class="table table-bordered">
+          <tr>
+            <th>Name</th>
+            <th>Address</th>
+          </tr>
+          <tr>
+            <td><%= @personal_detail.general_information.reference_name1 %></td>
+            <td><%= @personal_detail.general_information.reference_address1 %></td>
+          </tr>
+          <tr>
+            <td><%= @personal_detail.general_information.reference_name2 %></td>
+            <td><%= @personal_detail.general_information.reference_address2 %></td>
+          </tr>
+          <tr>
+            <td><%= @personal_detail.general_information.reference_name3 %></td>
+            <td><%= @personal_detail.general_information.reference_address3 %></td>
+          </tr>
+          <tr>
+            <td><%= @personal_detail.general_information.reference_name4 %></td>
+            <td><%= @personal_detail.general_information.reference_address4 %></td>
+          </tr>
+          <tr>
+            <td><%= @personal_detail.general_information.reference_name5 %></td>
+            <td><%= @personal_detail.general_information.reference_address5 %></td>
+          </tr>
+        </table>
+        <b>List down three (3) neighbors at your present address or residence:</b>
+        <table class="table table-bordered">
+          <tr>
+            <th>Name</th>
+            <th>Address</th>
+          </tr>
+          <tr>
+            <td><%= @personal_detail.general_information.neighbor_name1 %></td>
+            <td><%= @personal_detail.general_information.neighbor_address1 %></td>
+          </tr>
+          <tr>
+            <td><%= @personal_detail.general_information.neighbor_name2 %></td>
+            <td><%= @personal_detail.general_information.neighbor_address2 %></td>
+          </tr>
+          <tr>
+            <td><%= @personal_detail.general_information.neighbor_name3 %></td>
+            <td><%= @personal_detail.general_information.neighbor_address3 %></td>
+          </tr>
+        </table>
+      <% end %>
+    </div>
+    <div id="organization" class="tab-pane">
+        <b>List of organizations or social groups which you have been a member of :</b>
+          <div class="accordion" id="organizationsForm">
+            <div class="accordion-group">
+              <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#organizationsForm" href="#organizations">
+                  Add Organization
+                </a>
+              </div>
+              <div id="organizations" class="accordion-body collapse">
+                <div class="accordion-inner">
+                  <%= render 'organizations/form' %>
+                </div>
+              </div>
+            </div>
+          </div>
+        <table class="table table-bordered">
+          <tr>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Date of membership & Posit Credit</th>
+          </tr>
+          <% @personal_detail.organizations.each do |organization| %>
+          <tr>
+            <td><%= organization.name %></td>
+            <td><%= organization.address %></td>
+            <td><%= organization.date_of_membership.strftime("%m-%d-%Y") %></td>
+          </tr>
+          <% end %>
+        </table>
+    </div>
+    <div id="miscellaneous" class="tab-pane">
+      <% if @personal_detail.miscellaneou.nil? %>
+        <%= render 'miscellaneous/form' %>
+      <% else %>
+        <p><b>Hobbies, Sports and Past time: </b><%= @personal_detail.miscellaneou.hobbies %></p>
+          <b>Language and dialect (Indicate ability as fluent, fair or poor )</b><br>
+          <div class="tab-content">
+            <div id="languages" class="tab-pane active">
+              <a href="#addLanguage" data-toggle="tab" class="btn btn-mini">Add Language/Dialect</a>
+              <table class="table table-bordered">
+                <tr>
+                  <th>Languages and Dialects</th>
+                  <th>Speaks</th>
+                  <th>Read</th>
+                  <th>Write</th>
+                  <th>
+                  <% @personal_detail.miscellaneou.language_and_dialects.each do |language| %>
+                    <tr>
+                      <td><%= language.language %></td>
+                      <td><%= language.speaks %></td>
+                      <td><%= language.read %></td>
+                      <td><%= language.write %></td>
+                      <td><%= link_to language, method: :delete, data: { confirm: "Are you sure? "}, class: "btn btn-mini btn-danger", title: "Delete" do %>
+                            <i class="icon-trash icon-white"></i><% end %>
+                      </td>
+                    </tr>
+                <% end %>
+              </table>
+            </div>
+            <div id="addLanguage" class="tab-pane">
+              <a href="#languages" data-toggle="tab" class="btn btn-mini">List Languages/Dialects</a>
+              <table class="table table-bordered">
+                <tr>
+                  <th>Language and Dialect</th>
+                  <th>Speaks</th>
+                  <th>Read</th>
+                  <th>Write</th>
+                </tr>
+                <%= form_for(LanguageAndDialect.new) do |f| %>
+                    <%= f.hidden_field :miscellaneou_id, value: @personal_detail.miscellaneou.id %>
+                    <tr>
+                      <td><%= f.text_field :language, style: "width:150px;" %></td>
+                      <td><%= f.select :speaks, "<option>Fluent</option><option>Fair</option><option>Poor</option>".html_safe %></td>
+                      <td><%= f.select :read, "<option>Fluent</option><option>Fair</option><option>Poor</option>".html_safe %></td>
+                      <td><%= f.select :write, "<option>Fluent</option><option>Fair</option><option>Poor</option>".html_safe %></td>
+                    </tr>
+                    <tr>
+                      <td colspan="4"><%= f.submit "Save", class: "btn" %></td>
+                    </tr>
+                <% end %>
+              </table>
+            </div>
+          </div>
+        <p><b>Willing to undergo a lie detection test: </b><%= @personal_detail.miscellaneou.lie_detection_test ? "Yes" : "No" %></p>
       <% end %>
     </div>
     </div>

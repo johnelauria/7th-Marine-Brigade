@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Personal detail:</b>
+  <%= @miscellaneou.personal_detail_id %>
+</p>
+
+<p>
+  <b>Hobbies:</b>
+  <%= @miscellaneou.hobbies %>
+</p>
+
+<p>
+  <b>Lie detection test:</b>
+  <%= @miscellaneou.lie_detection_test %>
+</p>
+
+
+<%= link_to 'Edit', edit_miscellaneou_path(@miscellaneou) %> |
+<%= link_to 'Back', miscellaneous_path %>

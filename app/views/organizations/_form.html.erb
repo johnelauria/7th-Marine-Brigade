@@ -1,0 +1,31 @@
+<%= form_for(@organization) do |f| %>
+  <% if @organization.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@organization.errors.count, "error") %> prohibited this organization from being saved:</h2>
+
+      <ul>
+      <% @organization.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <%= f.hidden_field :personal_detail_id, value: @personal_detail.id if @organization.personal_detail_id.nil? %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br />
+    <%= f.text_area :address, rows: 2 %>
+  </div>
+  <div class="field">
+    <%= f.label :date_of_membership %><br />
+    <%= f.date_select :date_of_membership, start_year: Date.today.strftime("%Y").to_i - 60, end_year: Date.today.strftime("%Y").to_i %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Save", class: "btn" %>
+  </div>
+<% end %>

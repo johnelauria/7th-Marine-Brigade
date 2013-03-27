@@ -1,0 +1,43 @@
+<h1>Listing general_informations</h1>
+
+<table>
+  <tr>
+    <th>Personal detail</th>
+    <th>Reference name1</th>
+    <th>Reference address1</th>
+    <th>Reference name2</th>
+    <th>Reference address2</th>
+    <th>Reference name3</th>
+    <th>Reference address3</th>
+    <th>Reference name4</th>
+    <th>Reference address4</th>
+    <th>Reference name5</th>
+    <th>Reference address5</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @general_informations.each do |general_information| %>
+  <tr>
+    <td><%= general_information.personal_detail_id %></td>
+    <td><%= general_information.reference_name1 %></td>
+    <td><%= general_information.reference_address1 %></td>
+    <td><%= general_information.reference_name2 %></td>
+    <td><%= general_information.reference_address2 %></td>
+    <td><%= general_information.reference_name3 %></td>
+    <td><%= general_information.reference_address3 %></td>
+    <td><%= general_information.reference_name4 %></td>
+    <td><%= general_information.reference_address4 %></td>
+    <td><%= general_information.reference_name5 %></td>
+    <td><%= general_information.reference_address5 %></td>
+    <td><%= link_to 'Show', general_information %></td>
+    <td><%= link_to 'Edit', edit_general_information_path(general_information) %></td>
+    <td><%= link_to 'Destroy', general_information, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New General information', new_general_information_path %>

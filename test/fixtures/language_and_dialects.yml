@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  miscellaneou_id: 1
+  language: MyString
+  speaks: MyString
+  read: MyString
+  write: MyString
+
+two:
+  miscellaneou_id: 1
+  language: MyString
+  speaks: MyString
+  read: MyString
+  write: MyString

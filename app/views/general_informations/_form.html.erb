@@ -1,0 +1,66 @@
+<%= form_for(@general_information) do |f| %>
+  <% if @general_information.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@general_information.errors.count, "error") %> prohibited this general_information from being saved:</h2>
+
+      <ul>
+      <% @general_information.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <%= f.hidden_field :personal_detail_id, value: @personal_detail.id if @general_information.personal_detail_id.nil? %>
+    <b>Give five character references you have known for three (3) years or longer who are not you’re your
+      relatives.</b>
+    <table class="table table-bordered">
+      <tr>
+        <th>Name</th>
+        <th>Address</th>
+      </tr>
+      <tr>
+        <td><%= f.text_field :reference_name1 %></td>
+        <td><%= f.text_area :reference_address1, rows: 2 %></td>
+      </tr>
+      <tr>
+        <td><%= f.text_field :reference_name2 %></td>
+        <td><%= f.text_area :reference_address2, rows: 2 %></td>
+      </tr>
+      <tr>
+        <td><%= f.text_field :reference_name3 %></td>
+        <td><%= f.text_area :reference_address3, rows: 2 %></td>
+      </tr>
+      <tr>
+        <td><%= f.text_field :reference_name4 %></td>
+        <td><%= f.text_area :reference_address4, rows: 2 %></td>
+      </tr>
+      <tr>
+        <td><%= f.text_field :reference_name5 %></td>
+        <td><%= f.text_area :reference_address5, rows: 2 %></td>
+      </tr>
+    </table>
+    <b>List down three (3) neighbors at your present address or residence:</b>
+    <table class="table table-bordered">
+      <tr>
+        <th>Name</th>
+        <th>Address</th>
+      </tr>
+      <tr>
+        <td><%= f.text_field :neighbor_name1 %></td>
+        <td><%= f.text_area :neighbor_address1, rows: 2 %></td>
+      </tr>
+      <tr>
+        <td><%= f.text_field :neighbor_name2 %></td>
+        <td><%= f.text_area :neighbor_address2, rows: 2 %></td>
+      </tr>
+      <tr>
+        <td><%= f.text_field :neighbor_name3 %></td>
+        <td><%= f.text_area :neighbor_address3, rows: 2 %></td>
+      </tr>
+    </table>
+
+  <div class="actions">
+    <%= f.submit "Save", class: "btn" %>
+  </div>
+<% end %>

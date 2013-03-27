@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  personal_detail_id: 1
+  convicted_for_violation: false
+  name_of_court: MyText
+  family_member_convicted: false
+  family_name_of_court: MyText
+  administrative_case_charged: false
+  explain_administrative_charge: MyText
+  arrested_or_detained_pd: false
+  case_nature_place_of_detention: MyText
+  taking_liquor_or_narcotic: false
+
+two:
+  personal_detail_id: 1
+  convicted_for_violation: false
+  name_of_court: MyText
+  family_member_convicted: false
+  family_name_of_court: MyText
+  administrative_case_charged: false
+  explain_administrative_charge: MyText
+  arrested_or_detained_pd: false
+  case_nature_place_of_detention: MyText
+  taking_liquor_or_narcotic: false

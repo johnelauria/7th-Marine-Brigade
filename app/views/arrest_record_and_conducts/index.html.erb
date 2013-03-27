@@ -1,0 +1,41 @@
+<h1>Listing arrest_record_and_conducts</h1>
+
+<table>
+  <tr>
+    <th>Personal detail</th>
+    <th>Convicted for violation</th>
+    <th>Name of court</th>
+    <th>Family member convicted</th>
+    <th>Family name of court</th>
+    <th>Administrative case charged</th>
+    <th>Explain administrative charge</th>
+    <th>Arrested or detained pd</th>
+    <th>Case nature place of detention</th>
+    <th>Taking liquor or narcotic</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @arrest_record_and_conducts.each do |arrest_record_and_conduct| %>
+  <tr>
+    <td><%= arrest_record_and_conduct.personal_detail_id %></td>
+    <td><%= arrest_record_and_conduct.convicted_for_violation %></td>
+    <td><%= arrest_record_and_conduct.name_of_court %></td>
+    <td><%= arrest_record_and_conduct.family_member_convicted %></td>
+    <td><%= arrest_record_and_conduct.family_name_of_court %></td>
+    <td><%= arrest_record_and_conduct.administrative_case_charged %></td>
+    <td><%= arrest_record_and_conduct.explain_administrative_charge %></td>
+    <td><%= arrest_record_and_conduct.arrested_or_detained_pd %></td>
+    <td><%= arrest_record_and_conduct.case_nature_place_of_detention %></td>
+    <td><%= arrest_record_and_conduct.taking_liquor_or_narcotic %></td>
+    <td><%= link_to 'Show', arrest_record_and_conduct %></td>
+    <td><%= link_to 'Edit', edit_arrest_record_and_conduct_path(arrest_record_and_conduct) %></td>
+    <td><%= link_to 'Destroy', arrest_record_and_conduct, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Arrest record and conduct', new_arrest_record_and_conduct_path %>

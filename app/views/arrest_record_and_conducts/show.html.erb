@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Personal detail:</b>
+  <%= @arrest_record_and_conduct.personal_detail_id %>
+</p>
+
+<p>
+  <b>Convicted for violation:</b>
+  <%= @arrest_record_and_conduct.convicted_for_violation %>
+</p>
+
+<p>
+  <b>Name of court:</b>
+  <%= @arrest_record_and_conduct.name_of_court %>
+</p>
+
+<p>
+  <b>Family member convicted:</b>
+  <%= @arrest_record_and_conduct.family_member_convicted %>
+</p>
+
+<p>
+  <b>Family name of court:</b>
+  <%= @arrest_record_and_conduct.family_name_of_court %>
+</p>
+
+<p>
+  <b>Administrative case charged:</b>
+  <%= @arrest_record_and_conduct.administrative_case_charged %>
+</p>
+
+<p>
+  <b>Explain administrative charge:</b>
+  <%= @arrest_record_and_conduct.explain_administrative_charge %>
+</p>
+
+<p>
+  <b>Arrested or detained pd:</b>
+  <%= @arrest_record_and_conduct.arrested_or_detained_pd %>
+</p>
+
+<p>
+  <b>Case nature place of detention:</b>
+  <%= @arrest_record_and_conduct.case_nature_place_of_detention %>
+</p>
+
+<p>
+  <b>Taking liquor or narcotic:</b>
+  <%= @arrest_record_and_conduct.taking_liquor_or_narcotic %>
+</p>
+
+
+<%= link_to 'Edit', edit_arrest_record_and_conduct_path(@arrest_record_and_conduct) %> |
+<%= link_to 'Back', arrest_record_and_conducts_path %>

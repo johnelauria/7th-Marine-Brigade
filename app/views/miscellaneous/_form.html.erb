@@ -1,0 +1,27 @@
+<%= form_for(@miscellaneou) do |f| %>
+  <% if @miscellaneou.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@miscellaneou.errors.count, "error") %> prohibited this miscellaneou from being saved:</h2>
+
+      <ul>
+      <% @miscellaneou.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <%= f.hidden_field :personal_detail_id, value: @personal_detail.id if @miscellaneou.personal_detail_id.nil? %>
+
+  <div class="field">
+    <label>Hobbies, Sports and Past Time: </label>
+    <%= f.text_area :hobbies, rows: 2 %>
+  </div>
+  <div class="field">
+    <label>Are you willing to undergo a lie detector test?
+    <%= f.check_box :lie_detection_test %></label>
+  </div>
+  <div class="actions">
+    <%= f.submit "Save", class: "btn" %>
+  </div>
+<% end %>

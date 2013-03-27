@@ -11,7 +11,22 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130324235207) do
+ActiveRecord::Schema.define(:version => 20130327013902) do
+
+  create_table "arrest_record_and_conducts", :force => true do |t|
+    t.integer  "personal_detail_id"
+    t.boolean  "convicted_for_violation"
+    t.text     "name_of_court"
+    t.boolean  "family_member_convicted"
+    t.text     "family_name_of_court"
+    t.boolean  "administrative_case_charged"
+    t.text     "explain_administrative_charge"
+    t.boolean  "arrested_or_detained_pd"
+    t.text     "case_nature_place_of_detention"
+    t.boolean  "taking_liquor_or_narcotic"
+    t.datetime "created_at",                     :null => false
+    t.datetime "updated_at",                     :null => false
+  end
 
   create_table "brothers_and_sisters", :force => true do |t|
     t.integer  "family_history_id"
@@ -145,6 +160,28 @@ ActiveRecord::Schema.define(:version => 20130324235207) do
     t.datetime "updated_at",         :null => false
   end
 
+  create_table "general_informations", :force => true do |t|
+    t.integer  "personal_detail_id"
+    t.string   "reference_name1"
+    t.text     "reference_address1"
+    t.string   "reference_name2"
+    t.text     "reference_address2"
+    t.string   "reference_name3"
+    t.text     "reference_address3"
+    t.string   "reference_name4"
+    t.text     "reference_address4"
+    t.string   "reference_name5"
+    t.text     "reference_address5"
+    t.string   "neighbor_name1"
+    t.text     "neighbor_address1"
+    t.string   "neighbor_name2"
+    t.text     "neighbor_address2"
+    t.string   "neighbor_name3"
+    t.text     "neighbor_address3"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+  end
+
   create_table "important_unit_assignments", :force => true do |t|
     t.integer  "military_history_id"
     t.string   "unit"
@@ -152,6 +189,16 @@ ActiveRecord::Schema.define(:version => 20130324235207) do
     t.date     "date2"
     t.datetime "created_at",          :null => false
     t.datetime "updated_at",          :null => false
+  end
+
+  create_table "language_and_dialects", :force => true do |t|
+    t.integer  "miscellaneou_id"
+    t.string   "language"
+    t.string   "speaks"
+    t.string   "read"
+    t.string   "write"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
   end
 
   create_table "marital_histories", :force => true do |t|
@@ -188,6 +235,23 @@ ActiveRecord::Schema.define(:version => 20130324235207) do
     t.string   "rating"
     t.datetime "created_at",          :null => false
     t.datetime "updated_at",          :null => false
+  end
+
+  create_table "miscellaneous", :force => true do |t|
+    t.integer  "personal_detail_id"
+    t.text     "hobbies"
+    t.boolean  "lie_detection_test"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+  end
+
+  create_table "organizations", :force => true do |t|
+    t.integer  "personal_detail_id"
+    t.string   "name"
+    t.text     "address"
+    t.date     "date_of_membership"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
   end
 
   create_table "personal_characteristics", :force => true do |t|

@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Miscellaneou:</b>
+  <%= @language_and_dialect.miscellaneou_id %>
+</p>
+
+<p>
+  <b>Language:</b>
+  <%= @language_and_dialect.language %>
+</p>
+
+<p>
+  <b>Speaks:</b>
+  <%= @language_and_dialect.speaks %>
+</p>
+
+<p>
+  <b>Read:</b>
+  <%= @language_and_dialect.read %>
+</p>
+
+<p>
+  <b>Write:</b>
+  <%= @language_and_dialect.write %>
+</p>
+
+
+<%= link_to 'Edit', edit_language_and_dialect_path(@language_and_dialect) %> |
+<%= link_to 'Back', language_and_dialects_path %>

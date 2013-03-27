@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  personal_detail_id: 1
+  hobbies: MyText
+  lie_detection_test: false
+
+two:
+  personal_detail_id: 1
+  hobbies: MyText
+  lie_detection_test: false

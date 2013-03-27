@@ -33,6 +33,10 @@ class PersonalDetailsController < ApplicationController
     @employment = Employment.new
     @foreign_country_visited = ForeignCountryVisited.new
     @credit_reputation = CreditReputation.new
+    @arrest_record_and_conduct = ArrestRecordAndConduct.new
+    @general_information = GeneralInformation.new
+    @organization = Organization.new
+    @miscellaneou = Miscellaneou.new
 
     respond_to do |format|
       format.html # show.html.erb

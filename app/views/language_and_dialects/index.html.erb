@@ -1,0 +1,31 @@
+<h1>Listing language_and_dialects</h1>
+
+<table>
+  <tr>
+    <th>Miscellaneou</th>
+    <th>Language</th>
+    <th>Speaks</th>
+    <th>Read</th>
+    <th>Write</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @language_and_dialects.each do |language_and_dialect| %>
+  <tr>
+    <td><%= language_and_dialect.miscellaneou_id %></td>
+    <td><%= language_and_dialect.language %></td>
+    <td><%= language_and_dialect.speaks %></td>
+    <td><%= language_and_dialect.read %></td>
+    <td><%= language_and_dialect.write %></td>
+    <td><%= link_to 'Show', language_and_dialect %></td>
+    <td><%= link_to 'Edit', edit_language_and_dialect_path(language_and_dialect) %></td>
+    <td><%= link_to 'Destroy', language_and_dialect, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Language and dialect', new_language_and_dialect_path %>

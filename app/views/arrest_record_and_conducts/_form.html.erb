@@ -1,0 +1,55 @@
+<%= form_for(@arrest_record_and_conduct) do |f| %>
+  <% if @arrest_record_and_conduct.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@arrest_record_and_conduct.errors.count, "error") %> prohibited this arrest_record_and_conduct from being saved:</h2>
+
+      <ul>
+      <% @arrest_record_and_conduct.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <%= f.hidden_field :personal_detail_id, value: @personal_detail.id if @arrest_record_and_conduct.personal_detail.nil? %>
+
+  <div class="field">
+    <label>Have you ever been investigated, indicted or convicted for any violation of the law?
+    <%= f.check_box :convicted_for_violation %></label>
+  </div>
+  <div class="field">
+    <label>If so, state name of court, nature of offenses and disposition of the case: </label>
+    <%= f.text_area :name_of_court, rows: 3, placeholder: "Leave blank if you've never been investigated, indicated or convicted" %>
+  </div>
+  <div class="field">
+    <label>Has any member of your family even been investigated/arrested, indicated or convicted for Violation of the law?
+    <%= f.check_box :family_member_convicted %></label>
+  </div>
+  <div class="field">
+    <label>If so, State the name of the court, nature of the offense and Disposition of the case: </label>
+    <%= f.text_area :family_name_of_court, rows: 3 %>
+  </div>
+  <div class="field">
+    <label>Have you ever been charged in any administrative case?
+    <%= f.check_box :administrative_case_charged %></label>
+  </div>
+  <div class="field">
+    <label>If so, explain</label>
+    <%= f.text_area :explain_administrative_charge, rows: 3 %>
+  </div>
+  <div class="field">
+    <label>Have you ever been arrested or detained pursuant to the provision of PD 1081 and it’s Implementation orders (GO, SO, LOI)?
+    <%= f.check_box :arrested_or_detained_pd %></label>
+  </div>
+  <div class="field">
+    <label>If so, state the nature of the case and the place of detention: </label>
+    <%= f.text_area :case_nature_place_of_detention, rows: 3 %>
+  </div>
+  <div class="field">
+    <label>Do you take an intoxicating liquor/narcotic?
+    <%= f.check_box :taking_liquor_or_narcotic %></label>
+  </div>
+  <div class="actions">
+    <%= f.submit "Save", class: "btn" %>
+  </div>
+<% end %>

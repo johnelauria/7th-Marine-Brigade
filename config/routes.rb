@@ -1,4 +1,19 @@
 MarineBrigade::Application.routes.draw do
+  resources :language_and_dialects
+
+
+  resources :miscellaneous
+
+
+  resources :organizations
+
+
+  resources :general_informations
+
+
+  resources :arrest_record_and_conducts
+
+
   resources :credit_reputations
 
 

@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  personal_detail_id: 1
+  reference_name1: MyString
+  reference_address1: MyText
+  reference_name2: MyString
+  reference_address2: MyText
+  reference_name3: MyString
+  reference_address3: MyText
+  reference_name4: MyString
+  reference_address4: MyText
+  reference_name5: MyString
+  reference_address5: MyText
+
+two:
+  personal_detail_id: 1
+  reference_name1: MyString
+  reference_address1: MyText
+  reference_name2: MyString
+  reference_address2: MyText
+  reference_name3: MyString
+  reference_address3: MyText
+  reference_name4: MyString
+  reference_address4: MyText
+  reference_name5: MyString
+  reference_address5: MyText
