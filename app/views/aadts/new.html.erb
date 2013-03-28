@@ -1,0 +1,16 @@
+<div class="navbar navbar-static-top navbar-inverse">
+  <div class="navbar-inner">
+    <%= link_to "7th Marine Brigade", root_path, class: "brand" %>
+    <ul class="nav">
+      <li><%= link_to "PHS", PersonalDetail.find(params[:JAT2JUB4HJSDFSBFDJ33BK]) %></li>
+      <li class="active"><a href="#">AADT with SOI</a></li>
+    </ul>
+  </div>
+</div>
+<div class="container">
+    <legend>Annual Active Duty Training</legend>
+
+    <%= render 'form' %>
+
+    <%= link_to 'Back', aadts_path %>
+</div>

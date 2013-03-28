@@ -13,4 +13,5 @@ class PersonalDetail < ActiveRecord::Base
   has_one :general_information, dependent: :destroy
   has_many :organizations, dependent: :destroy
   has_one :miscellaneou, dependent: :destroy
+  has_one :aadt
 end

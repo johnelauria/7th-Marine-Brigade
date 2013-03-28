@@ -1,0 +1,37 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  personal_detail_id: 1
+  rank: MyString
+  name: MyString
+  afpsn: MyString
+  undergo_thirty_days: MyString
+  date_of_commission: 2013-03-28
+  authority: MyString
+  date_of_last_promotion: 2013-03-28
+  permanent_address: MyText
+  residence_tel_no: MyString
+  assignment_mobilization_center: MyString
+  present_reserve_unit_assignment: MyString
+  licence: MyString
+  special: MyString
+  skills: MyText
+  purpose_of_aadt: MyString
+
+two:
+  personal_detail_id: 1
+  rank: MyString
+  name: MyString
+  afpsn: MyString
+  undergo_thirty_days: MyString
+  date_of_commission: 2013-03-28
+  authority: MyString
+  date_of_last_promotion: 2013-03-28
+  permanent_address: MyText
+  residence_tel_no: MyString
+  assignment_mobilization_center: MyString
+  present_reserve_unit_assignment: MyString
+  licence: MyString
+  special: MyString
+  skills: MyText
+  purpose_of_aadt: MyString

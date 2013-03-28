@@ -11,7 +11,29 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130327013902) do
+ActiveRecord::Schema.define(:version => 20130328011006) do
+
+  create_table "aadts", :force => true do |t|
+    t.integer  "personal_detail_id"
+    t.string   "rank"
+    t.string   "name"
+    t.string   "afpsn"
+    t.string   "undergo_thirty_days"
+    t.date     "aadt_effective"
+    t.date     "date_of_commission"
+    t.string   "authority"
+    t.date     "date_of_last_promotion"
+    t.text     "permanent_address"
+    t.string   "residence_tel_no"
+    t.string   "assignment_mobilization_center"
+    t.string   "present_reserve_unit_assignment"
+    t.string   "licence"
+    t.string   "special"
+    t.text     "skills"
+    t.string   "purpose_of_aadt"
+    t.datetime "created_at",                      :null => false
+    t.datetime "updated_at",                      :null => false
+  end
 
   create_table "arrest_record_and_conducts", :force => true do |t|
     t.integer  "personal_detail_id"

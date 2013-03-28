@@ -1,0 +1,100 @@
+<%= form_for(@aadt) do |f| %>
+  <% if @aadt.errors.any? %>
+        <div id="error_explanation" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+      <h2><%= pluralize(@aadt.errors.count, "error") %> prohibited this aadt from being saved:</h2>
+
+      <ul>
+      <% @aadt.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <%= f.hidden_field :personal_detail_id, value: params[:JAT2JUB4HJSDFSBFDJ33BK] %>
+
+  <div class="field">
+    <label><b>Rank: </b><%= @aadt.rank unless @aadt.rank.nil? %><%= params[:rank] %></label>
+    <%= f.hidden_field :rank, value: params[:rank] %>
+  </div>
+  <div class="field">
+    <label><b>Name: </b><%= @aadt.name unless @aadt.name.nil? %> <%= params[:name] %></label>
+    <%= f.hidden_field :name, value: params[:name] %>
+  </div>
+  <div class="field">
+    <label><b>AFPSN: </b><%= @aadt.afpsn unless @aadt.afpsn.nil? %><%= params[:afpsn] %></label>
+    <%= f.hidden_field :afpsn, value: params[:afpsn] %>
+  </div>
+  <div class="field">
+    <label>Request to undergo Thirty (30) Days
+    <%= f.select :undergo_thirty_days, "<option>Continuous</option><option>Weekend</option>".html_safe %> Annual Active Duty Training</label>
+  </div>
+    <div class="field">
+      <label>Annual Active Duty Training Effective Date</label><br>
+      <%= f.date_select :aadt_effective %>
+    </div>
+
+  <legend><small>Following are the information pertaining to my personal circumstances: (Fill-
+    up all applicable items and indicate “N/A" or leave it blank if not applicable)</small></legend>
+  <div class="field">
+    <%= f.label :date_of_commission %><br />
+    <%= f.date_select :date_of_commission, start_year: Date.today.strftime("%Y").to_i - 65, end_year: Date.today.strftime("%Y").to_i %>
+  </div>
+  <div class="field">
+    <%= f.label :authority %><br />
+    <%= f.text_field :authority %>
+  </div>
+  <div class="field">
+    <%= f.label :date_of_last_promotion %><br />
+    <%= f.date_select :date_of_last_promotion, start_year: Date.today.strftime("%Y").to_i - 65, end_year: Date.today.strftime("%Y").to_i %>
+  </div>
+  <div class="field">
+    <%= f.label :permanent_address %><br />
+    <%= f.text_area :permanent_address, rows: 2 %>
+  </div>
+  <div class="field">
+    <%= f.label :residence_tel_no %><br />
+    <%= f.text_field :residence_tel_no %>
+  </div>
+  <div class="field">
+    <%= f.label :assignment_mobilization_center %><br />
+    <%= f.text_field :assignment_mobilization_center %>
+  </div>
+  <div class="field">
+    <%= f.label :present_reserve_unit_assignment %><br />
+    <%= f.text_field :present_reserve_unit_assignment %>
+  </div>
+  <div class="field">
+    <%= f.label :licence %><br />
+    <%= f.text_field :licence %>
+  </div>
+  <div class="field">
+    <%= f.label :special %><br />
+    <%= f.text_field :special %>
+  </div>
+  <div class="field">
+    <%= f.label :skills %><br />
+    <%= f.text_area :skills, rows: 2 %>
+  </div>
+  <div class="field">
+    <%= f.label :purpose_of_aadt %>
+    <div style="padding-left: 10px;">
+    <%= check_box_tag("aadt[purpose_of_aadt][]", "To update my knowledge in current military organization and doctrines") %> To update my knowledge in current military organization and doctrines<br>
+    <%= check_box_tag("aadt[purpose_of_aadt][]", "To maintain an acceptable level of military proficiency and skills") %> To maintain an acceptable level of military proficiency and skills<br>
+    <%= check_box_tag("aadt[purpose_of_aadt][]", "For Promotion Requirement") %> For Promotion Requirement<br><br>
+  </div>
+  </div>
+  <legend>Please Read</legend>
+    <ul>
+        <li>That the undersigned is aware of the provisions as stated in Para 5 sub Para
+      b 2 of DND circular Nr1 dated 01 Feb 2000 (Subject: Active Duty Training (ADT) of
+      AFP Reserve). I therefore waived my rights to pay and allowances due me during the
+      period of my AADT.</li>
+      <br>
+      <li>Furthermore, I have not been accused nor convicted in any court of any
+        criminal, civil, or administrative cases.</li>
+    </ul>
+  <div class="actions">
+    <%= f.submit "I accept, now Save this form", class: "btn" %>
+  </div>
+<% end %>

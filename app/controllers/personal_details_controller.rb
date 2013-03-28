@@ -2,6 +2,8 @@ class PersonalDetailsController < ApplicationController
   # GET /personal_details
   # GET /personal_details.json
   def index
+    @q = PersonalDetail.search(params[:q])
+    @personal_detail = @q.result(distinct: true)
     @personal_details = PersonalDetail.all
 
     respond_to do |format|

@@ -1,4 +1,7 @@
 MarineBrigade::Application.routes.draw do
+  resources :aadts
+
+
   resources :language_and_dialects
 
 
