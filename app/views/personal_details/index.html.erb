@@ -1,5 +1,5 @@
 <div class="container">
-<h1>Personal Details</h1>
+<h1>List of all personnel</h1>
 <%= search_form_for @q do |f| %>
     <%= f.text_field :last_name_cont, placeholder: "Search by Last Name", class: "input search-query" %>
     <%= f.submit "Search", class: "btn btn-search" %>
@@ -10,8 +10,6 @@
     <th>Last name</th>
     <th>First name</th>
     <th>Rank</th>
-    <th></th>
-    <th></th>
     <th></th>
   </tr>
 
