@@ -1,12 +1,16 @@
-<div class="navbar navbar-static-top navbar-inverse">
+<div class="navbar navbar-fixed-top navbar-inverse">
   <div class="navbar-inner">
     <%= link_to "7th Marine Brigade", root_path, class: "brand" %>
   <ul class="nav">
     <li class="active"><a href="#">PHS</a></li>
+    <% if @personal_detail.personal_characteristic.nil? && @personal_detail.marital_history.nil? && @personal_detail.educational_background.nil? %>
+        <li><a href="#preventAadt" data-toggle="modal">AADT with SOI</a></li>
+    <% else %>
     <% if @personal_detail.aadt.nil? %>
         <li><%= link_to "AADT with SOI", new_aadt_path(JAT2JUB4HJSDFSBFDJ33BK: @personal_detail.id, rank: @personal_detail.rank, name: "#{@personal_detail.first_name} #{@personal_detail.middle_name} #{@personal_detail.last_name}", afpsn: @personal_detail.AFPSN) %></li>
     <% else %>
         <li><%= link_to "AADT with SOI", @personal_detail.aadt %></li>
+    <% end %>
     <% end %>
   </ul>
 </div>
@@ -69,7 +73,7 @@
         </p>
 
         <p>
-          <b>Assignment:</b>
+          <b>Present Job / Assignment:</b>
           <%= @personal_detail.assignment %>
         </p>
 
@@ -670,4 +674,17 @@
     </div>
   </div>
 </div>
+</div>
+
+<div id="preventAadt" class="modal hide fade">
+  <div class="modal-header">
+    <button type="close" class="close" data-dismiss="modal">&times;</button>
+    <h4><%= image_tag("warning-sign.jpg", size: "75x75") %>Cannot proceed to AADT w/ SOI</h4>
+  </div>
+  <div class="modal-body">
+    <p>It seems that your Personal History Statement is currently incomplete. Please fill up the remaining forms before going to AADT w/ SOI. Some of the details of SOI are depending on your Personal History Statement.</p>
+  </div>
+  <div class="modal-footer">
+    <button type="close" class="btn btn-inverse" data-dismiss="modal">Okay, I understand</button>
+  </div>
 </div>

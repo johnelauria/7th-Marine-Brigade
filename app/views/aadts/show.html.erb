@@ -1,4 +1,4 @@
-<div class="navbar navbar-static-top navbar-inverse">
+<div class="navbar navbar-fixed-top navbar-inverse">
   <div class="navbar-inner">
     <%= link_to "7th Marine Brigade", root_path, class: "brand" %>
     <ul class="nav">
@@ -10,86 +10,100 @@
     <div class="container">
     <p id="notice"><%= notice %></p>
 
-    <p>
-      <b>Personal detail:</b>
-      <%= @aadt.personal_detail_id %>
-    </p>
+      <div align="center">
+        <h5>
+          PHILIPPINE NAVY<br>
+          NAVAL RESERVE COMMAND<br>
+          Fort Santiago, Intramuros, Manila<br>
+          (Annual Active Duty Training)
+        </h5>
+      </div>
 
-    <p>
-      <b>Rank:</b>
-      <%= @aadt.rank %>
-    </p>
+      <p><b>From: </b><%= @aadt.personal_detail.rank %> <%= @aadt.name %> <%= @aadt.afpsn %></p><br>
+      <p><b>To: </b>Commander, Naval Reserve Command PN</p>
+      <p><b>Via: </b>Commander, Naval Reserve Center, NCR</p><br>
+      <p><b>Subject: </b>Thirty (30) Annual Active Duty Training (AADT), Request for</p><br>
+      <ol>
+        <li>Request to undergo Thirty (30) Days <%= @aadt.undergo_thirty_days %> and Annual Active Duty Training effective <%= @aadt.aadt_effective.strftime("%m-%d-%Y") %> </li>
+        <li>Following are the information pertaining to personal circumstances:</li>
+        <ol style="list-style: lower-alpha;">
+          <li><b>Source and date of commission / enlistment: </b><%= @aadt.date_of_commission %></li>
+          <li><b>Authority: </b><%= @aadt.authority %></li>
+          <li><b>Date of last promotion: </b><%= @aadt.date_of_last_promotion.strftime("%m-%d-%Y") %></li>
+          <li><b>Permanent address: </b><%= @aadt.permanent_address %></li>
+          <li><b>Residence Tel No: </b><%= @aadt.residence_tel_no %></li>
+          <li><b>Assignment mobilization center: </b><%= @aadt.assignment_mobilization_center %></li>
+          <li><b>Present Reserve unit assignment: </b><%= @aadt.present_reserve_unit_assignment %></li>
+          <li><b>License/Bar Board eligibility: </b><%= @aadt.licence %></li>
+          <li><b>Special Skills: </b><%= @aadt.special %></li>
+          <li><b>Purpose of AADT: </b><%= @aadt.purpose_of_aadt %></li>
+        </ol>
+      </ol>
 
-    <p>
-      <b>Name:</b>
-      <%= @aadt.name %>
-    </p>
-
-    <p>
-      <b>Afpsn:</b>
-      <%= @aadt.afpsn %>
-    </p>
-
-    <p>
-      <b>Undergo thirty days:</b>
-      <%= @aadt.undergo_thirty_days %>
-    </p>
-
-    <p>
-      <b>Date of commission:</b>
-      <%= @aadt.date_of_commission %>
-    </p>
-
-    <p>
-      <b>Authority:</b>
-      <%= @aadt.authority %>
-    </p>
-
-    <p>
-      <b>Date of last promotion:</b>
-      <%= @aadt.date_of_last_promotion %>
-    </p>
-
-    <p>
-      <b>Permanent address:</b>
-      <%= @aadt.permanent_address %>
-    </p>
-
-    <p>
-      <b>Residence tel no:</b>
-      <%= @aadt.residence_tel_no %>
-    </p>
-
-    <p>
-      <b>Assignment mobilization center:</b>
-      <%= @aadt.assignment_mobilization_center %>
-    </p>
-
-    <p>
-      <b>Present reserve unit assignment:</b>
-      <%= @aadt.present_reserve_unit_assignment %>
-    </p>
-
-    <p>
-      <b>Licence:</b>
-      <%= @aadt.licence %>
-    </p>
-
-    <p>
-      <b>Special:</b>
-      <%= @aadt.special %>
-    </p>
-
-    <p>
-      <b>Skills:</b>
-      <%= @aadt.skills %>
-    </p>
-
-    <p>
-      <b>Purpose of aadt:</b>
-      <%= @aadt.purpose_of_aadt %>
-    </p>
-
-
-    <%= link_to 'Edit AADT', edit_aadt_path(@aadt) %>
+    <%= link_to 'Edit AADT', edit_aadt_path(@aadt) %><br><br><br>
+      <legend></legend>
+      <div align="center">
+        <h5>
+          PHILIPPINE NAVY<br>
+          NAVAL RESERVE COMMAND<br>
+          HEADQUARTERS NAVAL RESERVE CENTER, NCR<br>
+          Cabildo St., Intramuros, Manila
+        </h5><br>
+        <u>AADT SUMMARY OF INFORMATION SHEET</u>
+      </div><br>
+      <ol>
+        <li><b>Name: </b><%= @aadt.name %></li>
+        <li><b>Rank: </b><%= @aadt.rank %> &nbsp; &nbsp; &nbsp; &nbsp;  <b>AFPSN: </b><%= @aadt.afpsn %> &nbsp; &nbsp; &nbsp; &nbsp;  <b>Br. of Svc:</b> <%= @aadt.personal_detail.BR_SVC %></li>
+        <li><b>Date of Birth: </b><%= @aadt.personal_detail.birthdate.strftime("%m-%d-%Y") %> &nbsp; &nbsp; &nbsp; <b>Place of Birth: </b><%= @aadt.personal_detail.place_of_birth %></li>
+        <li><b>Sex: </b><%= @aadt.personal_detail.personal_characteristic.sex %> &nbsp; &nbsp; &nbsp; <b>Weight: </b><%= @aadt.personal_detail.personal_characteristic.weight %> &nbsp; &nbsp; &nbsp; <b>Height: </b><%= @aadt.personal_detail.personal_characteristic.height %></li>
+        <li><b>Civil Status: </b><%= @aadt.personal_detail.marital_history.marital_status %></li>
+        <li><b>Home Address/Telephone Number: </b><%= @aadt.personal_detail.home_address %>, <%= @aadt.personal_detail.telephone %></li>
+        <li><b>Source and Date of Commission/Enlistment: <%= @aadt.date_of_commission %></b></li>
+        <li><b>Authority of Commission/Enlistment: </b><%= @aadt.authority %></li>
+        <li><b>Present Reserve Unit Assignment: </b><%= @aadt.present_reserve_unit_assignment %></li>
+        <li><b>Assignment Mobilization Center: </b><%= @aadt.assignment_mobilization_center %></li>
+        <li><b>Special Skills/Field of Expertise: </b><%= @aadt.special %></li>
+        <li><b>Present Occupation & Place of Employment: </b><%= @aadt.personal_detail.assignment %>, <%= @aadt.personal_detail.duty_address %></li>
+        <li><b>Type of AADT: </b><%= @aadt.type_of_aadt %></li>
+        <li><b>Purpose of AADT: </b><%= @aadt.purpose_of_aadt %></li>
+        <li><b>Highest Educational Attainment: </b><%= @aadt.highest_education %></li>
+        <li><b>Courses or Degree Taken: </b></li>
+        <table class="table table-bordered">
+          <tr>
+            <th>Degree/Course</th>
+            <th>School and Address</th>
+          </tr>
+          <% if @aadt.personal_detail.educational_background.other_location.present? %>
+          <tr>
+            <td><%= @aadt.personal_detail.educational_background.other_course %></td>
+            <td><%= @aadt.personal_detail.educational_background.other_location %></td>
+          </tr>
+          <% end %>
+          <% if @aadt.personal_detail.educational_background.post_graduate_location.present? %>
+          <tr>
+            <td><%= @aadt.personal_detail.educational_background.postgraduate_course %></td>
+            <td><%= @aadt.personal_detail.educational_background.post_graduate_location %></td>
+          </tr>
+          <% end %>
+          <% if @aadt.personal_detail.educational_background.college_location.present? %>
+          <tr>
+            <td><%= @aadt.personal_detail.educational_background.college_course %></td>
+            <td><%= @aadt.personal_detail.educational_background.college_location %></td>
+          </tr>
+          <% end %>
+        </table>
+        <li><b>Military Training: </b></li>
+        <table class="table table-bordered">
+          <tr>
+            <th>Training</th>
+            <th>School and Address</th>
+          </tr>
+          <% @aadt.personal_detail.military_history.military_schools.each do |school| %>
+          <tr>
+            <td><%= school.nature_of_training %></td>
+            <td><%= school.name_of_school %></td>
+          </tr>
+          <% end %>
+        </table>
+      </ol>
 </div>

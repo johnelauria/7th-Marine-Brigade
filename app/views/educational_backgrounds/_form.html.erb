@@ -25,7 +25,7 @@
     <%= f.date_select :elementary_date_of_attendance2, start_year: Date.today.strftime("%Y").to_i - 65, end_year: Date.today.strftime("%Y").to_i %>
   </div>
   <div class="field">
-    <%= f.label :year_graduate %><br />
+    <%= f.label :year_graduated %><br />
     <%= f.number_field :elementary_year_graduate %>
   </div>
     <legend>High School</legend>
@@ -42,7 +42,7 @@
     <%= f.date_select :high_school_date_of_attendance2, start_year: Date.today.strftime("%Y").to_i - 65, end_year: Date.today.strftime("%Y").to_i %>
   </div>
   <div class="field">
-    <%= f.label :year_graduate %><br />
+    <%= f.label :year_graduated %><br />
     <%= f.number_field :high_school_year_graduate %>
   </div>
     <legend>College</legend>
@@ -58,8 +58,12 @@
     <%= f.label :until %><br />
     <%= f.date_select :college_date_of_attendance2, start_year: Date.today.strftime("%Y").to_i - 65, end_year: Date.today.strftime("%Y").to_i %>
   </div>
+    <div class="field">
+      <%= f.label :Course %>
+      <%= f.text_field :college_course %>
+    </div>
   <div class="field">
-    <%= f.label :year_graduate %><br />
+    <%= f.label :year_graduated %><br />
     <%= f.number_field :college_year_graduate %>
   </div>
     <legend>Post Graduate</legend>
@@ -75,6 +79,10 @@
     <%= f.label :until %><br />
     <%= f.date_select :post_graduate_date_of_attendance2, start_year: Date.today.strftime("%Y").to_i - 65, end_year: Date.today.strftime("%Y").to_i %>
   </div>
+    <div class="field">
+      <%= f.label :Course %>
+      <%= f.text_field :postgraduate_course %>
+    </div>
   <div class="field">
     <%= f.label :year_graduate %><br />
     <%= f.number_field :post_graduate_year_graduate %>
@@ -93,7 +101,11 @@
     <%= f.date_select :other_date_of_attendance2, start_year: Date.today.strftime("%Y").to_i - 65, end_year: Date.today.strftime("%Y").to_i %>
   </div>
   <div class="field">
-    <%= f.label :year_graduate %><br />
+    <%= f.label :Course %>
+    <%= f.text_field :other_course %>
+  </div>
+  <div class="field">
+    <%= f.label :year_graduated %><br />
     <%= f.text_field :other_year_graduate %>
   </div>
     <legend>Civil Service Eligibility</legend>

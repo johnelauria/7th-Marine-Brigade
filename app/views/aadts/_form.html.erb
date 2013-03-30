@@ -11,7 +11,7 @@
     </div>
   <% end %>
 
-    <%= f.hidden_field :personal_detail_id, value: params[:JAT2JUB4HJSDFSBFDJ33BK] %>
+    <%= f.hidden_field :personal_detail_id, value: params[:JAT2JUB4HJSDFSBFDJ33BK] if @aadt.personal_detail_id.nil? %>
 
   <div class="field">
     <label><b>Rank: </b><%= @aadt.rank unless @aadt.rank.nil? %><%= params[:rank] %></label>
@@ -31,7 +31,7 @@
   </div>
     <div class="field">
       <label>Annual Active Duty Training Effective Date</label><br>
-      <%= f.date_select :aadt_effective %>
+      <%= f.date_select :aadt_effective, start_year: Date.today.strftime("%Y").to_i - 10, end_year: Date.today.strftime("%Y").to_i + 10 %>
     </div>
 
   <legend><small>Following are the information pertaining to my personal circumstances: (Fill-
@@ -69,12 +69,16 @@
     <%= f.text_field :licence %>
   </div>
   <div class="field">
-    <%= f.label :special %><br />
+    <%= f.label :special_skills %><br />
     <%= f.text_field :special %>
   </div>
   <div class="field">
     <%= f.label :skills %><br />
     <%= f.text_area :skills, rows: 2 %>
+  </div>
+  <div class="field">
+    <label>Type of AADT</label>
+    <%= f.select :type_of_aadt, "<option>Voluntary</option><option>Compulsary</option>".html_safe %>
   </div>
   <div class="field">
     <%= f.label :purpose_of_aadt %>

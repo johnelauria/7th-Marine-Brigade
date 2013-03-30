@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130328011006) do
+ActiveRecord::Schema.define(:version => 20130330021927) do
 
   create_table "aadts", :force => true do |t|
     t.integer  "personal_detail_id"
@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(:version => 20130328011006) do
     t.string   "purpose_of_aadt"
     t.datetime "created_at",                      :null => false
     t.datetime "updated_at",                      :null => false
+    t.string   "type_of_aadt"
   end
 
   create_table "arrest_record_and_conducts", :force => true do |t|
@@ -112,6 +113,9 @@ ActiveRecord::Schema.define(:version => 20130328011006) do
     t.datetime "created_at",                        :null => false
     t.datetime "updated_at",                        :null => false
     t.integer  "personal_detail_id"
+    t.string   "college_course"
+    t.string   "postgraduate_course"
+    t.string   "other_course"
   end
 
   create_table "employments", :force => true do |t|
