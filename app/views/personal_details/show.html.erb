@@ -12,6 +12,11 @@
         <li><%= link_to "AADT with SOI", @personal_detail.aadt %></li>
     <% end %>
     <% end %>
+    <% if @personal_detail.rid.gsis.nil? || @personal_detail.rid.tin.nil? %>
+        <li><%= link_to "RIDS", edit_rid_path(@personal_detail.rid) %></li>
+    <% else %>
+        <li><%= link_to "RIDS", @personal_detail.rid %></li>
+    <% end %>
   </ul>
 </div>
 </div>

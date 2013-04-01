@@ -1,0 +1,292 @@
+<div class="navbar navbar-fixed-top navbar-inverse">
+  <div class="navbar-inner">
+    <%= link_to "7th Marine Brigade", root_path, class: "brand" %>
+    <ul class="nav">
+      <li><%= link_to "PHS", @rid.personal_detail %></li>
+      <% if @rid.personal_detail.personal_characteristic.nil? && @rid.personal_detail.marital_history.nil? && @rid.personal_detail.educational_background.nil? %>
+          <li><a href="#preventAadt" data-toggle="modal">AADT with SOI</a></li>
+      <% else %>
+          <% if @rid.personal_detail.aadt.nil? %>
+              <li><%= link_to "AADT with SOI", new_aadt_path(JAT2JUB4HJSDFSBFDJ33BK: @rid.personal_detail.id, rank: @personal_detail.rank, name: "#{@personal_detail.first_name} #{@personal_detail.middle_name} #{@personal_detail.last_name}", afpsn: @personal_detail.AFPSN) %></li>
+          <% else %>
+              <li><%= link_to "AADT with SOI", @rid.personal_detail.aadt %></li>
+          <% end %>
+      <% end %>
+      <li class="active"><%= link_to "RIDS", @rid.personal_detail.rid %></li>
+    </ul>
+  </div>
+</div>
+<div class="container">
+  <u><h4 align="center">RESERVIST INFORMATION DATA SHEET<br>(RIDS)</h4></u>
+    <p id="notice"><%= notice %></p>
+
+  <b>For References: </b><br><br>
+
+  <table class="table">
+    <tr>
+    <td><b>Rank: </b><%= @rid.personal_detail.rank %></td>
+    <td><b>First Name: </b><%= @rid.personal_detail.first_name %></td>
+    <td><b>Last Name: </b><%= @rid.personal_detail.last_name %></td>
+    <td><b>Middle Name: </b><%= @rid.personal_detail.middle_name %></td>
+    </tr>
+    <tr>
+      <td><b>AFPSN: </b><%= @rid.personal_detail.AFPSN %></td>
+      <td><b>BOS: </b><%= @rid.personal_detail.BR_SVC %></td>
+      <td><b>Unit Assignment: </b><%= @rid.personal_detail.assignment %></td>
+      <td><b>Mobilization Center: </b><%= @rid.personal_detail.aadt.assignment_mobilization_center %></td>
+    </tr>
+    <tr>
+      <td><b>Date of commission/Enlistment: </b><%= @rid.personal_detail.military_history.date_commission.strftime("%m-%d-%Y") %></td>
+      <td><b>Authority: </b><%= @rid.personal_detail.aadt.authority %></td>
+      <td></td><td></td>
+    </tr>
+    <tr>
+      <td><b>Date of last promotion: </b><%= @rid.personal_detail.aadt.date_of_last_promotion.strftime("%m-%d-%Y") %></td>
+      <td><b>Special Skills: </b><%= @rid.personal_detail.aadt.special %></td>
+      <td></td><td></td>
+    </tr>
+  </table>
+
+  <p><b>PRC Board/License: </b><%= @rid.personal_detail.aadt.licence %></p>
+  <p><b>Civilian Occupation/Designation: </b><%= @rid.civilian_occupation %></p>
+  <p><b>Office Address: </b><%= @rid.civilian_office_address %> &nbsp; &nbsp; &nbsp; &nbsp; <b>Contact number: </b><%= @rid.civilian_contact_number %></p>
+  <p><b>Home Address: </b><%= @rid.personal_detail.home_address %></p>
+
+  <p>
+      <b>Province:</b>
+      <%= @rid.province %>&nbsp;&nbsp;&nbsp;&nbsp;
+    <b>Contact Number:</b>
+      <%= @rid.province_contact %>
+  </p>
+
+  <p>
+    <b>Sex: </b><%= @rid.personal_detail.personal_characteristic.sex %>&nbsp;&nbsp;&nbsp;&nbsp;
+    <b>Marital Status: </b><%= @rid.personal_detail.marital_history.marital_status %>&nbsp;&nbsp;&nbsp;&nbsp;
+    <b>Nationality: </b><%= @rid.personal_detail.nationality %>
+  </p>
+    <p>
+      <b>Religion:</b>
+      <%= @rid.religion %>
+    </p>
+
+    <p>
+      <b>Blood type:</b>
+      <%= @rid.blood_type %>
+    </p>
+
+    <p>
+      <b>Sss:</b>
+      <%= @rid.sss %>
+    </p>
+
+    <p>
+      <b>Tin:</b>
+      <%= @rid.tin %>
+    </p>
+
+    <p>
+      <b>Gsis:</b>
+      <%= @rid.gsis %>
+    </p>
+
+    <p>
+      <b>Philhealth:</b>
+      <%= @rid.philhealth %>
+    </p>
+
+  <p>
+    <b>Height: </b><%= @rid.personal_detail.personal_characteristic.height %>&nbsp;&nbsp;&nbsp;&nbsp;
+    <b>Weight: </b><%= @rid.personal_detail.personal_characteristic.weight %>&nbsp;&nbsp;&nbsp;&nbsp;
+    <b>Color of Eyes: </b><%= @rid.personal_detail.personal_characteristic.color_of_eyes %>&nbsp;&nbsp;&nbsp;&nbsp;
+    <b>Color of Hair: </b><%= @rid.personal_detail.personal_characteristic.color_of_hair %>
+  </p>
+  <p>
+    <b>Identifying Marks: </b><%= @rid.personal_detail.personal_characteristic.scars_or_marks %>&nbsp;&nbsp;&nbsp;&nbsp;
+    <b>Dialect Spoken: </b>
+    <% @rid.personal_detail.miscellaneou.language_and_dialects.each do |language| %>
+        <%= language.language %>,
+    <% end %>
+  </p>
+  <p>
+      <b>Person to notify:</b>
+      <%= @rid.person_to_notify %>
+    </p>
+
+    <p>
+      <b>Size of combat:</b>
+      <%= @rid.size_of_combat %> &nbsp; &nbsp;&nbsp;&nbsp;
+      <b>Size of cap:</b>
+      <%= @rid.size_of_cap %>&nbsp;&nbsp;&nbsp;&nbsp;
+      <b>Size of bdu:</b>
+      <%= @rid.size_of_bdu %>
+    </p>
+
+
+    <%= link_to 'Edit RIDS', edit_rid_path(@rid) %>
+
+  <legend>Dependents</legend>
+  <table class="table table-bordered">
+    <tr>
+      <th>Name</th>
+      <th>Relation</th>
+      <th>Date of Birth</th>
+    </tr>
+    <div class="accordion" id="dependentForm">
+      <div class="accordion-group">
+        <div class="accordion-heading">
+          <a class="accordion-toggle" data-toggle="collapse" data-parent="#dependentForm" href="#addDependent">
+            Add dependent
+          </a>
+        </div>
+        <div id="addDependent" class="accordion-body collapse">
+          <div class="accordion-inner">
+            <%= render 'dependents/form' %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <% @rid.dependents.each do |dependent| %>
+    <tr>
+      <td><%= dependent.name %></td>
+      <td><%= dependent.relation %></td>
+      <td><%= dependent.date_of_birth.strftime("%m-%d-%Y") %></td>
+    </tr>
+    <% end %>
+  </table>
+  <legend>Civilian Schooling</legend>
+  <table class="table table-bordered">
+    <tr>
+      <th>Course</th>
+      <th>School</th>
+      <th>Date Completed</th>
+    </tr>
+    <% if @rid.personal_detail.educational_background.post_graduate_location.present? %>
+    <tr>
+      <td><%= @rid.personal_detail.educational_background.postgraduate_course %></td>
+      <td><%= @rid.personal_detail.educational_background.post_graduate_location %></td>
+      <td><%= @rid.personal_detail.educational_background.post_graduate_date_of_attendance2.strftime("%m-%d-%Y") %></td>
+    </tr>
+    <% end %>
+    <% if @rid.personal_detail.educational_background.college_location.present? %>
+        <tr>
+          <td><%= @rid.personal_detail.educational_background.college_course %></td>
+          <td><%= @rid.personal_detail.educational_background.college_location %></td>
+          <td><%= @rid.personal_detail.educational_background.college_date_of_attendance2.strftime("%m-%d-%Y") %></td>
+        </tr>
+    <% end %>
+    <% if @rid.personal_detail.educational_background.other_location.present? %>
+        <tr>
+          <td><%= @rid.personal_detail.educational_background.other_course %></td>
+          <td><%= @rid.personal_detail.educational_background.other_location %></td>
+          <td><%= @rid.personal_detail.educational_background.other_date_of_attendance2.strftime("%m-%d-%Y") %></td>
+        </tr>
+    <% end %>
+
+  </table>
+  <legend>Military Schooling/Training/ADT</legend>
+  <table class="table table-bordered">
+    <tr>
+      <th>Course</th>
+      <th>School</th>
+      <th>Date Completed</th>
+    </tr>
+    <% @rid.personal_detail.military_history.military_schools.each do |school| %>
+    <tr>
+      <td><%= school.nature_of_training %></td>
+      <td><%= school.name_of_school %></td>
+      <td><%= school.date_of_attendance.strftime("%m-%d-%Y") %></td>
+    </tr>
+    <% end %>
+  </table>
+  <legend>Civilian and Military Awards Received</legend>
+  <div class="accordion" id="awardForm">
+    <div class="accordion-group">
+      <div class="accordion-heading">
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#awardForm" href="#addCivilianMilitaryAward">
+          Add Civilian/Military Award
+        </a>
+      </div>
+      <div id="addCivilianMilitaryAward" class="accordion-body collapse">
+        <div class="accordion-inner">
+          <%= render 'civilian_military_awards/form' %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <table class="table table-bordered">
+    <tr>
+      <th>Type of Award</th>
+      <th>Authority</th>
+      <th>Date Awarded</th>
+    </tr>
+    <% @rid.civilian_military_awards.each do |award| %>
+    <tr>
+      <td><%= award.type_of_award %></td>
+      <td><%= award.authority %></td>
+      <td><%= award.date_awarded.strftime("%m-%d-%Y") %></td>
+    </tr>
+    <% end %>
+  </table>
+    <legend>Promotion/Demotion</legend>
+  <div class="accordion" id="promotionDemotionForm">
+    <div class="accordion-group">
+      <div class="accordion-heading">
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#promotionDemotionForm" href="#addPromotionDemotion">
+          Add Promotion/Demotion record
+        </a>
+      </div>
+      <div id="addPromotionDemotion" class="accordion-body collapse">
+        <div class="accordion-inner">
+          <%= render 'promotion_demotions/form' %>
+        </div>
+      </div>
+    </div>
+  </div>
+    <table class="table table-bordered">
+      <tr>
+        <th>From</th>
+        <th>To</th>
+        <th>Rank</th>
+        <th>Authority</th>
+        <th>Effectivity</th>
+      </tr>
+      <% @rid.promotion_demotions.each do |rank| %>
+      <tr>
+        <td><%= rank.from %></td>
+        <td><%= rank.to %></td>
+        <td><%= rank.rank %></td>
+        <td><%= rank.authority %></td>
+        <td><%= rank.effectivity.strftime("%m-%d-%Y") %></td>
+      </tr>
+      <% end %>
+    </table>
+    <div class="shadow1">
+      <div class="content">
+        <h5 align="center"><u>Requirements for Enlistment (Reservist)</u></h5><br>
+        <ol>
+          <li>Accomplish Reservist Information Data Sheet (RIDS)</li>
+          <li>Basic/Advance NROTC Certificate</li>
+          <li>Transcript of Record and Diploma</li>
+          <li>PRC License (if any)</li>
+          <li>NBI Clearance</li>
+          <li>2x2 Pictures (2 copies)</li>
+          <li>Birth Certificate from NSO</li>
+        </ol>
+        <b>Note: </b>Requirements should be submitted in two (2) copies
+        in a folder with blue tabbings.
+      </div>
+    </div>
+</div>
+
+<div id="preventAadt" class="modal hide fade">
+  <div class="modal-header">
+    <button type="close" class="close" data-dismiss="modal">&times;</button>
+    <h4><%= image_tag("warning-sign.jpg", size: "75x75") %>Cannot proceed to AADT w/ SOI</h4>
+  </div>
+  <div class="modal-body">
+    <p>It seems that your Personal History Statement is currently incomplete. Please fill up the remaining forms before going to AADT w/ SOI. Some of the details of SOI are depending on your Personal History Statement.</p>
+  </div>
+  <div class="modal-footer">
+    <button type="close" class="btn btn-inverse" data-dismiss="modal">Okay, I understand</button>
+  </div>
+</div>

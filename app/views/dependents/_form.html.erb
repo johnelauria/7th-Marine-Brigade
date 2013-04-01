@@ -1,0 +1,30 @@
+<%= form_for(@dependent) do |f| %>
+  <% if @dependent.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@dependent.errors.count, "error") %> prohibited this dependent from being saved:</h2>
+
+      <ul>
+      <% @dependent.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <%= f.hidden_field :rid_id, value: @rid.id %>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :relation %><br />
+    <%= f.text_field :relation %>
+  </div>
+  <div class="field">
+    <%= f.label :date_of_birth %><br />
+    <%= f.date_select :date_of_birth, start_year: Date.today.strftime("%Y").to_i - 30, end_year: Date.today.strftime("%Y").to_i %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Save", class: "btn" %>
+  </div>
+<% end %>

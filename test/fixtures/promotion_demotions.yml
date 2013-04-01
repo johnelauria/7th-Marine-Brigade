@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  rid_id: 1
+  from: MyString
+  to: MyString
+  rank: MyString
+  authority: MyString
+  effectivity: 2013-04-01
+
+two:
+  rid_id: 1
+  from: MyString
+  to: MyString
+  rank: MyString
+  authority: MyString
+  effectivity: 2013-04-01

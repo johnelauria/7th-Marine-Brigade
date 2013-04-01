@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  rid_id: 1
+  type_of_award: MyString
+  authority: MyString
+  date_awarded: 2013-04-01
+  category: MyString
+
+two:
+  rid_id: 1
+  type_of_award: MyString
+  authority: MyString
+  date_awarded: 2013-04-01
+  category: MyString

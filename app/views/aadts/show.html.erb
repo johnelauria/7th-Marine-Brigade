@@ -4,6 +4,11 @@
     <ul class="nav">
       <li><%= link_to "PHS", PersonalDetail.find(@aadt.personal_detail_id) %></li>
       <li class="active"><a href="#">AADT with SOI</a></li>
+      <% if @aadt.personal_detail.rid.gsis.nil? || @aadt.personal_detail.rid.tin.nil? %>
+          <li><%= link_to "RIDS", edit_rid_path(@aadt.personal_detail.rid) %></li>
+      <% else %>
+          <li><%= link_to "RIDS", @aadt.personal_detail.rid %></li>
+      <% end %>
     </ul>
   </div>
 </div>
@@ -27,7 +32,7 @@
         <li>Request to undergo Thirty (30) Days <%= @aadt.undergo_thirty_days %> and Annual Active Duty Training effective <%= @aadt.aadt_effective.strftime("%m-%d-%Y") %> </li>
         <li>Following are the information pertaining to personal circumstances:</li>
         <ol style="list-style: lower-alpha;">
-          <li><b>Source and date of commission / enlistment: </b><%= @aadt.date_of_commission %></li>
+          <li><b>Source and date of commission / enlistment: </b><%= @aadt.date_of_commission.strftime("%m-%d-%Y") %></li>
           <li><b>Authority: </b><%= @aadt.authority %></li>
           <li><b>Date of last promotion: </b><%= @aadt.date_of_last_promotion.strftime("%m-%d-%Y") %></li>
           <li><b>Permanent address: </b><%= @aadt.permanent_address %></li>

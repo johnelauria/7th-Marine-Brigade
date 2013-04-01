@@ -1,0 +1,39 @@
+<%= form_for(@promotion_demotion) do |f| %>
+  <% if @promotion_demotion.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@promotion_demotion.errors.count, "error") %> prohibited this promotion_demotion from being saved:</h2>
+
+      <ul>
+      <% @promotion_demotion.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <%= f.hidden_field :rid_id, value: @rid.id %>
+
+  <div class="field">
+    <%= f.label :from %><br />
+    <%= f.text_field :from %>
+  </div>
+  <div class="field">
+    <%= f.label :to %><br />
+    <%= f.text_field :to %>
+  </div>
+  <div class="field">
+    <%= f.label :rank %><br />
+    <%= f.text_field :rank %>
+  </div>
+  <div class="field">
+    <%= f.label :authority %><br />
+    <%= f.text_field :authority %>
+  </div>
+  <div class="field">
+    <%= f.label :effectivity %><br />
+    <%= f.date_select :effectivity, start_year: Date.today.strftime("%Y").to_i - 60 %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Save", class: "btn" %>
+  </div>
+<% end %>

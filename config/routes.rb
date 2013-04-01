@@ -1,4 +1,16 @@
 MarineBrigade::Application.routes.draw do
+  resources :promotion_demotions
+
+
+  resources :civilian_military_awards
+
+
+  resources :dependents
+
+
+  resources :rids
+
+
   resources :aadts
 
 

@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Rid:</b>
+  <%= @civilian_military_award.rid_id %>
+</p>
+
+<p>
+  <b>Type of award:</b>
+  <%= @civilian_military_award.type_of_award %>
+</p>
+
+<p>
+  <b>Authority:</b>
+  <%= @civilian_military_award.authority %>
+</p>
+
+<p>
+  <b>Date awarded:</b>
+  <%= @civilian_military_award.date_awarded %>
+</p>
+
+<p>
+  <b>Category:</b>
+  <%= @civilian_military_award.category %>
+</p>
+
+
+<%= link_to 'Edit', edit_civilian_military_award_path(@civilian_military_award) %> |
+<%= link_to 'Back', civilian_military_awards_path %>

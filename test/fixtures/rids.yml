@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  personal_detail_id: 1
+  province: MyString
+  province_contact: MyString
+  religion: MyString
+  blood_type: MyString
+  sss: 1
+  tin: 1
+  gsis: 1
+  philhealth: 1
+  person_to_notify: MyString
+  size_of_combat: MyString
+  size_of_cap: MyString
+  size_of_bdu: MyString
+
+two:
+  personal_detail_id: 1
+  province: MyString
+  province_contact: MyString
+  religion: MyString
+  blood_type: MyString
+  sss: 1
+  tin: 1
+  gsis: 1
+  philhealth: 1
+  person_to_notify: MyString
+  size_of_combat: MyString
+  size_of_cap: MyString
+  size_of_bdu: MyString

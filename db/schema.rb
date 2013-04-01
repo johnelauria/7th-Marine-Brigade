@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130330021927) do
+ActiveRecord::Schema.define(:version => 20130401084734) do
 
   create_table "aadts", :force => true do |t|
     t.integer  "personal_detail_id"
@@ -70,6 +70,16 @@ ActiveRecord::Schema.define(:version => 20130330021927) do
     t.integer  "marital_history_id"
   end
 
+  create_table "civilian_military_awards", :force => true do |t|
+    t.integer  "rid_id"
+    t.string   "type_of_award"
+    t.string   "authority"
+    t.date     "date_awarded"
+    t.string   "category"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
+
   create_table "credit_reputations", :force => true do |t|
     t.integer  "personal_detail_id"
     t.boolean  "salary_defendant"
@@ -86,6 +96,15 @@ ActiveRecord::Schema.define(:version => 20130330021927) do
     t.text     "credit_reference_address3"
     t.datetime "created_at",                :null => false
     t.datetime "updated_at",                :null => false
+  end
+
+  create_table "dependents", :force => true do |t|
+    t.integer  "rid_id"
+    t.string   "name"
+    t.string   "relation"
+    t.date     "date_of_birth"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
   end
 
   create_table "educational_backgrounds", :force => true do |t|
@@ -327,11 +346,43 @@ ActiveRecord::Schema.define(:version => 20130330021927) do
     t.integer  "personal_detail_id"
   end
 
+  create_table "promotion_demotions", :force => true do |t|
+    t.integer  "rid_id"
+    t.string   "from"
+    t.string   "to"
+    t.string   "rank"
+    t.string   "authority"
+    t.date     "effectivity"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
   create_table "received_military_awards", :force => true do |t|
     t.integer  "military_history_id"
     t.text     "awards"
     t.datetime "created_at",          :null => false
     t.datetime "updated_at",          :null => false
+  end
+
+  create_table "rids", :force => true do |t|
+    t.integer  "personal_detail_id"
+    t.string   "province"
+    t.string   "province_contact"
+    t.string   "religion"
+    t.string   "blood_type"
+    t.integer  "sss"
+    t.integer  "tin"
+    t.integer  "gsis"
+    t.integer  "philhealth"
+    t.string   "person_to_notify"
+    t.string   "size_of_combat"
+    t.string   "size_of_cap"
+    t.string   "size_of_bdu"
+    t.datetime "created_at",              :null => false
+    t.datetime "updated_at",              :null => false
+    t.string   "civilian_occupation"
+    t.text     "civilian_office_address"
+    t.string   "civilian_contact_number"
   end
 
 end

@@ -69,6 +69,7 @@ class PersonalDetailsController < ApplicationController
 
     respond_to do |format|
       if @personal_detail.save
+        Rid.create(personal_detail_id: @personal_detail.id)
         format.html { redirect_to @personal_detail, notice: 'Personal detail was successfully created.' }
         format.json { render json: @personal_detail, status: :created, location: @personal_detail }
       else
@@ -84,6 +85,7 @@ class PersonalDetailsController < ApplicationController
     @personal_detail = PersonalDetail.find(params[:id])
 
     respond_to do |format|
+      @personal_detail.rid.update_attributes(personal_detail_id: @personal_detail.id)
       if @personal_detail.update_attributes(params[:personal_detail])
         format.html { redirect_to @personal_detail, notice: 'Personal detail was successfully updated.' }
         format.json { head :no_content }

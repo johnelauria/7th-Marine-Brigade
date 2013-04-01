@@ -1,0 +1,2 @@
+module PromotionDemotionsHelper
+end

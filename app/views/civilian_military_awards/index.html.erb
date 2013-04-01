@@ -1,0 +1,31 @@
+<h1>Listing civilian_military_awards</h1>
+
+<table>
+  <tr>
+    <th>Rid</th>
+    <th>Type of award</th>
+    <th>Authority</th>
+    <th>Date awarded</th>
+    <th>Category</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @civilian_military_awards.each do |civilian_military_award| %>
+  <tr>
+    <td><%= civilian_military_award.rid_id %></td>
+    <td><%= civilian_military_award.type_of_award %></td>
+    <td><%= civilian_military_award.authority %></td>
+    <td><%= civilian_military_award.date_awarded %></td>
+    <td><%= civilian_military_award.category %></td>
+    <td><%= link_to 'Show', civilian_military_award %></td>
+    <td><%= link_to 'Edit', edit_civilian_military_award_path(civilian_military_award) %></td>
+    <td><%= link_to 'Destroy', civilian_military_award, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Civilian military award', new_civilian_military_award_path %>

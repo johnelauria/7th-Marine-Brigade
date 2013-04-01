@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Rid:</b>
+  <%= @promotion_demotion.rid_id %>
+</p>
+
+<p>
+  <b>From:</b>
+  <%= @promotion_demotion.from %>
+</p>
+
+<p>
+  <b>To:</b>
+  <%= @promotion_demotion.to %>
+</p>
+
+<p>
+  <b>Rank:</b>
+  <%= @promotion_demotion.rank %>
+</p>
+
+<p>
+  <b>Authority:</b>
+  <%= @promotion_demotion.authority %>
+</p>
+
+<p>
+  <b>Effectivity:</b>
+  <%= @promotion_demotion.effectivity %>
+</p>
+
+
+<%= link_to 'Edit', edit_promotion_demotion_path(@promotion_demotion) %> |
+<%= link_to 'Back', promotion_demotions_path %>

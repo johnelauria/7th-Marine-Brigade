@@ -1,0 +1,35 @@
+<%= form_for(@civilian_military_award) do |f| %>
+  <% if @civilian_military_award.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@civilian_military_award.errors.count, "error") %> prohibited this civilian_military_award from being saved:</h2>
+
+      <ul>
+      <% @civilian_military_award.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <%= f.hidden_field :rid_id, value: @rid.id %>
+
+  <div class="field">
+    <%= f.label :type_of_award %><br />
+    <%= f.text_field :type_of_award %>
+  </div>
+  <div class="field">
+    <%= f.label :authority %><br />
+    <%= f.text_field :authority %>
+  </div>
+  <div class="field">
+    <%= f.label :date_awarded %><br />
+    <%= f.date_select :date_awarded, start_year: Date.today.strftime("%Y").to_i - 60, end_year: Date.today.strftime("%Y").to_i %>
+  </div>
+  <div class="field">
+    <%= f.label :category %><br />
+    <%= f.select :category, "<option>Military</option><option>Civilian</option>".html_safe %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Save", class: "btn" %>
+  </div>
+<% end %>

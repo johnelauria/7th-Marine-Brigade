@@ -1,0 +1,29 @@
+<h1>Listing dependents</h1>
+
+<table>
+  <tr>
+    <th>Rid</th>
+    <th>Name</th>
+    <th>Relation</th>
+    <th>Date of birth</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @dependents.each do |dependent| %>
+  <tr>
+    <td><%= dependent.rid_id %></td>
+    <td><%= dependent.name %></td>
+    <td><%= dependent.relation %></td>
+    <td><%= dependent.date_of_birth %></td>
+    <td><%= link_to 'Show', dependent %></td>
+    <td><%= link_to 'Edit', edit_dependent_path(dependent) %></td>
+    <td><%= link_to 'Destroy', dependent, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Dependent', new_dependent_path %>
