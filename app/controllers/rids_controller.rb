@@ -47,6 +47,7 @@ class RidsController < ApplicationController
 
     respond_to do |format|
       if @rid.save
+        RidsShort.create(rid_id: @rid.id)
         format.html { redirect_to @rid, notice: 'Rid was successfully created.' }
         format.json { render json: @rid, status: :created, location: @rid }
       else

@@ -1,0 +1,116 @@
+<div class="navbar navbar-fixed-top navbar-inverse">
+  <div class="navbar-inner">
+    <%= link_to "7th Marine Brigade", root_path, class: "brand" %>
+    <ul class="nav">
+      <li><%= link_to "PHS", @rids_short.rid.personal_detail %></li>
+      <% if @rids_short.rid.personal_detail.personal_characteristic.nil? && @rids_short.rid.personal_detail.marital_history.nil? && @rids_short.rid.personal_detail.educational_background.nil? %>
+          <li><a href="#preventAadt" data-toggle="modal">AADT with SOI</a></li>
+      <% else %>
+          <li><%= link_to "AADT with SOI", @rids_short.rid.personal_detail.aadt %></li>
+      <% end %>
+      <li class="active">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">RIDS<b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><%= link_to "RIDS", @rids_short.rid %></li>
+          <% if @rids_short.rid.rids_short.zip_code.nil? || @rids_short.rid.rids_short.city.nil? %>
+              <li><%= link_to "RIDS Short Assembly Test", edit_rids_short_path(@rids_short) %></li>
+          <% else %>
+              <li class="active"><%= link_to "RIDS Short Assembly Test", @rids_short %></li>
+          <% end %>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="container">
+    <p id="notice"><%= notice %></p>
+
+  <div class="row">
+    <div class="span3">
+      <%= image_tag("Logo 7MBDE.jpg", size: "100x100") %>
+    </div>
+    <div class="span6">
+      <br><h3>7th MARINE BRIGADE RESERVE</h3>
+    </div>
+  </div>
+  <h3>Assembly Test</h3>
+  <div align="center">
+    <u><h4>RESERVIST INFORMATION DATA SHEET</h4></u>
+  </div>
+  <br>
+  <p>
+    <b>Last Name: </b><%= @rids_short.rid.personal_detail.last_name %> &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+    <b>First Name: </b><%= @rids_short.rid.personal_detail.first_name %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <b>Middle Name: </b><%= @rids_short.rid.personal_detail.middle_name %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <b>Suffix: </b><%= @rids_short.rid.personal_detail.suffix %>
+  </p>
+
+  <p>
+    <b>Metro Manila Residential Address: </b><%= @rids_short.manila_address %>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
+    <b>City: </b><%= @rids_short.city %>
+  </p>
+
+  <p>
+    <b>Zip Code: </b><%= @rids_short.zip_code %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <b>Home Contact Number: </b><%= @rids_short.home_contact %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <b>Cellphone Number: </b><%= @rids_short.rid.personal_detail.mobile_number %>
+  </p>
+
+  <p>
+    <b>Provincial Address: </b><%= @rids_short.rid.province %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <b>Contact Number: </b><%= @rids_short.rid.province_contact %>
+  </p>
+
+  <p>
+    <b>Email Address: </b><%= @rids_short.email_address %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <b>Date of Birth: </b><%= @rids_short.rid.personal_detail.birthdate %>
+  </p>
+
+  <p>
+    <b>Place of Birth: </b><%= @rids_short.rid.personal_detail.place_of_birth %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <b>Sex: </b><%= @rids_short.rid.personal_detail.personal_characteristic.sex %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <b>Marital Status: </b><%= @rids_short.rid.personal_detail.marital_history.marital_status %>
+  </p>
+
+  <p>
+    <b>Rank: </b><%= @rids_short.rid.personal_detail.rank %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <b>AFP Serial Number: </b><%= @rids_short.rid.personal_detail.AFPSN %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <b>Source of Enlistment/Commission: </b><%= @rids_short.rid.personal_detail.aadt.source_of_commission %>
+  </p>
+
+  <p>
+    <b>NROTC School: </b><%= @rids_short.nrotc_school %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <b>NROTC year graduated: </b><%= @rids_short.nrotc_year_graduate %>
+  </p>
+
+  <p>
+    <b>S.O./G.O. number and date of Enlistment/Commission: </b><%= @rids_short.so_go_number %>
+  </p>
+
+  <p>
+    <b>Civilian Occupation: </b><%= @rids_short.rid.civilian_occupation %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <b>Name of office, office address and phone number: </b><%= @rids_short.rid.civilian_office_address %>
+  </p>
+
+  <p>
+    <b>Year and course: </b><%= @rids_short.year_and_course %>
+    <b>School and school address: </b><%= @rids_short.school_address %>
+  </p>
+
+  <p>
+    <b>SSS Number: </b><%= @rids_short.rid.sss %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <b>GSIS Number: </b><%= @rids_short.rid.gsis %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <b>TIN Number: </b><%= @rids_short.rid.tin %>
+  </p>
+
+  <p>
+    <b>PRC/Board License: </b><%= @rids_short.rid.personal_detail.aadt.licence %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <b>Languages/Dialects Spoken: </b>
+    <% @rids_short.rid.personal_detail.miscellaneou.language_and_dialects.each do |language| %>
+        <%= language.language %>,
+    <% end %>
+  </p>
+
+
+    <%= link_to 'Edit', edit_rids_short_path(@rids_short) %>
+</div>

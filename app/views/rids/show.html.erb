@@ -12,7 +12,17 @@
               <li><%= link_to "AADT with SOI", @rid.personal_detail.aadt %></li>
           <% end %>
       <% end %>
-      <li class="active"><%= link_to "RIDS", @rid.personal_detail.rid %></li>
+      <li class="active">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">RIDS<b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li class="active"><%= link_to "RIDS", @rid.personal_detail.rid %></li>
+          <% if @rid.rids_short.zip_code.nil? || @rid.rids_short.city.nil? %>
+            <li><%= link_to "RIDS Short Assembly Test", edit_rids_short_path(@rid.rids_short) %></li>
+          <% else %>
+            <li><%= link_to "RIDS Short Assembly Test", @rid.rids_short %></li>
+          <% end %>
+        </ul>
+      </li>
     </ul>
   </div>
 </div>
@@ -281,7 +291,7 @@
 <div id="preventAadt" class="modal hide fade">
   <div class="modal-header">
     <button type="close" class="close" data-dismiss="modal">&times;</button>
-    <h4><%= image_tag("warning-sign.jpg", size: "75x75") %>Cannot proceed to AADT w/ SOI</h4>
+    <h4><%= image_tag("warning-sign.jpg", size: "75x75") %>Cannot proceed to AADT w/ SOI %></h4>
   </div>
   <div class="modal-body">
     <p>It seems that your Personal History Statement is currently incomplete. Please fill up the remaining forms before going to AADT w/ SOI. Some of the details of SOI are depending on your Personal History Statement.</p>

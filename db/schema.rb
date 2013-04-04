@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130401084734) do
+ActiveRecord::Schema.define(:version => 20130404130853) do
 
   create_table "aadts", :force => true do |t|
     t.integer  "personal_detail_id"
@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(:version => 20130401084734) do
     t.datetime "created_at",                      :null => false
     t.datetime "updated_at",                      :null => false
     t.string   "type_of_aadt"
+    t.string   "source_of_commission"
   end
 
   create_table "arrest_record_and_conducts", :force => true do |t|
@@ -335,6 +336,11 @@ ActiveRecord::Schema.define(:version => 20130401084734) do
     t.integer  "national_reg_cards_no"
     t.datetime "created_at",            :null => false
     t.datetime "updated_at",            :null => false
+    t.string   "suffix"
+    t.string   "street_name"
+    t.integer  "street_number"
+    t.string   "telephone_area_code"
+    t.string   "mobile_number"
   end
 
   create_table "place_of_residences", :force => true do |t|
@@ -383,6 +389,23 @@ ActiveRecord::Schema.define(:version => 20130401084734) do
     t.string   "civilian_occupation"
     t.text     "civilian_office_address"
     t.string   "civilian_contact_number"
+  end
+
+  create_table "rids_shorts", :force => true do |t|
+    t.integer  "rid_id"
+    t.text     "manila_address"
+    t.string   "city"
+    t.string   "zip_code"
+    t.string   "nrotc_school"
+    t.date     "nrotc_year_graduate"
+    t.integer  "so_go_number"
+    t.string   "year_and_course"
+    t.text     "school_address"
+    t.text     "other_skills"
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
+    t.string   "home_contact"
+    t.string   "email_address"
   end
 
 end

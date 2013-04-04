@@ -7,7 +7,15 @@
       <% if @aadt.personal_detail.rid.gsis.nil? || @aadt.personal_detail.rid.tin.nil? %>
           <li><%= link_to "RIDS", edit_rid_path(@aadt.personal_detail.rid) %></li>
       <% else %>
-          <li><%= link_to "RIDS", @aadt.personal_detail.rid %></li>
+          <li>
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">RIDS<b class="caret"></b> </a>
+            <ul class="dropdown-menu">
+              <li><%= link_to "RIDS", @aadt.personal_detail.rid %></li>
+              <% if @aadt.personal_detail.rid.rids_short.city.present? || @aadt.personal_detail.rid.rids_short.zip_code.present? %>
+                <li><%= link_to "RIDS Short Assembly Test", @aadt.personal_detail.rid.rids_short %></li>
+              <% end %>
+            </ul>
+          </li>
       <% end %>
     </ul>
   </div>

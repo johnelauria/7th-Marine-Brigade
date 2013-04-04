@@ -1,5 +1,5 @@
 class PersonalDetail < ActiveRecord::Base
-  attr_accessible :AFPSN, :BR_SVC, :assignment, :birthdate, :change_in_name, :duty_address, :first_name, :home_address, :last_name, :middle_name, :national_reg_cards_no, :nationality, :place_of_birth, :rank, :telephone, :tin
+  attr_accessible :AFPSN, :BR_SVC, :assignment, :birthdate, :change_in_name, :duty_address, :first_name, :home_address, :last_name, :middle_name, :national_reg_cards_no, :nationality, :place_of_birth, :rank, :telephone, :tin, :suffix, :telephone_area_code, :street_name, :street_number, :mobile_number
   has_one :personal_characteristic, dependent: :destroy
   has_one :marital_history, dependent: :destroy
   has_one :family_history, dependent: :destroy

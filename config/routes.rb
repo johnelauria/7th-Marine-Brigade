@@ -1,4 +1,7 @@
 MarineBrigade::Application.routes.draw do
+  resources :rids_shorts
+
+
   resources :promotion_demotions
 
 

@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  rid_id: 1
+  manila_address: MyText
+  city: MyString
+  zip_code: MyString
+  nrotc_school: MyString
+  nrotc_year_graduate: 2013-04-04
+  so_go_number: 1
+  year_and_course: MyString
+  school_address: MyText
+  other_skills: MyText
+
+two:
+  rid_id: 1
+  manila_address: MyText
+  city: MyString
+  zip_code: MyString
+  nrotc_school: MyString
+  nrotc_year_graduate: 2013-04-04
+  so_go_number: 1
+  year_and_course: MyString
+  school_address: MyText
+  other_skills: MyText

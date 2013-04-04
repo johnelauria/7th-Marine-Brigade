@@ -1,0 +1,41 @@
+<h1>Listing rids_shorts</h1>
+
+<table>
+  <tr>
+    <th>Rid</th>
+    <th>Manila address</th>
+    <th>City</th>
+    <th>Zip code</th>
+    <th>Nrotc school</th>
+    <th>Nrotc year graduate</th>
+    <th>So go number</th>
+    <th>Year and course</th>
+    <th>School address</th>
+    <th>Other skills</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @rids_shorts.each do |rids_short| %>
+  <tr>
+    <td><%= rids_short.rid_id %></td>
+    <td><%= rids_short.manila_address %></td>
+    <td><%= rids_short.city %></td>
+    <td><%= rids_short.zip_code %></td>
+    <td><%= rids_short.nrotc_school %></td>
+    <td><%= rids_short.nrotc_year_graduate %></td>
+    <td><%= rids_short.so_go_number %></td>
+    <td><%= rids_short.year_and_course %></td>
+    <td><%= rids_short.school_address %></td>
+    <td><%= rids_short.other_skills %></td>
+    <td><%= link_to 'Show', rids_short %></td>
+    <td><%= link_to 'Edit', edit_rids_short_path(rids_short) %></td>
+    <td><%= link_to 'Destroy', rids_short, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Rids short', new_rids_short_path %>

@@ -1,0 +1,52 @@
+<%= form_for(@rids_short) do |f| %>
+  <% if @rids_short.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@rids_short.errors.count, "error") %> prohibited this rids_short from being saved:</h2>
+
+      <ul>
+      <% @rids_short.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <%= f.hidden_field :rid_id %>
+
+  <div class="field">
+    <label>Metro Manila Residential Address</label>
+    <%= f.text_area :manila_address, rows: 2 %>
+  </div>
+  <div class="field">
+    <%= f.label :city %>
+    <%= f.text_field :city %>
+  </div>
+  <div class="field">
+    <%= f.label :zip_code %>
+    <%= f.text_field :zip_code %>
+  </div>
+  <div class="field">
+    <label>If NROTC indicate school and year graduated</label>
+    <%= f.text_field :nrotc_school, placeholder: "Name of school" %><br>
+    <%= f.date_select :nrotc_year_graduate, start_year: Date.today.strftime("%Y").to_i - 65, end_year: Date.today.strftime("%Y").to_i %>
+  </div>
+  <div class="field">
+    <label>S.O./G.O. number and date of Enlistment/Commission</label>
+    <%= f.number_field :so_go_number %>
+  </div>
+  <div class="field">
+    <label>Year and Course (For students)</label>
+    <%= f.text_field :year_and_course %>
+  </div>
+  <div class="field">
+    <label>Schoold Address (For Students)</label>
+    <%= f.text_area :school_address, rows: 2 %>
+  </div>
+  <div class="field">
+    <%= f.label :other_skills %><br />
+    <%= f.text_area :other_skills, rows: 2 %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Save", class: "btn" %>
+  </div>
+<% end %>

@@ -1,24 +1,24 @@
 <div class="navbar navbar-fixed-top navbar-inverse">
   <div class="navbar-inner">
     <%= link_to "7th Marine Brigade", root_path, class: "brand" %>
-  <ul class="nav">
-    <li class="active"><a href="#">PHS</a></li>
-    <% if @personal_detail.personal_characteristic.nil? && @personal_detail.marital_history.nil? && @personal_detail.educational_background.nil? %>
-        <li><a href="#preventAadt" data-toggle="modal">AADT with SOI</a></li>
-    <% else %>
-    <% if @personal_detail.aadt.nil? %>
-        <li><%= link_to "AADT with SOI", new_aadt_path(JAT2JUB4HJSDFSBFDJ33BK: @personal_detail.id, rank: @personal_detail.rank, name: "#{@personal_detail.first_name} #{@personal_detail.middle_name} #{@personal_detail.last_name}", afpsn: @personal_detail.AFPSN) %></li>
-    <% else %>
-        <li><%= link_to "AADT with SOI", @personal_detail.aadt %></li>
-    <% end %>
-    <% end %>
-    <% if @personal_detail.rid.gsis.nil? || @personal_detail.rid.tin.nil? %>
-        <li><%= link_to "RIDS", edit_rid_path(@personal_detail.rid) %></li>
-    <% else %>
-        <li><%= link_to "RIDS", @personal_detail.rid %></li>
-    <% end %>
-  </ul>
-</div>
+    <ul class="nav">
+      <li class="active"><%= link_to "PHS", @personal_detail %></li>
+      <li><%= link_to "AADT w/ SOI", @personal_detail.aadt %></li>
+      <% if @personal_detail.rid.gsis.nil? || @personal_detail.rid.tin.nil? %>
+          <li><%= link_to "RIDS", edit_rid_path(@personal_detail.rid) %></li>
+      <% else %>
+          <li>
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">RIDS<b class="caret"></b> </a>
+            <ul class="dropdown-menu">
+              <li><%= link_to "RIDS", @personal_detail.rid %></li>
+              <% if @personal_detail.rid.rids_short.city.present? || @personal_detail.rid.rids_short.zip_code.present? %>
+                  <li><%= link_to "RIDS Short Assembly Test", @personal_detail.rid.rids_short %></li>
+              <% end %>
+            </ul>
+          </li>
+      <% end %>
+    </ul>
+  </div>
 </div>
 <div class="container">
 <p id="notice"><%= notice %></p>
@@ -47,6 +47,10 @@
   <div class="span9">
     <div class="tab-content">
       <div class="tab-pane active" id="personalDetails">
+        <p>
+          <b>Suffix: </b>
+          <%= @personal_detail.suffix %>
+        </p>
         <p>
           <b>Last name:</b>
           <%= @personal_detail.last_name %>
@@ -89,12 +93,16 @@
 
         <p>
           <b>Telephone:</b>
-          <%= @personal_detail.telephone %>
+          <%= @personal_detail.telephone %> &nbsp; &nbsp;&nbsp;&nbsp;
+          <b>Area Code: </b>
+          <%= @personal_detail.telephone_area_code %>
         </p>
 
         <p>
           <b>Home address:</b>
-          <%= @personal_detail.home_address %>
+          <%= @personal_detail.home_address %>&nbsp;&nbsp;&nbsp;&nbsp;
+          <b>Street number: </b><%= @personal_detail.street_number %>&nbsp;&nbsp;&nbsp;&nbsp;
+          <b>Street name: </b><%= @personal_detail.street_name %>
         </p>
 
         <p>
