@@ -37,6 +37,10 @@
   <legend><small>Following are the information pertaining to my personal circumstances: (Fill-
     up all applicable items and indicate “N/A" or leave it blank if not applicable)</small></legend>
   <div class="field">
+    <%= f.label :source_of_commission %><br>
+    <%= f.text_field :source_of_commission %>
+  </div>
+  <div class="field">
     <%= f.label :date_of_commission %><br />
     <%= f.date_select :date_of_commission, start_year: Date.today.strftime("%Y").to_i - 65, end_year: Date.today.strftime("%Y").to_i %>
   </div>

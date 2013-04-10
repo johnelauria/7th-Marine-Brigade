@@ -1,0 +1,33 @@
+<h1>Listing duties</h1>
+
+<table>
+  <tr>
+    <th>Soi form</th>
+    <th>Position</th>
+    <th>Unit</th>
+    <th>Date1</th>
+    <th>Date2</th>
+    <th>Authority</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @duties.each do |duty| %>
+  <tr>
+    <td><%= duty.soi_form_id %></td>
+    <td><%= duty.position %></td>
+    <td><%= duty.unit %></td>
+    <td><%= duty.date1 %></td>
+    <td><%= duty.date2 %></td>
+    <td><%= duty.authority %></td>
+    <td><%= link_to 'Show', duty %></td>
+    <td><%= link_to 'Edit', edit_duty_path(duty) %></td>
+    <td><%= link_to 'Destroy', duty, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Duty', new_duty_path %>

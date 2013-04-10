@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Soi form:</b>
+  <%= @duty.soi_form_id %>
+</p>
+
+<p>
+  <b>Position:</b>
+  <%= @duty.position %>
+</p>
+
+<p>
+  <b>Unit:</b>
+  <%= @duty.unit %>
+</p>
+
+<p>
+  <b>Date1:</b>
+  <%= @duty.date1 %>
+</p>
+
+<p>
+  <b>Date2:</b>
+  <%= @duty.date2 %>
+</p>
+
+<p>
+  <b>Authority:</b>
+  <%= @duty.authority %>
+</p>
+
+
+<%= link_to 'Edit', edit_duty_path(@duty) %> |
+<%= link_to 'Back', duties_path %>

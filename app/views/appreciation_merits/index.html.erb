@@ -1,0 +1,27 @@
+<h1>Listing appreciation_merits</h1>
+
+<table>
+  <tr>
+    <th>Soi form</th>
+    <th>Date received</th>
+    <th>Awarded by</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @appreciation_merits.each do |appreciation_merit| %>
+  <tr>
+    <td><%= appreciation_merit.soi_form_id %></td>
+    <td><%= appreciation_merit.date_received %></td>
+    <td><%= appreciation_merit.awarded_by %></td>
+    <td><%= link_to 'Show', appreciation_merit %></td>
+    <td><%= link_to 'Edit', edit_appreciation_merit_path(appreciation_merit) %></td>
+    <td><%= link_to 'Destroy', appreciation_merit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Appreciation merit', new_appreciation_merit_path %>

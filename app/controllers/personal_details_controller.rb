@@ -70,6 +70,7 @@ class PersonalDetailsController < ApplicationController
     respond_to do |format|
       if @personal_detail.save
         Rid.create(personal_detail_id: @personal_detail.id)
+        SoiForm.create(personal_detail_id: @personal_detail.id)
         format.html { redirect_to @personal_detail, notice: 'Personal detail was successfully created.' }
         format.json { render json: @personal_detail, status: :created, location: @personal_detail }
       else

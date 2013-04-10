@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  soi_form_id: 1
+  position: MyString
+  unit: MyString
+  date1: 2013-04-10
+  date2: 2013-04-10
+  authority: MyString
+
+two:
+  soi_form_id: 1
+  position: MyString
+  unit: MyString
+  date1: 2013-04-10
+  date2: 2013-04-10
+  authority: MyString

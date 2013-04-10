@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130404130853) do
+ActiveRecord::Schema.define(:version => 20130410115839) do
 
   create_table "aadts", :force => true do |t|
     t.integer  "personal_detail_id"
@@ -35,6 +35,14 @@ ActiveRecord::Schema.define(:version => 20130404130853) do
     t.datetime "updated_at",                      :null => false
     t.string   "type_of_aadt"
     t.string   "source_of_commission"
+  end
+
+  create_table "appreciation_merits", :force => true do |t|
+    t.integer  "soi_form_id"
+    t.date     "date_received"
+    t.string   "awarded_by"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
   end
 
   create_table "arrest_record_and_conducts", :force => true do |t|
@@ -81,6 +89,14 @@ ActiveRecord::Schema.define(:version => 20130404130853) do
     t.datetime "updated_at",    :null => false
   end
 
+  create_table "commendations", :force => true do |t|
+    t.integer  "soi_form_id"
+    t.date     "date_received"
+    t.string   "awarded_by"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
+
   create_table "credit_reputations", :force => true do |t|
     t.integer  "personal_detail_id"
     t.boolean  "salary_defendant"
@@ -106,6 +122,19 @@ ActiveRecord::Schema.define(:version => 20130404130853) do
     t.date     "date_of_birth"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
+    t.text     "address"
+  end
+
+  create_table "duties", :force => true do |t|
+    t.integer  "soi_form_id"
+    t.string   "position"
+    t.string   "unit"
+    t.date     "date1"
+    t.date     "date2"
+    t.string   "authority"
+    t.string   "category"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "educational_backgrounds", :force => true do |t|
@@ -406,6 +435,22 @@ ActiveRecord::Schema.define(:version => 20130404130853) do
     t.datetime "updated_at",          :null => false
     t.string   "home_contact"
     t.string   "email_address"
+  end
+
+  create_table "soi_forms", :force => true do |t|
+    t.integer  "personal_detail_id"
+    t.text     "postal_address"
+    t.integer  "postal_tel_num"
+    t.string   "postal_area_code"
+    t.string   "next_of_kin"
+    t.string   "active_comsd_svc"
+    t.date     "length_of_military"
+    t.string   "remarks"
+    t.string   "statement_of_service_remarks"
+    t.date     "date_of_compulsory_retirement"
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
+    t.date     "present_duty_assignment"
   end
 
 end

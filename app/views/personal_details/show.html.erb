@@ -4,6 +4,11 @@
     <ul class="nav">
       <li class="active"><%= link_to "PHS", @personal_detail %></li>
       <li><%= link_to "AADT w/ SOI", @personal_detail.aadt %></li>
+      <% if @personal_detail.soi_form.postal_address.nil? || @personal_detail.soi_form.active_comsd_svc.nil? %>
+        <li><%= link_to "SOI Form 2008", edit_soi_form_path(@personal_detail.soi_form) %></li>
+      <% else %>
+        <li><%= link_to "SOI Form 2008", @personal_detail.soi_form %></li>
+      <% end %>
       <% if @personal_detail.rid.gsis.nil? || @personal_detail.rid.tin.nil? %>
           <li><%= link_to "RIDS", edit_rid_path(@personal_detail.rid) %></li>
       <% else %>

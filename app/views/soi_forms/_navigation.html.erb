@@ -1,0 +1,23 @@
+<div class="navbar navbar-fixed-top navbar-inverse">
+  <div class="navbar-inner">
+    <%= link_to "7th Marine Brigade", root_path, class: "brand" %>
+    <ul class="nav">
+      <li><%= link_to "PHS", @soi_form.personal_detail %></li>
+      <li><%= link_to "AADT w/ SOI", @soi_form.personal_detail.aadt %></li>
+      <li class="active"><%= link_to "SOI Form 2008", edit_soi_form_path(@soi_form) %></li>
+      <% if @soi_form.personal_detail.rid.gsis.nil? || @soi_form.personal_detail.rid.tin.nil? %>
+          <li><%= link_to "RIDS", edit_rid_path(@soi_form.personal_detail.rid) %></li>
+      <% else %>
+          <li>
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">RIDS<b class="caret"></b> </a>
+            <ul class="dropdown-menu">
+              <li><%= link_to "RIDS", @soi_form.personal_detail.rid %></li>
+              <% if @soi_form.personal_detail.rid.rids_short.city.present? || @soi_form.personal_detail.rid.rids_short.zip_code.present? %>
+                  <li><%= link_to "RIDS Short Assembly Test", @soi_form.personal_detail.rid.rids_short %></li>
+              <% end %>
+            </ul>
+          </li>
+      <% end %>
+    </ul>
+  </div>
+</div>

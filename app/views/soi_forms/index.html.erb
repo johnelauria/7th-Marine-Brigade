@@ -1,0 +1,41 @@
+<h1>Listing soi_forms</h1>
+
+<table>
+  <tr>
+    <th>Personal detail</th>
+    <th>Postal address</th>
+    <th>Postal tel num</th>
+    <th>Postal area code</th>
+    <th>Next of kin</th>
+    <th>Active comsd svc</th>
+    <th>Length of military</th>
+    <th>Remarks</th>
+    <th>Statement of service remarks</th>
+    <th>Date of compulsory retirement</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @soi_forms.each do |soi_form| %>
+  <tr>
+    <td><%= soi_form.personal_detail_id %></td>
+    <td><%= soi_form.postal_address %></td>
+    <td><%= soi_form.postal_tel_num %></td>
+    <td><%= soi_form.postal_area_code %></td>
+    <td><%= soi_form.next_of_kin %></td>
+    <td><%= soi_form.active_comsd_svc %></td>
+    <td><%= soi_form.length_of_military %></td>
+    <td><%= soi_form.remarks %></td>
+    <td><%= soi_form.statement_of_service_remarks %></td>
+    <td><%= soi_form.date_of_compulsory_retirement %></td>
+    <td><%= link_to 'Show', soi_form %></td>
+    <td><%= link_to 'Edit', edit_soi_form_path(soi_form) %></td>
+    <td><%= link_to 'Destroy', soi_form, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Soi form', new_soi_form_path %>

@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Soi form:</b>
+  <%= @appreciation_merit.soi_form_id %>
+</p>
+
+<p>
+  <b>Date received:</b>
+  <%= @appreciation_merit.date_received %>
+</p>
+
+<p>
+  <b>Awarded by:</b>
+  <%= @appreciation_merit.awarded_by %>
+</p>
+
+
+<%= link_to 'Edit', edit_appreciation_merit_path(@appreciation_merit) %> |
+<%= link_to 'Back', appreciation_merits_path %>

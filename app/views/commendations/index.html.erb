@@ -1,0 +1,27 @@
+<h1>Listing commendations</h1>
+
+<table>
+  <tr>
+    <th>Soi form</th>
+    <th>Date received</th>
+    <th>Awarded by</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @commendations.each do |commendation| %>
+  <tr>
+    <td><%= commendation.soi_form_id %></td>
+    <td><%= commendation.date_received %></td>
+    <td><%= commendation.awarded_by %></td>
+    <td><%= link_to 'Show', commendation %></td>
+    <td><%= link_to 'Edit', edit_commendation_path(commendation) %></td>
+    <td><%= link_to 'Destroy', commendation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Commendation', new_commendation_path %>

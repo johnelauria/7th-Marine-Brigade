@@ -1,0 +1,56 @@
+<%= form_for(@soi_form) do |f| %>
+  <% if @soi_form.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@soi_form.errors.count, "error") %> prohibited this soi_form from being saved:</h2>
+
+      <ul>
+      <% @soi_form.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <%= f.hidden_field :personal_detail_id %>
+
+  <div class="field">
+    <%= f.label :postal_address %><br />
+    <%= f.text_area :postal_address, rows: 2 %>
+  </div>
+  <div class="field">
+    <%= f.label :postal_telephone_number %><br />
+    <%= f.text_field :postal_area_code, placeholder: "area code", class: "input-mini" %>
+    <%= f.text_field :postal_tel_num %>
+  </div>
+  <div class="field">
+    <%= f.label :next_of_kin %><br />
+    <%= f.text_field :next_of_kin %>
+  </div>
+  <div class="field">
+    <%= f.label :active_comsd_svc %><br />
+    <%= f.text_field :active_comsd_svc %>
+  </div>
+  <div class="field">
+    <%= f.label :length_of_military %><br />
+    <%= f.date_select :length_of_military %>
+  </div>
+  <div class="field">
+    <%= f.label :present_duty_assignment %><br>
+    <%= f.date_select :present_duty_assignment, start_year: Date.today.strftime("%Y").to_i - 65, end_year: Date.today.strftime("%Y").to_i %>
+  </div>
+  <div class="field">
+    <%= f.label :remarks %><br />
+    <%= f.text_field :remarks %>
+  </div>
+  <div class="field">
+    <%= f.label :statement_of_service_remarks %><br />
+    <%= f.text_field :statement_of_service_remarks %>
+  </div>
+  <div class="field">
+    <%= f.label :date_of_compulsory_retirement %><br />
+    <%= f.date_select :date_of_compulsory_retirement %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Save", class: "btn" %>
+  </div>
+<% end %>

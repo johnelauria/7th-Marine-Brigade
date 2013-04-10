@@ -1,0 +1,27 @@
+<%= form_for(@appreciation_merit) do |f| %>
+  <% if @appreciation_merit.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@appreciation_merit.errors.count, "error") %> prohibited this appreciation_merit from being saved:</h2>
+
+      <ul>
+      <% @appreciation_merit.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <%= f.hidden_field :soi_form_id, value: @soi_form.id %>
+
+  <div class="field">
+    <%= f.label :date_received %><br />
+    <%= f.date_select :date_received, start_year: Date.today.strftime("%Y").to_i - 65, end_year: Date.today.strftime("%Y").to_i %>
+  </div>
+  <div class="field">
+    <%= f.label :awarded_by %><br />
+    <%= f.text_field :awarded_by %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Save", class: "btn" %>
+  </div>
+<% end %>

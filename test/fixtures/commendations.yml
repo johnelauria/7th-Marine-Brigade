@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  soi_form_id: 1
+  date_received: 2013-04-10
+  awarded_by: MyString
+
+two:
+  soi_form_id: 1
+  date_received: 2013-04-10
+  awarded_by: MyString

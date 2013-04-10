@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  personal_detail_id: 1
+  postal_address: MyText
+  postal_tel_num: 1
+  postal_area_code: MyString
+  next_of_kin: MyString
+  active_comsd_svc: MyString
+  length_of_military: 2013-04-09
+  remarks: MyString
+  statement_of_service_remarks: MyString
+  date_of_compulsory_retirement: 2013-04-09
+
+two:
+  personal_detail_id: 1
+  postal_address: MyText
+  postal_tel_num: 1
+  postal_area_code: MyString
+  next_of_kin: MyString
+  active_comsd_svc: MyString
+  length_of_military: 2013-04-09
+  remarks: MyString
+  statement_of_service_remarks: MyString
+  date_of_compulsory_retirement: 2013-04-09

@@ -140,6 +140,8 @@
       <th>Name</th>
       <th>Relation</th>
       <th>Date of Birth</th>
+      <th>Address</th>
+      <th></th>
     </tr>
     <div class="accordion" id="dependentForm">
       <div class="accordion-group">
@@ -160,6 +162,12 @@
       <td><%= dependent.name %></td>
       <td><%= dependent.relation %></td>
       <td><%= dependent.date_of_birth.strftime("%m-%d-%Y") %></td>
+      <td><%= dependent.address %></td>
+      <td>
+        <%= link_to dependent, method: :delete, data: { confirm: "Are you sure? "}, title: "Delete", class: "btn btn-mini btn-danger" do %>
+        <i class="icon-trash icon-white"></i>
+        <% end %>
+      </td>
     </tr>
     <% end %>
   </table>

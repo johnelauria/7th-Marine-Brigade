@@ -15,4 +15,5 @@ class PersonalDetail < ActiveRecord::Base
   has_one :miscellaneou, dependent: :destroy
   has_one :aadt, dependent: :destroy
   has_one :rid, dependent: :destroy
+  has_one :soi_form, dependent: :destroy
 end

@@ -1,4 +1,16 @@
 MarineBrigade::Application.routes.draw do
+  resources :duties
+
+
+  resources :commendations
+
+
+  resources :appreciation_merits
+
+
+  resources :soi_forms
+
+
   resources :rids_shorts
 
 

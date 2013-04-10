@@ -1,0 +1,15 @@
+<%= render 'navigation' %>
+<div class="container">
+  <div align="center">
+    <h5>
+      PHILIPPINE NAVY<br>
+      <strong>HEADQUARTERS PHILIPPINE MARINE CORPS</strong><br>
+      Fort Bonifacio, Makati City<br><br>
+      <u>SUMMARY OF INFORMATION</u><br>
+      <u>(As of <%= @soi_form.created_at.strftime("%B %Y") %>)</u>
+    </h5>
+  </div>
+
+    <%= render 'form' %>
+
+</div>
