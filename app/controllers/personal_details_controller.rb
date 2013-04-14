@@ -71,6 +71,7 @@ class PersonalDetailsController < ApplicationController
       if @personal_detail.save
         Rid.create(personal_detail_id: @personal_detail.id)
         SoiForm.create(personal_detail_id: @personal_detail.id)
+        Aadt.create(personal_detail_id: @personal_detail.id, rank: @personal_detail.rank, name: @personal_detail.first_name, afpsn: @personal_detail.AFPSN)
         format.html { redirect_to @personal_detail, notice: 'Personal detail was successfully created.' }
         format.json { render json: @personal_detail, status: :created, location: @personal_detail }
       else
@@ -87,6 +88,7 @@ class PersonalDetailsController < ApplicationController
 
     respond_to do |format|
       @personal_detail.rid.update_attributes(personal_detail_id: @personal_detail.id)
+      @personal_detail.aadt.update_attributes(personal_detail_id: @personal_detail.id, rank: @personal_detail.rank, name: @personal_detail.first_name, afpsn: @personal_detail.AFPSN)
       if @personal_detail.update_attributes(params[:personal_detail])
         format.html { redirect_to @personal_detail, notice: 'Personal detail was successfully updated.' }
         format.json { head :no_content }

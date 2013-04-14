@@ -3,7 +3,11 @@
     <%= link_to "7th Marine Brigade", root_path, class: "brand" %>
     <ul class="nav">
       <li><%= link_to "PHS", @rids_short.rid.personal_detail %></li>
-      <li><%= link_to "AADT w/ SOI", @rids_short.rid.personal_detail.aadt %></li>
+      <% if @personal_detail.aadt.aadt_effective.present? %>
+          <li><%= link_to "AADT w/ SOI", @rids_short.rid.personal_detail.aadt %></li>
+      <% else %>
+          <li><a href="#preventAadt" data-toggle="modal">AADT w/ SOI</a></li>
+      <% end %>
       <% if @rids_short.rid.personal_detail.soi_form.postal_address.nil? || @rids_short.rid.personal_detail.soi_form.active_comsd_svc.nil? %>
           <li><%= link_to "SOI Form 2008", edit_soi_form_path(@rids_short.rid.personal_detail.soi_form) %></li>
       <% else %>
@@ -23,5 +27,18 @@
           </li>
       <% end %>
     </ul>
+  </div>
+</div>
+
+<div id="preventAadt" class="modal hide fade">
+  <div class="modal-header">
+    <button type="close" class="close" data-dismiss="modal">&times;</button>
+    <h4><%= image_tag("warning-sign.jpg", size: "75x75") %>Cannot proceed to AADT w/ SOI</h4>
+  </div>
+  <div class="modal-body">
+    <p>It seems that your Personal History Statement is currently incomplete. Please fill up the remaining forms before going to AADT w/ SOI. Some of the details of SOI are depending on your Personal History Statement.</p>
+  </div>
+  <div class="modal-footer">
+    <button type="close" class="btn btn-inverse" data-dismiss="modal">Okay, I understand</button>
   </div>
 </div>

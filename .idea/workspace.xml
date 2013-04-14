@@ -3,18 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="93a0be8b-6d4e-4ad9-8ff7-c56d84ccb073" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/educational_background.rb" afterPath="$PROJECT_DIR$/app/models/educational_background.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/aadts/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/aadts/edit.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/aadts/new.html.erb" afterPath="$PROJECT_DIR$/app/views/aadts/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/aadts/show.html.erb" afterPath="$PROJECT_DIR$/app/views/aadts/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/educational_backgrounds/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/educational_backgrounds/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/personal_details/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/personal_details/edit.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/personal_details/new.html.erb" afterPath="$PROJECT_DIR$/app/views/personal_details/new.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/personal_details_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/personal_details_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/military_school.rb" afterPath="$PROJECT_DIR$/app/models/military_school.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/military_schools/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/military_schools/_form.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/personal_details/_navigation.html.erb" afterPath="$PROJECT_DIR$/app/views/personal_details/_navigation.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/personal_details/show.html.erb" afterPath="$PROJECT_DIR$/app/views/personal_details/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/rids/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/rids/edit.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/rids/new.html.erb" afterPath="$PROJECT_DIR$/app/views/rids/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/rids/show.html.erb" afterPath="$PROJECT_DIR$/app/views/rids/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/rids_shorts/show.html.erb" afterPath="$PROJECT_DIR$/app/views/rids_shorts/show.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/rids/_navigation.html.erb" afterPath="$PROJECT_DIR$/app/views/rids/_navigation.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/rids_shorts/_navigation.html.erb" afterPath="$PROJECT_DIR$/app/views/rids_shorts/_navigation.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/soi_forms/_navigation.html.erb" afterPath="$PROJECT_DIR$/app/views/soi_forms/_navigation.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/soi_forms/show.html.erb" afterPath="$PROJECT_DIR$/app/views/soi_forms/show.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
     </list>
@@ -35,11 +31,63 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="show.html.erb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/soi_forms/show.html.erb">
+      <file leaf-file-name="_navigation.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/personal_details/_navigation.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="147" column="18" selection-start="7213" selection-end="7213" vertical-scroll-proportion="0.31123388">
+            <state line="32" column="0" selection-start="1515" selection-end="2172" vertical-scroll-proportion="-8.230769">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_navigation.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/rids/_navigation.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="17" selection-start="245" selection-end="245" vertical-scroll-proportion="-3.2692308">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_navigation.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/rids_shorts/_navigation.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="43" column="6" selection-start="2256" selection-end="2256" vertical-scroll-proportion="-18.038462">
+              <folding>
+                <marker date="1365932852241" expanded="true" signature="51:1596" placeholder="..." />
+                <marker date="1365932852241" expanded="true" signature="80:1589" placeholder="..." />
+                <marker date="1365932852241" expanded="true" signature="168:1580" placeholder="..." />
+                <marker date="1365932852241" expanded="true" signature="1094:1554" placeholder="..." />
+                <marker date="1365932852241" expanded="true" signature="1235:1538" placeholder="..." />
+                <marker date="1365932852241" expanded="true" signature="1644:2255" placeholder="..." />
+                <marker date="1365932852241" expanded="true" signature="1673:1853" placeholder="..." />
+                <marker date="1365932852241" expanded="true" signature="1880:2112" placeholder="..." />
+                <marker date="1365932852241" expanded="true" signature="2141:2248" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_navigation.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/soi_forms/_navigation.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="52" selection-start="399" selection-end="399" vertical-scroll-proportion="-4.576923">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="edit.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/rids/edit.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="26" selection-start="26" selection-end="26" vertical-scroll-proportion="-0.0">
+              <folding>
+                <marker date="1365924926566" expanded="true" signature="49:107" placeholder="..." />
+                <marker date="1365924926566" expanded="true" signature="155:766" placeholder="..." />
+                <marker date="1365924926566" expanded="true" signature="184:364" placeholder="..." />
+                <marker date="1365924926566" expanded="true" signature="391:623" placeholder="..." />
+                <marker date="1365924926566" expanded="true" signature="652:759" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -47,25 +95,43 @@
       <file leaf-file-name="schema.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/db/schema.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="173" column="34" selection-start="6462" selection-end="6480" vertical-scroll-proportion="0.0">
+            <state line="314" column="16" selection-start="11437" selection-end="11437" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="_form.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/educational_backgrounds/_form.html.erb">
+        <entry file="file://$PROJECT_DIR$/app/views/military_schools/_form.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="140" column="36" selection-start="5696" selection-end="5696" vertical-scroll-proportion="-15.653846">
+            <state line="36" column="94" selection-start="1294" selection-end="1294" vertical-scroll-proportion="-13.461538">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="educational_background.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/educational_background.rb">
+      <file leaf-file-name="military_schools_controller.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/military_schools_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="887" selection-start="936" selection-end="936" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="military_school.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/military_school.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="129" selection-start="171" selection-end="171" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show.html.erb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/soi_forms/show.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="269" column="44" selection-start="11244" selection-end="11244" vertical-scroll-proportion="0.93499047">
               <folding />
             </state>
           </provider>
@@ -87,21 +153,21 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/aadts/new.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/aadts/_navigation.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/personal_details/_navigation.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/personal_details/show.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/personal_details/edit.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/personal_details/new.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/rids/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/rids/edit.html.erb" />
         <option value="$PROJECT_DIR$/app/views/rids/new.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/rids/_navigation.html.erb" />
         <option value="$PROJECT_DIR$/app/views/rids_shorts/show.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/rids_shorts/_navigation.html.erb" />
         <option value="$PROJECT_DIR$/db/migrate/20130414075552_add_details_to_educational_backgrounds.rb" />
         <option value="$PROJECT_DIR$/app/views/educational_backgrounds/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/models/educational_background.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/personal_details_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/personal_details/show.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/personal_details/_navigation.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/rids_shorts/_navigation.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/rids/_navigation.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/soi_forms/_navigation.html.erb" />
+        <option value="$PROJECT_DIR$/db/migrate/20130414095729_add_completed_to_military_schools.rb" />
+        <option value="$PROJECT_DIR$/app/views/military_schools/_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/models/military_school.rb" />
         <option value="$PROJECT_DIR$/app/views/soi_forms/show.html.erb" />
       </list>
     </option>
@@ -145,8 +211,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="RailsProjectView" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -411,6 +475,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="military_schools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="marine_brigade" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="marine_brigade" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="educational_backgrounds" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -551,19 +637,21 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="RailsProjectView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
     <property name="recentsLimit" value="5" />
+    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="RakeTaksPopup.undocumentedIncluded" value="false" />
     <property name="RailsGeneratorsPopup.hiddenIncluded" value="false" />
-    <property name="options.searchVisible" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RunManager" selected="Rake.db:migrate">
     <configuration default="false" name="db:migrate" type="RakeRunConfigurationType" factoryName="Rake" temporary="true">
@@ -869,14 +957,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294893" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294893" sideWeight="0.49591002" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25984848" sideWeight="0.7067545" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26363635" sideWeight="0.7067545" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294893" sideWeight="0.4969325" order="9" side_tool="true" content_ui="tabs" />
@@ -946,93 +1034,9 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/personal_details/edit.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="26" selection-start="26" selection-end="26" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/personal_details/new.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="23" selection-start="23" selection-end="23" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/personal_details/_navigation.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="6" selection-start="0" selection-end="1345" vertical-scroll-proportion="-17.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/rids/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="26" selection-start="26" selection-end="26" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/rids/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/rids/edit.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="26" selection-start="26" selection-end="26" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/rids/new.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="26" selection-start="26" selection-end="26" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/rids/_navigation.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="31" selection-start="1427" selection-end="1427" vertical-scroll-proportion="-17.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/rids_shorts/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="22" selection-start="22" selection-end="22" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/rids_shorts/_navigation.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="53" selection-start="1196" selection-end="1196" vertical-scroll-proportion="0.5635359">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20130414075552_add_details_to_educational_backgrounds.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="52" selection-start="869" selection-end="869" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/educational_backgrounds_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/educational_backgrounds/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="140" column="36" selection-start="5696" selection-end="5696" vertical-scroll-proportion="-15.653846">
+        <state line="140" column="36" selection-start="5696" selection-end="5696" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1044,16 +1048,245 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/aadts/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="0" selection-start="413" selection-end="1073" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/personal_details_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="90" column="58" selection-start="3271" selection-end="3271" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/personal_details/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="668" column="6" selection-start="32825" selection-end="32825" vertical-scroll-proportion="-16.192308">
+          <folding>
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365932646319" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/personal_details/_navigation.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="0" selection-start="1515" selection-end="2172" vertical-scroll-proportion="-8.230769">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/rids_shorts/_navigation.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="6" selection-start="2256" selection-end="2256" vertical-scroll-proportion="-18.038462">
+          <folding>
+            <marker date="1365932852241" expanded="true" signature="51:1596" placeholder="..." />
+            <marker date="1365932852241" expanded="true" signature="80:1589" placeholder="..." />
+            <marker date="1365932852241" expanded="true" signature="168:1580" placeholder="..." />
+            <marker date="1365932852241" expanded="true" signature="1094:1554" placeholder="..." />
+            <marker date="1365932852241" expanded="true" signature="1235:1538" placeholder="..." />
+            <marker date="1365932852241" expanded="true" signature="1644:2255" placeholder="..." />
+            <marker date="1365932852241" expanded="true" signature="1673:1853" placeholder="..." />
+            <marker date="1365932852241" expanded="true" signature="1880:2112" placeholder="..." />
+            <marker date="1365932852241" expanded="true" signature="2141:2248" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/rids/edit.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="26" selection-start="26" selection-end="26" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/rids/_navigation.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="17" selection-start="245" selection-end="245" vertical-scroll-proportion="-3.2692308">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/soi_forms/_navigation.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="52" selection-start="399" selection-end="399" vertical-scroll-proportion="-4.576923">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/db/schema.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="173" column="34" selection-start="6462" selection-end="6480" vertical-scroll-proportion="0.0">
+        <state line="314" column="16" selection-start="11437" selection-end="11437" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20130414095729_add_completed_to_military_schools.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="69" selection-start="156" selection-end="156" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/military_schools/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="94" selection-start="1294" selection-end="1294" vertical-scroll-proportion="-13.461538">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/military_schools_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/military_school.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="129" selection-start="171" selection-end="171" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/soi_forms/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="147" column="18" selection-start="7213" selection-end="7213" vertical-scroll-proportion="0.31123388">
+        <state line="269" column="44" selection-start="11244" selection-end="11244" vertical-scroll-proportion="0.93499047">
           <folding />
         </state>
       </provider>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130414075552) do
+ActiveRecord::Schema.define(:version => 20130414095729) do
 
   create_table "aadts", :force => true do |t|
     t.integer  "personal_detail_id"
@@ -318,8 +318,9 @@ ActiveRecord::Schema.define(:version => 20130414075552) do
     t.date     "date_of_attendance"
     t.string   "nature_of_training"
     t.string   "rating"
-    t.datetime "created_at",          :null => false
-    t.datetime "updated_at",          :null => false
+    t.datetime "created_at",                             :null => false
+    t.datetime "updated_at",                             :null => false
+    t.boolean  "completed",           :default => false
   end
 
   create_table "miscellaneous", :force => true do |t|

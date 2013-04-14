@@ -166,7 +166,7 @@
       <td><%= school.name_of_school %></td>
       <td><%= school.date_of_attendance %></td>
       <td><%= school.rating %></td>
-      <td><%= school.date_of_attendance.strftime("%Y") %></td>
+      <td><%= school.completed ? 'Yes' : 'No' %></td>
     </tr>
     <% end %>
   </table><br>

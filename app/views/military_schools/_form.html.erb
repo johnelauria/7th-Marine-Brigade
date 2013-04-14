@@ -33,6 +33,9 @@
     <%= f.label :rating %><br />
     <%= f.text_field :rating %>
   </div>
+  <div class="field">
+    <label>Check this box if you have completed your training: <%= f.check_box :completed %></label>
+  </div>
   <div class="actions">
     <%= f.submit "Save", class: "btn" %>
   </div>
