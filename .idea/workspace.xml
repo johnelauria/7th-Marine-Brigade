@@ -3,19 +3,19 @@
   <component name="ChangeListManager">
     <list default="true" id="93a0be8b-6d4e-4ad9-8ff7-c56d84ccb073" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/personal_details_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/personal_details_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/aadt.rb" afterPath="$PROJECT_DIR$/app/models/aadt.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/dependent.rb" afterPath="$PROJECT_DIR$/app/models/dependent.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/personal_detail.rb" afterPath="$PROJECT_DIR$/app/models/personal_detail.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/rids_short.rb" afterPath="$PROJECT_DIR$/app/models/rids_short.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/aadts/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/aadts/_form.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/educational_background.rb" afterPath="$PROJECT_DIR$/app/models/educational_background.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/aadts/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/aadts/edit.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/aadts/new.html.erb" afterPath="$PROJECT_DIR$/app/views/aadts/new.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/aadts/show.html.erb" afterPath="$PROJECT_DIR$/app/views/aadts/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/dependents/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/dependents/_form.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/educational_backgrounds/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/educational_backgrounds/_form.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/personal_details/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/personal_details/edit.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/personal_details/new.html.erb" afterPath="$PROJECT_DIR$/app/views/personal_details/new.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/personal_details/show.html.erb" afterPath="$PROJECT_DIR$/app/views/personal_details/show.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/rids/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/rids/edit.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/rids/new.html.erb" afterPath="$PROJECT_DIR$/app/views/rids/new.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/rids/show.html.erb" afterPath="$PROJECT_DIR$/app/views/rids/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/rids_shorts/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/rids_shorts/_form.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/rids_shorts/show.html.erb" afterPath="$PROJECT_DIR$/app/views/rids_shorts/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/soi_forms/show.html.erb" afterPath="$PROJECT_DIR$/app/views/soi_forms/show.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
     </list>
     <ignored path="marine_brigade.iws" />
@@ -35,37 +35,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="_form.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/commendations/_form.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="36" selection-start="804" selection-end="804" vertical-scroll-proportion="-15.692307">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_form.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/soi_forms/_form.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="2" selection-start="1290" selection-end="1290" vertical-scroll-proportion="-17.384615">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="show.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/soi_forms/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="213" column="15" selection-start="9081" selection-end="9081" vertical-scroll-proportion="0.9373849">
+            <state line="147" column="18" selection-start="7213" selection-end="7213" vertical-scroll-proportion="0.31123388">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="duties_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/duties_controller.rb">
+      <file leaf-file-name="schema.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/schema.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="77" column="30" selection-start="1792" selection-end="1792" vertical-scroll-proportion="0.0">
+            <state line="173" column="34" selection-start="6462" selection-end="6480" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_form.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/educational_backgrounds/_form.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="140" column="36" selection-start="5696" selection-end="5696" vertical-scroll-proportion="-15.653846">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="educational_background.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/educational_background.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="887" selection-start="936" selection-end="936" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -87,21 +87,21 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
+        <option value="$PROJECT_DIR$/app/views/aadts/new.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/aadts/_navigation.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/personal_details/_navigation.html.erb" />
         <option value="$PROJECT_DIR$/app/views/personal_details/show.html.erb" />
-        <option value="$PROJECT_DIR$/app/models/appreciation_merit.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/appreciation_merits_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/appreciation_merits/_form.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/soi_forms/edit.html.erb" />
-        <option value="$PROJECT_DIR$/app/models/commendation.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/commendations_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/commendations/_form.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/soi_forms/_form.html.erb" />
-        <option value="$PROJECT_DIR$/db/migrate/20130410115839_create_duties.rb" />
-        <option value="$PROJECT_DIR$/app/models/duty.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/duties_controller.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/soi_forms_controller.rb" />
-        <option value="$PROJECT_DIR$/app/models/soi_form.rb" />
-        <option value="$PROJECT_DIR$/app/views/duties/_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/personal_details/edit.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/personal_details/new.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/rids/show.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/rids/edit.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/rids/new.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/rids/_navigation.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/rids_shorts/show.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/rids_shorts/_navigation.html.erb" />
+        <option value="$PROJECT_DIR$/db/migrate/20130414075552_add_details_to_educational_backgrounds.rb" />
+        <option value="$PROJECT_DIR$/app/views/educational_backgrounds/_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/models/educational_background.rb" />
         <option value="$PROJECT_DIR$/app/views/soi_forms/show.html.erb" />
       </list>
     </option>
@@ -146,6 +146,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="RailsProjectView" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -410,6 +411,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="educational_backgrounds" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="marine_brigade" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="marine_brigade" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="duties" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -433,6 +456,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="commendations" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="marine_brigade" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="marine_brigade" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aadts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -506,20 +551,19 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="RailsProjectView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
+    <property name="recentsLimit" value="5" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="RakeTaksPopup.undocumentedIncluded" value="false" />
     <property name="RailsGeneratorsPopup.hiddenIncluded" value="false" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RunManager" selected="Rake.db:migrate">
     <configuration default="false" name="db:migrate" type="RakeRunConfigurationType" factoryName="Rake" temporary="true">
@@ -825,14 +869,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294893" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294893" sideWeight="0.49591002" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2560606" sideWeight="0.7067545" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25984848" sideWeight="0.7067545" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294893" sideWeight="0.4969325" order="9" side_tool="true" content_ui="tabs" />
@@ -902,112 +946,114 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/appreciation_merits/edit.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/soi_forms/_navigation.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="6" selection-start="1184" selection-end="1184" vertical-scroll-proportion="0.6887661">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/soi_forms/edit.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="40" selection-start="295" selection-end="295" vertical-scroll-proportion="-5.230769">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/commendations_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="54" selection-start="2191" selection-end="2191" vertical-scroll-proportion="0.7882562">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/soi_forms/new.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/personal_details/edit.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="26" selection-start="26" selection-end="26" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/commendation.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/personal_details/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="22" selection-start="122" selection-end="122" vertical-scroll-proportion="0.08415841">
+        <state line="0" column="23" selection-start="23" selection-end="23" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20130410113215_add_present_duty_assignment_to_soi_forms.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/personal_details/_navigation.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="6" selection-start="0" selection-end="1345" vertical-scroll-proportion="-17.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/rids/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="26" selection-start="26" selection-end="26" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/rids/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/commendations/_form.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/rids/edit.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="36" selection-start="804" selection-end="804" vertical-scroll-proportion="-15.692307">
+        <state line="0" column="26" selection-start="26" selection-end="26" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/soi_forms/_form.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/rids/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="2" selection-start="1290" selection-end="1290" vertical-scroll-proportion="-17.384615">
+        <state line="0" column="26" selection-start="26" selection-end="26" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20130410115839_create_duties.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/rids/_navigation.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="24" selection-start="283" selection-end="283" vertical-scroll-proportion="0.35051546">
+        <state line="26" column="31" selection-start="1427" selection-end="1427" vertical-scroll-proportion="-17.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/soi_forms_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/rids_shorts/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="20" selection-start="462" selection-end="462" vertical-scroll-proportion="0.52577317">
+        <state line="0" column="22" selection-start="22" selection-end="22" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/soi_form.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/rids_shorts/_navigation.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="39" selection-start="448" selection-end="448" vertical-scroll-proportion="0.14938489">
+        <state line="18" column="53" selection-start="1196" selection-end="1196" vertical-scroll-proportion="0.5635359">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/duty.rb">
+    <entry file="file://$PROJECT_DIR$/db/migrate/20130414075552_add_details_to_educational_backgrounds.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="22" selection-start="142" selection-end="142" vertical-scroll-proportion="0.058419243">
+        <state line="14" column="52" selection-start="869" selection-end="869" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/duties/_form.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/educational_backgrounds_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="0" selection-start="1125" selection-end="1125" vertical-scroll-proportion="0.9388489">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/duties_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/educational_backgrounds/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="30" selection-start="1792" selection-end="1792" vertical-scroll-proportion="0.0">
+        <state line="140" column="36" selection-start="5696" selection-end="5696" vertical-scroll-proportion="-15.653846">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/educational_background.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="887" selection-start="936" selection-end="936" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/schema.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="173" column="34" selection-start="6462" selection-end="6480" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/soi_forms/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="213" column="15" selection-start="9081" selection-end="9081" vertical-scroll-proportion="0.9373849">
+        <state line="147" column="18" selection-start="7213" selection-end="7213" vertical-scroll-proportion="0.31123388">
           <folding />
         </state>
       </provider>

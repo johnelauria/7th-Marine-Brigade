@@ -1,0 +1,27 @@
+<div class="navbar navbar-fixed-top navbar-inverse">
+  <div class="navbar-inner">
+    <%= link_to "7th Marine Brigade", root_path, class: "brand" %>
+    <ul class="nav">
+      <li><%= link_to "PHS", @aadt.personal_detail %></li>
+      <li class="active"><%= link_to "AADT w/ SOI", @aadt %></li>
+      <% if @aadt.personal_detail.soi_form.postal_address.nil? || @aadt.personal_detail.soi_form.active_comsd_svc.nil? %>
+          <li><%= link_to "SOI Form 2008", edit_soi_form_path(@aadt.personal_detail.soi_form) %></li>
+      <% else %>
+          <li><%= link_to "SOI Form 2008", @aadt.personal_detail.soi_form %></li>
+      <% end %>
+      <% if @aadt.personal_detail.rid.gsis.nil? || @aadt.personal_detail.rid.tin.nil? %>
+          <li><%= link_to "RIDS", edit_rid_path(@aadt.personal_detail.rid) %></li>
+      <% else %>
+          <li>
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">RIDS<b class="caret"></b> </a>
+            <ul class="dropdown-menu">
+              <li><%= link_to "RIDS", @aadt.personal_detail.rid %></li>
+              <% if @aadt.personal_detail.rid.rids_short.city.present? || @aadt.personal_detail.rid.rids_short.zip_code.present? %>
+                  <li><%= link_to "RIDS Short Assembly Test", @aadt.personal_detail.rid.rids_short %></li>
+              <% end %>
+            </ul>
+          </li>
+      <% end %>
+    </ul>
+  </div>
+</div>

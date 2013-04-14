@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130410115839) do
+ActiveRecord::Schema.define(:version => 20130414075552) do
 
   create_table "aadts", :force => true do |t|
     t.integer  "personal_detail_id"
@@ -159,12 +159,22 @@ ActiveRecord::Schema.define(:version => 20130410115839) do
     t.date     "other_date_of_attendance2"
     t.string   "other_year_graduate"
     t.text     "civil_service_eligibility"
-    t.datetime "created_at",                        :null => false
-    t.datetime "updated_at",                        :null => false
+    t.datetime "created_at",                                          :null => false
+    t.datetime "updated_at",                                          :null => false
     t.integer  "personal_detail_id"
     t.string   "college_course"
     t.string   "postgraduate_course"
     t.string   "other_course"
+    t.string   "elementary_standing"
+    t.boolean  "elementary_completed",              :default => true
+    t.string   "high_school_standing"
+    t.boolean  "high_school_completed",             :default => true
+    t.string   "college_standing"
+    t.boolean  "college_completed",                 :default => true
+    t.string   "post_grad_standing"
+    t.boolean  "post_grad_completed",               :default => true
+    t.string   "other_standing"
+    t.boolean  "other_completed",                   :default => true
   end
 
   create_table "employments", :force => true do |t|

@@ -28,6 +28,13 @@
     <%= f.label :year_graduated %><br />
     <%= f.number_field :elementary_year_graduate %>
   </div>
+  <div class="field">
+    <%= f.label :standing %>
+    <%= f.text_field :elementary_standing %>
+  </div>
+    <div class="field">
+      <label>Leave this box checked if you have completed this course, uncheck it if otherwise: <%= f.check_box :elementary_completed %></label>
+    </div>
     <legend>High School</legend>
   <div class="field">
     <%= f.label :location %><br />
@@ -45,6 +52,13 @@
     <%= f.label :year_graduated %><br />
     <%= f.number_field :high_school_year_graduate %>
   </div>
+  <div class="field">
+    <%= f.label :standing %>
+    <%= f.text_field :high_school_standing %>
+  </div>
+    <div class="field">
+      <label>Leave this box checked if you have completed this course, uncheck it if otherwise: <%= f.check_box :high_school_completed %></label>
+    </div>
     <legend>College</legend>
   <div class="field">
     <%= f.label :location %><br />
@@ -66,6 +80,13 @@
     <%= f.label :year_graduated %><br />
     <%= f.number_field :college_year_graduate %>
   </div>
+  <div class="field">
+    <%= f.label :standing %>
+    <%= f.text_field :college_standing %>
+  </div>
+    <div class="field">
+      <label>Leave this box checked if you have completed this course, uncheck it if otherwise: <%= f.check_box :college_completed %></label>
+    </div>
     <legend>Post Graduate</legend>
   <div class="field">
     <%= f.label :location %><br />
@@ -87,6 +108,13 @@
     <%= f.label :year_graduate %><br />
     <%= f.number_field :post_graduate_year_graduate %>
   </div>
+  <div class="field">
+    <%= f.label :standing %>
+    <%= f.text_field :post_grad_standing %>
+  </div>
+    <div class="field">
+      <label>Leave this box checked if you have completed this course, uncheck it if otherwise: <%= f.check_box :post_grad_completed %></label>
+    </div>
     <legend>Other School Attended</legend>
   <div class="field">
     <%= f.label :location %><br />
@@ -108,6 +136,13 @@
     <%= f.label :year_graduated %><br />
     <%= f.text_field :other_year_graduate %>
   </div>
+  <div class="field">
+    <%= f.label :standing %>
+    <%= f.text_field :other_standing %>
+  </div>
+    <div class="field">
+      <label>Leave this box checked if you have completed this course, uncheck it if otherwise: <%= f.check_box :other_completed %></label>
+    </div>
     <legend>Civil Service Eligibility</legend>
   <div class="field">
     <label>If any and other seminar qualification acquired:</label><br />

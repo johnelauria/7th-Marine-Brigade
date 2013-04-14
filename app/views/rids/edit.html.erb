@@ -1,21 +1,4 @@
-<div class="navbar navbar-fixed-top navbar-inverse">
-  <div class="navbar-inner">
-    <%= link_to "7th Marine Brigade", root_path, class: "brand" %>
-    <ul class="nav">
-      <li><%= link_to "PHS", @rid.personal_detail %></li>
-      <% if @rid.personal_detail.personal_characteristic.nil? && @rid.personal_detail.marital_history.nil? && @rid.personal_detail.educational_background.nil? %>
-          <li><a href="#preventAadt" data-toggle="modal">AADT with SOI</a></li>
-      <% else %>
-          <% if @rid.personal_detail.aadt.nil? %>
-              <li><%= link_to "AADT with SOI", new_aadt_path(JAT2JUB4HJSDFSBFDJ33BK: @rid.personal_detail.id, rank: @personal_detail.rank, name: "#{@personal_detail.first_name} #{@personal_detail.middle_name} #{@personal_detail.last_name}", afpsn: @personal_detail.AFPSN) %></li>
-          <% else %>
-              <li><%= link_to "AADT with SOI", @rid.personal_detail.aadt %></li>
-          <% end %>
-      <% end %>
-      <li class="active"><a href="#">RIDS</a></li>
-    </ul>
-  </div>
-</div>
+<%= render 'navigation' %>
 <div class="container">
     <h1>Editing rid</h1>
 
