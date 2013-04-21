@@ -1,4 +1,7 @@
 MarineBrigade::Application.routes.draw do
+  resources :security_tag_applications
+
+
   resources :duties
 
 

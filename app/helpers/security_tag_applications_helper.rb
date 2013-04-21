@@ -1,0 +1,2 @@
+module SecurityTagApplicationsHelper
+end

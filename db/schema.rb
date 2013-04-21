@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130414095729) do
+ActiveRecord::Schema.define(:version => 20130421013632) do
 
   create_table "aadts", :force => true do |t|
     t.integer  "personal_detail_id"
@@ -446,6 +446,26 @@ ActiveRecord::Schema.define(:version => 20130414095729) do
     t.datetime "updated_at",          :null => false
     t.string   "home_contact"
     t.string   "email_address"
+  end
+
+  create_table "security_tag_applications", :force => true do |t|
+    t.integer  "personal_detail_id"
+    t.string   "office_division"
+    t.date     "date_reported"
+    t.text     "city_address"
+    t.string   "city_telephone"
+    t.string   "city_cellphone"
+    t.string   "name_to_notify"
+    t.string   "telephone_notify"
+    t.string   "cellphone_notify"
+    t.string   "signed_at"
+    t.date     "signed_on"
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
+    t.string   "position"
+    t.string   "relation_to_notify"
+    t.text     "address_to_notify"
+    t.string   "area_code_to_notify"
   end
 
   create_table "soi_forms", :force => true do |t|

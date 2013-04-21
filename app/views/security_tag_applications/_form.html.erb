@@ -1,0 +1,73 @@
+<%= form_for(@security_tag_application) do |f| %>
+  <% if @security_tag_application.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@security_tag_application.errors.count, "error") %> prohibited this security_tag_application from being saved:</h2>
+
+      <ul>
+      <% @security_tag_application.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <%= f.hidden_field :personal_detail_id %>
+
+  <div class="field">
+    <%= f.label :office_division %><br />
+    <%= f.text_field :office_division %>
+  </div>
+  <div class="field">
+    <%= f.label :position %><br>
+    <%= f.text_field :position %>
+  </div>
+  <div class="field">
+    <%= f.label :date_reported %><br />
+    <%= f.date_select :date_reported %>
+  </div>
+  <div class="field">
+    <%= f.label :city_address %><br />
+    <%= f.text_area :city_address, rows: 3 %>
+  </div>
+  <div class="field">
+    <%= f.label :city_telephone %><br />
+    <%= f.text_field :city_telephone %>
+  </div>
+  <div class="field">
+    <%= f.label :city_cellphone %><br />
+    <%= f.text_field :city_cellphone %>
+  </div>
+  <legend>Person to notify in case of emergency</legend>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name_to_notify %>
+  </div>
+  <div class="field">
+    <%= f.label :relation %><br>
+    <%= f.text_field :relation_to_notify %>
+  </div>
+  <div class="field">
+    <%= f.label :Address %><br>
+    <%= f.text_area :address_to_notify, rows: 3 %>
+  </div>
+  <div class="field">
+    <%= f.label :telephone %><br />
+    <%= f.text_field :area_code_to_notify, placeholder: "area code", class: "input input-mini" %>
+    <%= f.text_field :telephone_notify, placeholder: "Telephone number" %>
+  </div>
+  <div class="field">
+    <%= f.label :cellphone_notify %><br />
+    <%= f.text_field :cellphone_notify %>
+  </div>
+  <div class="field">
+    <%= f.label :signed_at %><br />
+    <%= f.text_field :signed_at %>
+  </div>
+  <div class="field">
+    <%= f.label :signed_on %><br />
+    <%= f.date_select :signed_on %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Save", class: "btn" %>
+  </div>
+<% end %>

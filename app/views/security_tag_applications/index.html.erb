@@ -1,0 +1,43 @@
+<h1>Listing security_tag_applications</h1>
+
+<table>
+  <tr>
+    <th>Personal detail</th>
+    <th>Office division</th>
+    <th>Date reported</th>
+    <th>City address</th>
+    <th>City telephone</th>
+    <th>City cellphone</th>
+    <th>Name to notify</th>
+    <th>Telephone notify</th>
+    <th>Cellphone notify</th>
+    <th>Signed at</th>
+    <th>Signed on</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @security_tag_applications.each do |security_tag_application| %>
+  <tr>
+    <td><%= security_tag_application.personal_detail_id %></td>
+    <td><%= security_tag_application.office_division %></td>
+    <td><%= security_tag_application.date_reported %></td>
+    <td><%= security_tag_application.city_address %></td>
+    <td><%= security_tag_application.city_telephone %></td>
+    <td><%= security_tag_application.city_cellphone %></td>
+    <td><%= security_tag_application.name_to_notify %></td>
+    <td><%= security_tag_application.telephone_notify %></td>
+    <td><%= security_tag_application.cellphone_notify %></td>
+    <td><%= security_tag_application.signed_at %></td>
+    <td><%= security_tag_application.signed_on %></td>
+    <td><%= link_to 'Show', security_tag_application %></td>
+    <td><%= link_to 'Edit', edit_security_tag_application_path(security_tag_application) %></td>
+    <td><%= link_to 'Destroy', security_tag_application, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Security tag application', new_security_tag_application_path %>

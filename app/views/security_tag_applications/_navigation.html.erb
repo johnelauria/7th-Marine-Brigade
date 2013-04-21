@@ -1,0 +1,47 @@
+<div class="navbar navbar-fixed-top navbar-inverse">
+  <div class="navbar-inner">
+    <%= link_to "7th Marine Brigade", root_path, class: "brand" %>
+    <ul class="nav">
+      <li><%= link_to "PHS", @security_tag_application.personal_detail %></li>
+      <% if @security_tag_application.personal_detail.aadt.aadt_effective.present? %>
+          <li><%= link_to "AADT w/ SOI", @security_tag_application.personal_detail.aadt %></li>
+      <% else %>
+          <li><a href="#preventAadt" data-toggle="modal">AADT w/ SOI</a></li>
+      <% end %>
+      <% if @security_tag_application.personal_detail.soi_form.postal_address.nil? || @security_tag_application.personal_detail.soi_form.active_comsd_svc.nil? %>
+          <li><%= link_to "SOI Form 2008", edit_soi_form_path(@security_tag_application.personal_detail.soi_form) %></li>
+      <% else %>
+          <li><%= link_to "SOI Form 2008", @security_tag_application.personal_detail.soi_form %></li>
+      <% end %>
+      <% if @security_tag_application.personal_detail.rid.gsis.nil? || @security_tag_application.personal_detail.rid.tin.nil? %>
+          <li><%= link_to "RIDS", edit_rid_path(@security_tag_application.personal_detail.rid) %></li>
+      <% else %>
+          <li>
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">RIDS<b class="caret"></b> </a>
+            <ul class="dropdown-menu">
+              <li><%= link_to "RIDS", @security_tag_application.personal_detail.rid %></li>
+              <% if @security_tag_application.personal_detail.rid.rids_short.city.present? || @security_tag_application.personal_detail.rid.rids_short.zip_code.present? %>
+                  <li><%= link_to "RIDS Short Assembly Test", @security_tag_application.personal_detail.rid.rids_short %></li>
+              <% end %>
+            </ul>
+          </li>
+      <% end %>
+    </ul>
+    <ul class="nav pull-right">
+      <li class="active"><%= link_to "Security Application", @security_tag_application %></li>
+    </ul>
+  </div>
+</div>
+
+<div id="preventAadt" class="modal hide fade">
+  <div class="modal-header">
+    <button type="close" class="close" data-dismiss="modal">&times;</button>
+    <h4><%= image_tag("warning-sign.jpg", size: "75x75") %>Cannot proceed to AADT w/ SOI</h4>
+  </div>
+  <div class="modal-body">
+    <p>It seems that your Personal History Statement is currently incomplete. Please fill up the remaining forms before going to AADT w/ SOI. Some of the details of SOI are depending on your Personal History Statement.</p>
+  </div>
+  <div class="modal-footer">
+    <button type="close" class="btn btn-inverse" data-dismiss="modal">Okay, I understand</button>
+  </div>
+</div>

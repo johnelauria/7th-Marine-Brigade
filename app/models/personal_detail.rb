@@ -16,4 +16,5 @@ class PersonalDetail < ActiveRecord::Base
   has_one :aadt, dependent: :destroy
   has_one :rid, dependent: :destroy
   has_one :soi_form, dependent: :destroy
+  has_one :security_tag_application, dependent: :destroy
 end

@@ -72,6 +72,7 @@ class PersonalDetailsController < ApplicationController
         Rid.create(personal_detail_id: @personal_detail.id)
         SoiForm.create(personal_detail_id: @personal_detail.id)
         Aadt.create(personal_detail_id: @personal_detail.id, rank: @personal_detail.rank, name: @personal_detail.first_name, afpsn: @personal_detail.AFPSN)
+        SecurityTagApplication.create(personal_detail_id: @personal_detail.id)
         format.html { redirect_to @personal_detail, notice: 'Personal detail was successfully created.' }
         format.json { render json: @personal_detail, status: :created, location: @personal_detail }
       else
