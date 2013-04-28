@@ -1,0 +1,37 @@
+<h1>Listing vehicle_passcards</h1>
+
+<table>
+  <tr>
+    <th>Personal detail</th>
+    <th>Vehicle make</th>
+    <th>Plate number</th>
+    <th>Year model</th>
+    <th>Color</th>
+    <th>Motor number</th>
+    <th>Chassis number</th>
+    <th>Decal number</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @vehicle_passcards.each do |vehicle_passcard| %>
+  <tr>
+    <td><%= vehicle_passcard.personal_detail_id %></td>
+    <td><%= vehicle_passcard.vehicle_make %></td>
+    <td><%= vehicle_passcard.plate_number %></td>
+    <td><%= vehicle_passcard.year_model %></td>
+    <td><%= vehicle_passcard.color %></td>
+    <td><%= vehicle_passcard.motor_number %></td>
+    <td><%= vehicle_passcard.chassis_number %></td>
+    <td><%= vehicle_passcard.decal_number %></td>
+    <td><%= link_to 'Show', vehicle_passcard %></td>
+    <td><%= link_to 'Edit', edit_vehicle_passcard_path(vehicle_passcard) %></td>
+    <td><%= link_to 'Destroy', vehicle_passcard, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Vehicle passcard', new_vehicle_passcard_path %>

@@ -1,0 +1,103 @@
+<%= render 'navigation' %>
+<div class="container">
+  <div align="center">
+    <h5>
+      REPUBLIC OF THE PHILIPPINES<br>
+      DEPARTMENT OF NATIONAL DEFENSE<br>
+      GENERAL HEADQUARTERS, ARMED FORCES OF THE PHILIPPINES<br>
+      Camp General Emilio Aguinaldo, Quezon City<br><br>
+      APPLICATION FORM FOR PASSCARD/STICKER
+    </h5>
+    <hr>
+  </div>
+  <ol>
+    <h5><li>PERSONAL DATA:</li></h5>
+    <p><b>Name: </b><%= @personal_detail.last_name %>, <%= @personal_detail.first_name %>, <%= @personal_detail.middle_name %></p>
+    <p><b>Grade/Rank: </b><%= @personal_detail.rank %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Br/Svc: </b><%= @personal_detail.BR_SVC %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>AFPSN: </b><%= @personal_detail.AFPSN %></p>
+    <p><b>Residence Address: </b><%= @personal_detail.street_number %>, <%= @personal_detail.street_name %>, <%= @personal_detail.home_address %> <b>Tel #: </b>(<%= @personal_detail.telephone_area_code %>) <%= @personal_detail.telephone %></p>
+    <p><b>Designation/Office: </b><%= @personal_detail.security_tag_application.office_division %></p>
+    <p><b>Date of Retirement: </b><%= @personal_detail.soi_form.date_of_compulsory_retirement.strftime("%B %m, %Y") %></p>
+    <h5><li>VEHICLE DATA:</li></h5>
+    <div class="accordion" id="passcardForm">
+      <div class="accordion-group">
+        <div class="accordion-heading">
+          <a class="accordion-toggle" data-toggle="collapse" data-parent="#passcardForm" href="#addVehicle">
+            Add Vehicle
+          </a>
+        </div>
+        <div id="addVehicle" class="accordion-body collapse">
+          <div class="accordion-inner">
+            <%= render 'vehicle_passcards/form' %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <table class="table table-bordered">
+      <tr>
+        <th>Vehicle Make(s)</th>
+        <th>Plate No</th>
+        <th>Year Model</th>
+        <th>Color</th>
+        <th>Motor Number</th>
+        <th>Chassis Number</th>
+        <th>Decal Number</th>
+      </tr>
+      <% @personal_detail.vehicle_passcards.each do |passcard| %>
+        <tr>
+          <td><%= passcard.vehicle_make %></td>
+          <td><%= passcard.plate_number %></td>
+          <td><%= passcard.year_model %></td>
+          <td><%= passcard.color %></td>
+          <td><%= passcard.motor_number %></td>
+          <td><%= passcard.chassis_number %></td>
+          <td><%= passcard.decal_number %></td>
+          <td>
+            <%= link_to passcard, method: :delete, data: { confirm: "Are you sure you want to delete this?"}, title: "Delete", class: "btn btn-mini btn-danger" do %>
+                <i class="icon-trash icon-white"></i>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </table>
+    <h5><li>CATEGORY/TYPE OF VEHICLE STICKER:</li></h5>
+    <div class="row">
+      <div class="span6">
+        <% if @personal_detail.vehicle_passcards.find_by_category("Type A (PASSCARD)").present? %>
+            <i class="icon-ok"></i>
+        <% else %>
+            <i class="icon-remove"></i>
+        <% end %>
+        <b>Type A (PASSCARD)</b>
+        <ol type="a">
+          <li>Registered to active military personnel</li>
+          <li>Staff vehicles registered to the AFP</li>
+        </ol><br>
+        <% if @personal_detail.vehicle_passcards.find_by_category("Type C (YELLOW)").present? %>
+            <i class="icon-ok"></i>
+        <% else %>
+            <i class="icon-remove"></i>
+        <% end %>
+        <b>Type C (YELLOW)</b>
+        <ol type="a">
+          <li>Concessionaires/Traders with AFP Contract</li>
+          <li>Official/Employee/Member of tenant entity/club facility on Post</li>
+          <li>Diplomats and expatriates</li>
+          <li>Selected sponsored civilians</li>
+        </ol>
+      </div>
+      <div class="span5">
+        <% if @personal_detail.vehicle_passcards.find_by_category("Type B (RED)").present? %>
+            <i class="icon-ok"></i>
+        <% else %>
+            <i class="icon-remove"></i>
+        <% end %>
+        <b>Type B (RED)</b>
+        <ol type="a">
+          <li>Former military personnel of AFP Reservists</li>
+          <li>Unremarried widow/widower of military personnel</li>
+          <li>AFP & DND Civilian employees</li>
+        </ol><br>
+      </div>
+    </div>
+  </ol>
+</div>

@@ -111,4 +111,9 @@ class PersonalDetailsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def vehicle_passcard
+    @personal_detail = PersonalDetail.find(params[:id])
+    @vehicle_passcard = VehiclePasscard.new
+  end
 end

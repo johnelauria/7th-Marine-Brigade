@@ -1,4 +1,7 @@
 MarineBrigade::Application.routes.draw do
+  resources :vehicle_passcards
+
+
   resources :security_tag_applications
 
 
@@ -91,7 +94,9 @@ MarineBrigade::Application.routes.draw do
   resources :personal_characteristics
 
 
-  resources :personal_details
+  resources :personal_details do
+    get :vehicle_passcard, on: :member
+  end
 
 
   # The priority is based upon order of creation:

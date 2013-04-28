@@ -1,0 +1,73 @@
+<div class="row">
+  <div class="span5">
+<%= form_for(@vehicle_passcard) do |f| %>
+  <% if @vehicle_passcard.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@vehicle_passcard.errors.count, "error") %> prohibited this vehicle_passcard from being saved:</h2>
+
+      <ul>
+      <% @vehicle_passcard.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <%= f.hidden_field :personal_detail_id, value: @personal_detail.id %>
+
+  <div class="field">
+    <%= f.label :vehicle_make %><br />
+    <%= f.text_field :vehicle_make %>
+  </div>
+  <div class="field">
+    <%= f.label :plate_number %><br />
+    <%= f.text_field :plate_number %>
+  </div>
+  <div class="field">
+    <%= f.label :year_model %><br />
+    <%= f.number_field :year_model %>
+  </div>
+  <div class="field">
+    <%= f.label :color %><br />
+    <%= f.text_field :color %>
+  </div>
+  <div class="field">
+    <%= f.label :motor_number %><br />
+    <%= f.text_field :motor_number %>
+  </div>
+  <div class="field">
+    <%= f.label :chassis_number %><br />
+    <%= f.text_field :chassis_number %>
+  </div>
+  <div class="field">
+    <%= f.label :decal_number %><br />
+    <%= f.select :decal_number, "<option>Old</option><option>New</option>".html_safe %>
+  </div>
+
+</div>
+  <div class="span5">
+    <p><%= f.select :category, "<option>Type A (PASSCARD)</option><option>Type B (RED)</option><option>Type C (YELLOW)</option>".html_safe, prompt: "Select Category" %></p>
+    <b>Type A (PASSCARD)</b>
+    <ol type="a">
+      <li>Registered to active military personnel</li>
+      <li>Staff vehicles registered to the AFP</li>
+    </ol><br>
+    <b>Type B (RED)</b>
+    <ol type="a">
+      <li>Former military personnel of AFP Reservists</li>
+      <li>Unremarried widow/widower of military personnel</li>
+      <li>AFP & DND Civilian employees</li>
+    </ol><br>
+    <b>Type C (YELLOW)</b>
+    <ol type="a">
+      <li>Concessionaires/Traders with AFP Contract</li>
+      <li>Official/Employee/Member of tenant entity/club facility on Post</li>
+      <li>Diplomats and expatriates</li>
+      <li>Selected sponsored civilians</li>
+    </ol>
+  </div>
+</div>
+<div class="actions">
+   <%= f.submit "Save", class: "btn" %>
+</div>
+<% end %>

@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  personal_detail_id: 1
+  vehicle_make: MyString
+  plate_number: MyString
+  year_model: 1
+  color: MyString
+  motor_number: MyString
+  chassis_number: MyString
+  decal_number: MyString
+
+two:
+  personal_detail_id: 1
+  vehicle_make: MyString
+  plate_number: MyString
+  year_model: 1
+  color: MyString
+  motor_number: MyString
+  chassis_number: MyString
+  decal_number: MyString

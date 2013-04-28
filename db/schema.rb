@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130421013632) do
+ActiveRecord::Schema.define(:version => 20130424140026) do
 
   create_table "aadts", :force => true do |t|
     t.integer  "personal_detail_id"
@@ -482,6 +482,20 @@ ActiveRecord::Schema.define(:version => 20130421013632) do
     t.datetime "created_at",                    :null => false
     t.datetime "updated_at",                    :null => false
     t.date     "present_duty_assignment"
+  end
+
+  create_table "vehicle_passcards", :force => true do |t|
+    t.integer  "personal_detail_id"
+    t.string   "vehicle_make"
+    t.string   "plate_number"
+    t.integer  "year_model"
+    t.string   "color"
+    t.string   "motor_number"
+    t.string   "chassis_number"
+    t.string   "decal_number"
+    t.string   "category"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
   end
 
 end
