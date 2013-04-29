@@ -23,7 +23,7 @@
   </div>
   <div class="field">
     <%= f.label :date_reported %><br />
-    <%= f.date_select :date_reported, start_year: Date.today.strftime("%m").to_i - 65, end_year: Date.today.strftime("%m").to_i %>
+    <%= f.date_select :date_reported, start_year: Date.today.strftime("%Y").to_i - 65, end_year: Date.today.strftime("%Y").to_i %>
   </div>
   <div class="field">
     <%= f.label :city_address %><br />

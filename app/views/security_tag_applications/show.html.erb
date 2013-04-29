@@ -15,7 +15,7 @@
   <p><b>RANK: </b><%= @security_tag_application.personal_detail.rank %>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <b>AFPSN: </b><%= @security_tag_application.personal_detail.AFPSN %>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <b>BR OF SVC: </b><%= @security_tag_application.personal_detail.BR_SVC %></p>
   <p><b>OFFICE/DIVISION: </b><%= @security_tag_application.office_division %></p>
   <p><b>POSITION: </b><%= @security_tag_application.position %></p>
-  <p><b>DATE REPORTED: </b><%= @security_tag_application.date_reported %></p>
+  <p><b>DATE REPORTED: </b><%= @security_tag_application.date_reported.strftime("%B %m, %Y") %></p>
   <p><b>DATE/PLACE OF BIRTH: </b><%= @security_tag_application.personal_detail.birthdate.strftime("%B %m, %Y") %>, <%= @security_tag_application.personal_detail.place_of_birth %></p>
   <p><b>HOME ADDRESS/TEL/CEL NR: </b><%= @security_tag_application.personal_detail.home_address %>, (<%= @security_tag_application.personal_detail.telephone_area_code %>) <%= @security_tag_application.personal_detail.telephone %>, <%= @security_tag_application.personal_detail.mobile_number %></p>
   <p><b>CITY ADDRESS/TEL/CEL NR: </b><%= @security_tag_application.city_address %>, <%= @security_tag_application.city_telephone %>, <%= @security_tag_application.city_cellphone %></p>

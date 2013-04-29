@@ -3,13 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="93a0be8b-6d4e-4ad9-8ff7-c56d84ccb073" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/personal_details_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/personal_details_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/personal_detail.rb" afterPath="$PROJECT_DIR$/app/models/personal_detail.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/personal_details/_navigation.html.erb" afterPath="$PROJECT_DIR$/app/views/personal_details/_navigation.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/personal_details/index.html.erb" afterPath="$PROJECT_DIR$/app/views/personal_details/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/aadts/_navigation.html.erb" afterPath="$PROJECT_DIR$/app/views/aadts/_navigation.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/personal_details/vehicle_passcard.html.erb" afterPath="$PROJECT_DIR$/app/views/personal_details/vehicle_passcard.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/rids/_navigation.html.erb" afterPath="$PROJECT_DIR$/app/views/rids/_navigation.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/rids_shorts/_navigation.html.erb" afterPath="$PROJECT_DIR$/app/views/rids_shorts/_navigation.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/security_tag_applications/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/security_tag_applications/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/security_tag_applications/_navigation.html.erb" afterPath="$PROJECT_DIR$/app/views/security_tag_applications/_navigation.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/security_tag_applications/show.html.erb" afterPath="$PROJECT_DIR$/app/views/security_tag_applications/show.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/soi_forms/_navigation.html.erb" afterPath="$PROJECT_DIR$/app/views/soi_forms/_navigation.html.erb" />
     </list>
     <ignored path="marine_brigade.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,19 +29,91 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/personal_details/index.html.erb">
+      <file leaf-file-name="_navigation.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/personal_details/_navigation.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="40" selection-start="297" selection-end="297" vertical-scroll-proportion="-3.9230769">
+            <state line="14" column="0" selection-start="0" selection-end="2891" vertical-scroll-proportion="-9.153846">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/vehicle_passcards/show.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="9" selection-start="463" selection-end="463" vertical-scroll-proportion="-8.692307">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="vehicle_passcard.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/personal_details/vehicle_passcard.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="9" selection-start="179" selection-end="179" vertical-scroll-proportion="-2.6153846">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_form.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/security_tag_applications/_form.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="25" column="120" selection-start="878" selection-end="878" vertical-scroll-proportion="-8.5">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_navigation.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/aadts/_navigation.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="43" column="125" selection-start="2119" selection-end="2119" vertical-scroll-proportion="-15.653846">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="_navigation.html.erb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/personal_details/_navigation.html.erb">
+        <entry file="file://$PROJECT_DIR$/app/views/soi_forms/_navigation.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="75" selection-start="2891" selection-end="2891" vertical-scroll-proportion="0.9371534">
+            <state line="53" column="131" selection-start="2643" selection-end="2643" vertical-scroll-proportion="0.7605634">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/security_tag_applications/show.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="90" selection-start="1074" selection-end="1074" vertical-scroll-proportion="-9.307693">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_navigation.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/security_tag_applications/_navigation.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="56" column="144" selection-start="3158" selection-end="3158" vertical-scroll-proportion="-13.884615">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_navigation.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/rids/_navigation.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="56" column="123" selection-start="2852" selection-end="2852" vertical-scroll-proportion="-13.884615">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_navigation.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/rids_shorts/_navigation.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="58" column="134" selection-start="2907" selection-end="2907" vertical-scroll-proportion="-16.884615">
               <folding />
             </state>
           </provider>
@@ -62,22 +135,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/controllers/security_tag_applications_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/personal_characteristics/edit.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/personal_characteristics/new.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/personal_details/_form.html.erb" />
-        <option value="$PROJECT_DIR$/db/migrate/20130424140026_create_vehicle_passcards.rb" />
-        <option value="$PROJECT_DIR$/app/models/vehicle_passcard.rb" />
         <option value="$PROJECT_DIR$/app/models/personal_detail.rb" />
         <option value="$PROJECT_DIR$/app/views/vehicle_passcards/show.html.erb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/controllers/vehicle_passcards_controller.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/personal_details_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/vehicle_passcards/_form.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/personal_details/vehicle_passcard.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/security_tag_applications/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/personal_details/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/personal_details/_navigation.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/personal_details_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/security_tag_applications/_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/security_tag_applications/show.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/personal_details/vehicle_passcard.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/soi_forms/_navigation.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/aadts/_navigation.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/rids/_navigation.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/rids_shorts/_navigation.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/security_tag_applications/_navigation.html.erb" />
       </list>
     </option>
   </component>
@@ -120,7 +193,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="RailsProjectView" />
       <pane id="ProjectPane">
         <subPane>
@@ -596,6 +668,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -943,7 +1016,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294893" sideWeight="0.49591002" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25341427" sideWeight="0.7067545" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26327768" sideWeight="0.7067545" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294893" sideWeight="0.4969325" order="9" side_tool="true" content_ui="tabs" />
@@ -1013,47 +1086,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/personal_characteristics/new.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="52" selection-start="151" selection-end="151" vertical-scroll-proportion="0.18411553" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/personal_details/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="61" selection-start="1822" selection-end="1822" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/personal_detail.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="50" selection-start="1228" selection-end="1228" vertical-scroll-proportion="0.59266055" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20130424140026_create_vehicle_passcards.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="24" selection-start="368" selection-end="368" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/vehicle_passcards/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="318" vertical-scroll-proportion="-0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="98" column="7" selection-start="1165" selection-end="1165" vertical-scroll-proportion="0.029310346">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/vehicle_passcards_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="107" selection-start="2496" selection-end="2496" vertical-scroll-proportion="0.67019403">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/vehicle_passcard.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="146" selection-start="189" selection-end="189" vertical-scroll-proportion="0.03250478" />
@@ -1061,56 +1093,99 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/db/schema.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="501" column="16" selection-start="17374" selection-end="17374" vertical-scroll-proportion="0.0">
+        <state line="501" column="16" selection-start="17374" selection-end="17374" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/vehicle_passcards/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="0" selection-start="1509" selection-end="2174" vertical-scroll-proportion="0.08872458" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/personal_details/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="243" column="50" selection-start="10730" selection-end="10730" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/personal_details/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="40" selection-start="297" selection-end="297" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/personal_details_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="114" column="6" selection-start="4174" selection-end="4174" vertical-scroll-proportion="0.67019403">
+        <state line="2" column="34" selection-start="112" selection-end="112" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/vehicle_passcards/_form.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/vehicle_passcards/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="0" selection-start="1509" selection-end="2174" vertical-scroll-proportion="0.08872458">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/personal_details/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="243" column="50" selection-start="10730" selection-end="10730" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/personal_details/vehicle_passcard.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="88" column="79" selection-start="3863" selection-end="3863" vertical-scroll-proportion="0.0">
+        <state line="18" column="9" selection-start="463" selection-end="463" vertical-scroll-proportion="-8.692307">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/security_tag_applications/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="127" selection-start="2264" selection-end="2264" vertical-scroll-proportion="0.8766859">
+        <state line="25" column="120" selection-start="878" selection-end="878" vertical-scroll-proportion="-8.5">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/personal_details/index.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/security_tag_applications/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="40" selection-start="297" selection-end="297" vertical-scroll-proportion="-3.9230769">
+        <state line="17" column="90" selection-start="1074" selection-end="1074" vertical-scroll-proportion="-9.307693">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/personal_details/_navigation.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="75" selection-start="2891" selection-end="2891" vertical-scroll-proportion="0.9371534">
+        <state line="14" column="0" selection-start="0" selection-end="2891" vertical-scroll-proportion="-9.153846">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/personal_details/vehicle_passcard.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="9" selection-start="179" selection-end="179" vertical-scroll-proportion="-2.6153846">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/aadts/_navigation.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="125" selection-start="2119" selection-end="2119" vertical-scroll-proportion="-15.653846">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/rids/_navigation.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="123" selection-start="2852" selection-end="2852" vertical-scroll-proportion="-13.884615">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/rids_shorts/_navigation.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="134" selection-start="2907" selection-end="2907" vertical-scroll-proportion="-16.884615">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/security_tag_applications/_navigation.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="144" selection-start="3158" selection-end="3158" vertical-scroll-proportion="-13.884615">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/soi_forms/_navigation.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="131" selection-start="2643" selection-end="2643" vertical-scroll-proportion="0.7605634">
           <folding />
         </state>
       </provider>

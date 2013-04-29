@@ -3,7 +3,7 @@
     <%= link_to "7th Marine Brigade", root_path, class: "brand" %>
     <ul class="nav">
       <li><%= link_to "PHS", @rids_short.rid.personal_detail %></li>
-      <% if @personal_detail.aadt.aadt_effective.present? %>
+      <% if @rids_short.rid.personal_detail.aadt.aadt_effective.present? %>
           <li><%= link_to "AADT w/ SOI", @rids_short.rid.personal_detail.aadt %></li>
       <% else %>
           <li><a href="#preventAadt" data-toggle="modal">AADT w/ SOI</a></li>
@@ -27,6 +27,9 @@
           </li>
       <% end %>
     </ul>
+    <ul class="nav pull-right">
+      <li><a href="#applicationForms" data-toggle="modal">Application Forms</a></li>
+    </ul>
   </div>
 </div>
 
@@ -40,5 +43,21 @@
   </div>
   <div class="modal-footer">
     <button type="close" class="btn btn-inverse" data-dismiss="modal">Okay, I understand</button>
+  </div>
+</div>
+
+<div id="applicationForms" class="modal hide fade">
+  <div class="modal-header">
+    <button type="close" data-dismiss="modal" class="close">&times;</button>
+    <h4>Application Forms</h4>
+  </div>
+  <div class="modal-body">
+    <ul>
+      <li><%= link_to "Security Application", @rids_short.rid.personal_detail.security_tag_application %></li>
+      <li><%= link_to "Vehicle Passcard/Sticker Application", vehicle_passcard_personal_detail_path(@rids_short.rid.personal_detail.id) %></li>
+    </ul>
+  </div>
+  <div class="modal-footer">
+    <button type="close" data-dismiss="modal" class="btn btn-inverse">Close</button>
   </div>
 </div>
