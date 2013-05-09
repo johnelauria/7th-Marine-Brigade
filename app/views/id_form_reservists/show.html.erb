@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Personal detail:</b>
+  <%= @id_form_reservist.personal_detail_id %>
+</p>
+
+<p>
+  <b>Other identifying data:</b>
+  <%= @id_form_reservist.other_identifying_data %>
+</p>
+
+<p>
+  <b>Mother maiden firstname:</b>
+  <%= @id_form_reservist.mother_maiden_firstname %>
+</p>
+
+<p>
+  <b>Mother maiden middlename:</b>
+  <%= @id_form_reservist.mother_maiden_middlename %>
+</p>
+
+<p>
+  <b>Mother maiden lastname:</b>
+  <%= @id_form_reservist.mother_maiden_lastname %>
+</p>
+
+
+<%= link_to 'Edit', edit_id_form_reservist_path(@id_form_reservist) %> |
+<%= link_to 'Back', id_form_reservists_path %>

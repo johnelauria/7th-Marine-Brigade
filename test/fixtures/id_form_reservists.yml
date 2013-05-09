@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  personal_detail_id: 1
+  other_identifying_data: MyText
+  mother_maiden_firstname: MyString
+  mother_maiden_middlename: MyString
+  mother_maiden_lastname: MyString
+
+two:
+  personal_detail_id: 1
+  other_identifying_data: MyText
+  mother_maiden_firstname: MyString
+  mother_maiden_middlename: MyString
+  mother_maiden_lastname: MyString

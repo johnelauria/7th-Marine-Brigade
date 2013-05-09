@@ -1,0 +1,31 @@
+<h1>Listing id_form_reservists</h1>
+
+<table>
+  <tr>
+    <th>Personal detail</th>
+    <th>Other identifying data</th>
+    <th>Mother maiden firstname</th>
+    <th>Mother maiden middlename</th>
+    <th>Mother maiden lastname</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @id_form_reservists.each do |id_form_reservist| %>
+  <tr>
+    <td><%= id_form_reservist.personal_detail_id %></td>
+    <td><%= id_form_reservist.other_identifying_data %></td>
+    <td><%= id_form_reservist.mother_maiden_firstname %></td>
+    <td><%= id_form_reservist.mother_maiden_middlename %></td>
+    <td><%= id_form_reservist.mother_maiden_lastname %></td>
+    <td><%= link_to 'Show', id_form_reservist %></td>
+    <td><%= link_to 'Edit', edit_id_form_reservist_path(id_form_reservist) %></td>
+    <td><%= link_to 'Destroy', id_form_reservist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Id form reservist', new_id_form_reservist_path %>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130424140026) do
+ActiveRecord::Schema.define(:version => 20130509021439) do
 
   create_table "aadts", :force => true do |t|
     t.integer  "personal_detail_id"
@@ -190,7 +190,6 @@ ActiveRecord::Schema.define(:version => 20130424140026) do
   end
 
   create_table "family_histories", :force => true do |t|
-    t.string   "father_name"
     t.date     "father_date_of_birth"
     t.string   "father_place_of_birth"
     t.text     "father_address"
@@ -200,7 +199,6 @@ ActiveRecord::Schema.define(:version => 20130424140026) do
     t.boolean  "father_naturalized"
     t.date     "father_naturalized_date"
     t.string   "father_naturalized_place"
-    t.string   "mother_name"
     t.date     "mother_date_of_birth"
     t.string   "mother_place_of_birth"
     t.text     "mother_address"
@@ -210,7 +208,6 @@ ActiveRecord::Schema.define(:version => 20130424140026) do
     t.boolean  "mother_naturalized"
     t.date     "mother_naturalized_date"
     t.string   "mother_naturalized_place"
-    t.string   "father_in_law_name"
     t.date     "father_in_law_birth_date"
     t.string   "father_in_law_place_of_birth"
     t.text     "father_in_law_address"
@@ -220,7 +217,6 @@ ActiveRecord::Schema.define(:version => 20130424140026) do
     t.boolean  "father_in_law_naturalized"
     t.date     "father_in_law_naturalized_date"
     t.string   "father_in_law_naturalized_place"
-    t.string   "mother_in_law_name"
     t.date     "mother_in_law_birth_date"
     t.string   "mother_in_law_place_of_birth"
     t.text     "mother_in_law_address"
@@ -233,6 +229,18 @@ ActiveRecord::Schema.define(:version => 20130424140026) do
     t.datetime "created_at",                        :null => false
     t.datetime "updated_at",                        :null => false
     t.integer  "personal_detail_id"
+    t.string   "father_first_name"
+    t.string   "father_middle_name"
+    t.string   "father_last_name"
+    t.string   "mother_first_name"
+    t.string   "mother_middle_name"
+    t.string   "mother_last_name"
+    t.string   "father_in_law_firstname"
+    t.string   "father_in_law_middlename"
+    t.string   "father_in_law_lastname"
+    t.string   "mother_in_law_firstname"
+    t.string   "mother_in_law_middlename"
+    t.string   "mother_in_law_lastname"
   end
 
   create_table "foreign_country_visiteds", :force => true do |t|
@@ -265,6 +273,16 @@ ActiveRecord::Schema.define(:version => 20130424140026) do
     t.text     "neighbor_address3"
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false
+  end
+
+  create_table "id_form_reservists", :force => true do |t|
+    t.integer  "personal_detail_id"
+    t.text     "other_identifying_data"
+    t.string   "mother_maiden_firstname"
+    t.string   "mother_maiden_middlename"
+    t.string   "mother_maiden_lastname"
+    t.datetime "created_at",               :null => false
+    t.datetime "updated_at",               :null => false
   end
 
   create_table "important_unit_assignments", :force => true do |t|
@@ -429,6 +447,9 @@ ActiveRecord::Schema.define(:version => 20130424140026) do
     t.string   "civilian_occupation"
     t.text     "civilian_office_address"
     t.string   "civilian_contact_number"
+    t.string   "relation_to_notify"
+    t.text     "address_to_notify"
+    t.string   "contact_to_notify"
   end
 
   create_table "rids_shorts", :force => true do |t|

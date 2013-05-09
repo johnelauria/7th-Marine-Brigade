@@ -14,8 +14,10 @@
     <legend>Father</legend>
     <%= f.hidden_field :personal_detail_id, value: @personal_detail.id if @family_history.personal_detail_id.nil? %>
   <div class="field">
-    <%= f.label :father_name %><br />
-    <%= f.text_field :father_name, placeholder: "Please Enter full name" %>
+    <label>Father's Name</label><br />
+    <%= f.text_field :father_first_name, placeholder: "First Name" %>
+    <%= f.text_field :father_middle_name, placeholder: "Middle Name" %>
+    <%= f.text_field :father_last_name, placeholder: "Last Name" %>
   </div>
   <div class="field">
     <%= f.label :father_date_of_birth %><br />
@@ -56,8 +58,10 @@
 
     <legend>Mother</legend>
   <div class="field">
-    <%= f.label :mother_name %><br />
-    <%= f.text_field :mother_name %>
+    <label>Mother's Name</label><br />
+    <%= f.text_field :mother_first_name, placeholder: "First Name" %>
+    <%= f.text_field :mother_middle_name, placeholder: "Middle Name" %>
+    <%= f.text_field :mother_last_name, placeholder: "Last Name" %>
   </div>
   <div class="field">
     <%= f.label :mother_date_of_birth %><br />
@@ -97,8 +101,10 @@
   </div>
     <legend>Father in law</legend>
   <div class="field">
-    <%= f.label :father_in_law_name %><br />
-    <%= f.text_field :father_in_law_name %>
+    <label>Father-in-law's Name</label><br />
+    <%= f.text_field :father_in_law_firstname, placeholder: "First Name" %>
+    <%= f.text_field :father_in_law_middlename, placeholder: "Middle Name" %>
+    <%= f.text_field :father_in_law_lastname, placeholder: "Last Name" %>
   </div>
   <div class="field">
     <%= f.label :father_in_law_birth_date %><br />
@@ -138,8 +144,10 @@
   </div>
     <legend>Mother in law</legend>
   <div class="field">
-    <%= f.label :mother_in_law_name %><br />
-    <%= f.text_field :mother_in_law_name %>
+    <label>Mother-in-law's Name</label><br />
+    <%= f.text_field :mother_in_law_firstname, placeholder: "First Name" %>
+    <%= f.text_field :mother_in_law_middlename, placeholder: "Middle Name" %>
+    <%= f.text_field :mother_in_law_lastname, placeholder: "Last Name" %>
   </div>
   <div class="field">
     <%= f.label :mother_in_law_birth_date %><br />

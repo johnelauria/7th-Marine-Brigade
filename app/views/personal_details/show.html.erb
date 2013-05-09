@@ -185,7 +185,7 @@
             <%= render 'family_histories/form' %>
         <% else %>
             <legend>Father</legend>
-            <p><b>Father: </b><%= @family.father_name %></p>
+            <p><b>Father: </b><%= @family.father_first_name %> <%= @family.father_middle_name %> <%= @family.father_last_name %></p>
             <p><b>Date and Place of Birth: </b><%= @family.father_date_of_birth.strftime("%m-%d-%Y") %> from <%= @family.father_place_of_birth %></p>
             <p><b>Address: </b><%= @family.father_address %></p>
             <p><b>Occupation & Place of Employment: </b><%= @family.father_occupation %> at <%= @family.father_place_of_employment %></p>
@@ -196,7 +196,7 @@
                 <p><b>Date of naturalization: </b><%= @family.father_naturalized_place %></p>
             <% end %>
             <legend>Mother</legend>
-            <p><b>Mother: </b><%= @family.mother_name %></p>
+            <p><b>Mother: </b><%= @family.mother_first_name %> <%= @family.mother_middle_name %> <%= @family.mother_last_name %></p>
             <p><b>Date and Place of Birth: </b><%= @family.mother_date_of_birth.strftime("%m-%d-%Y") %> from <%= @family.mother_place_of_birth %></p>
             <p><b>Address: </b><%= @family.mother_address %></p>
             <p><b>Occupation & Place of Employment: </b><%= @family.mother_occupation %> at <%= @family.mother_place_of_employment %></p>
@@ -247,7 +247,7 @@
               <% end %>
             </table>
             <legend>Father-in-law</legend>
-            <p><b>Father-in-law: </b><%= @family.father_in_law_name %></p>
+            <p><b>Father-in-law: </b><%= @family.father_in_law_firstname %> <%= @family.father_in_law_middlename %> <%= @family.father_in_law_lastname %></p>
             <p><b>Date and Place of Birth: </b><%= @family.father_in_law_birth_date.strftime("%m-%d-%Y") %> from <%= @family.father_in_law_place_of_birth %></p>
             <p><b>Address: </b><%= @family.father_in_law_address %></p>
             <p><b>Occupation & Place of Employment: </b><%= @family.father_in_law_occupation %> at <%= @family.father_in_law_place_of_employment %></p>
@@ -258,7 +258,7 @@
                 <p><b>Date of naturalization: </b><%= @family.father_in_law_naturalized_place %></p>
             <% end %>
             <legend>Mother-in-law</legend>
-            <p><b>Mother-in-law: </b><%= @family.mother_in_law_name %></p>
+            <p><b>Mother-in-law: </b><%= @family.mother_in_law_firstname %> <%= @family.mother_in_law_middlename %> <%= @family.mother_in_law_lastname %></p>
             <p><b>Date and Place of Birth: </b><%= @family.mother_in_law_birth_date.strftime("%m-%d-%Y") %> from <%= @family.mother_in_law_place_of_birth %></p>
             <p><b>Address: </b><%= @family.mother_in_law_address %></p>
             <p><b>Occupation & Place of Employment: </b><%= @family.mother_in_law_occupation %> at <%= @family.mother_in_law_place_of_employment %></p>

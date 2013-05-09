@@ -2,11 +2,11 @@
   <div class="navbar-inner">
     <%= link_to "7th Marine Brigade", root_path, class: "brand" %>
     <ul class="nav">
-      <li class="active"><%= link_to "PHS", @personal_detail %></li>
+      <li><%= link_to "PHS", @personal_detail %></li>
       <% if @personal_detail.aadt.aadt_effective.present? %>
-      <li><%= link_to "AADT w/ SOI", @personal_detail.aadt %></li>
+          <li><%= link_to "AADT w/ SOI", @personal_detail.aadt %></li>
       <% else %>
-      <li><a href="#preventAadt" data-toggle="modal">AADT w/ SOI</a></li>
+          <li><a href="#preventAadt" data-toggle="modal">AADT w/ SOI</a></li>
       <% end %>
       <% if @personal_detail.soi_form.postal_address.nil? || @personal_detail.soi_form.active_comsd_svc.nil? %>
           <li><%= link_to "SOI Form 2008", edit_soi_form_path(@personal_detail.soi_form) %></li>
@@ -17,7 +17,7 @@
           <li><%= link_to "RIDS", edit_rid_path(@personal_detail.rid) %></li>
       <% else %>
           <li>
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#">RIDS<span class="caret"></span> </a>
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">RIDS<b class="caret"></b> </a>
             <ul class="dropdown-menu pull-right">
               <li><%= link_to "RIDS", @personal_detail.rid %></li>
               <% if @personal_detail.rid.rids_short.city.present? || @personal_detail.rid.rids_short.zip_code.present? %>
@@ -28,11 +28,10 @@
       <% end %>
     </ul>
     <ul class="nav pull-right">
-      <li><a href="#applicationForms" data-toggle="modal">Application Forms</a></li>
+      <li class="active"><a href="#applicationForms" data-toggle="modal">Application Forms</a></li>
     </ul>
   </div>
 </div>
-
 <div id="preventAadt" class="modal hide fade">
   <div class="modal-header">
     <button type="close" class="close" data-dismiss="modal">&times;</button>

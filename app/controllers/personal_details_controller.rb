@@ -116,4 +116,9 @@ class PersonalDetailsController < ApplicationController
     @personal_detail = PersonalDetail.find(params[:id])
     @vehicle_passcard = VehiclePasscard.new
   end
+
+  def id_form_reservist
+    @personal_detail = PersonalDetail.find(params[:id])
+    @id_form_reservist = IdFormReservist.new
+  end
 end

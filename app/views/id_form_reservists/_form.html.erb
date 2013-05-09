@@ -1,0 +1,32 @@
+<div class="container">
+  <p style="color:#66f">Please fill up the required details below to apply for ID Form Reservist</p>
+  <%= form_for(@id_form_reservist) do |f| %>
+    <% if @id_form_reservist.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@id_form_reservist.errors.count, "error") %> prohibited this id_form_reservist from being saved:</h2>
+
+        <ul>
+        <% @id_form_reservist.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <%= f.hidden_field :personal_detail_id, value: @personal_detail.id %>
+
+    <div class="field">
+      <%= f.label :other_identifying_data %><br />
+      <%= f.text_area :other_identifying_data, rows: 3 %>
+    </div>
+    <div class="field">
+      <label>Mother's Maiden Name</label><br />
+      <%= f.text_field :mother_maiden_firstname, placeholder: "First Name" %>
+      <%= f.text_field :mother_maiden_middlename, placeholder: "Middle Name" %>
+      <%= f.text_field :mother_maiden_lastname, placeholder: "Last Name" %>
+    </div>
+    <div class="actions">
+      <%= f.submit "Save", class: "btn" %>
+    </div>
+  <% end %>
+</div>

@@ -1,4 +1,7 @@
 MarineBrigade::Application.routes.draw do
+  resources :id_form_reservists
+
+
   resources :vehicle_passcards
 
 
@@ -96,6 +99,7 @@ MarineBrigade::Application.routes.draw do
 
   resources :personal_details do
     get :vehicle_passcard, on: :member
+    get :id_form_reservist, on: :member
   end
 
 

@@ -88,3 +88,35 @@ div {
   padding: 50px;
   background-color: #DDD;
 }
+
+.customUl {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  li {
+  font: 200 20px/1.5 Helvetica, Verdana, sans-serif;
+  border-bottom: 1px solid #ccc;
+}
+
+  li:last-child {
+    border: none;
+  }
+
+  li a {
+    text-decoration: none;
+    color: #77f;
+    font-size: 15px;
+
+    -webkit-transition: font-size 0.7s ease, background-color 0.7s ease, color 0.7s ease;
+    -moz-transition: font-size 0.7s ease, background-color 0.7s ease;
+    -o-transition: font-size 0.7s ease, background-color 0.7s ease;
+    -ms-transition: font-size 0.7s ease, background-color 0.7s ease;
+    transition: font-size 0.7s ease, background-color 0.7s ease color 0.7s ease;
+  }
+
+  li a:hover {
+    font-size: 21px;
+    background: #f6f6f6;
+    color: #333;
+  }
+}

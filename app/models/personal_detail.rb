@@ -18,4 +18,5 @@ class PersonalDetail < ActiveRecord::Base
   has_one :soi_form, dependent: :destroy
   has_one :security_tag_application, dependent: :destroy
   has_many :vehicle_passcards, dependent: :destroy
+  has_one :id_form_reservist, dependent: :destroy
 end

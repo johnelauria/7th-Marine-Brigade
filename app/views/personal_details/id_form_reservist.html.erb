@@ -1,0 +1,68 @@
+<%= render 'application_form_navigation' %>
+<div class="container">
+	<h5 align="center">
+		ARMED FORCES OF THE PHILIPPINES<br>
+		ID APPLICATION FORM<br>
+		RESERVIST<br>
+		Reserve Officer / Reserve Enlisted Personnel
+	</h5><br>
+	<% if @personal_detail.id_form_reservist.nil? %>
+		<%= render 'id_form_reservists/form' %>
+	<% else %>
+	<p><b>First Name: </b><%= @personal_detail.first_name %></p>
+	<p><b>Middle Name: </b><%= @personal_detail.middle_name %></p>
+	<p><b>Last Name: </b><%= @personal_detail.last_name %></p>
+	<% if (@personal_detail.marital_history.marital_status == "Married") && (@personal_detail.personal_characteristic.sex == "Female") %>
+		<p><b>Maiden's Middle Name: </b> --Add--</p>
+		<p><b>Maiden's Last Name: </b> --Add--</p>
+	<% end %>
+	<p>
+		<b>Rank: </b><%= @personal_detail.rank %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<b>BRSVC: </b><%= @personal_detail.BR_SVC %>
+	</p>
+	<p><b>AFPSN: </b><%= @personal_detail.AFPSN %></p>
+	<p><b>Unit Assignment: </b><%= @personal_detail.assignment %></p>
+	<p><b>Home Address: </b><%= @personal_detail.home_address %></p>
+	<p>
+		<b>Weight: </b><%= @personal_detail.personal_characteristic.weight %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<b>Height: </b><%= @personal_detail.personal_characteristic.height %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<b>Blood Type: </b> <%= @personal_detail.rid.blood_type %>
+	</p>
+	<p><b>Other Identifying Data: </b><%= @personal_detail.id_form_reservist.other_identifying_data %></p>
+	<p>
+		<b>Religion: </b><%= @personal_detail.rid.religion %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<b>TIN: </b><%= @personal_detail.tin %>
+	</p>
+	<p><b>Philhealth No: </b><%= @personal_detail.rid.philhealth %></p>
+	<p><b>SSS/GSIS No: </b><%= @personal_detail.rid.gsis %></p>
+	<p><b>Date of Birth: </b><%= @personal_detail.birthdate.strftime("%d-%m-%Y") %></p>
+	<p><b>Place of Birth: </b><%= @personal_detail.place_of_birth %></p>
+	<p><b>Marital Status: </b><%= @personal_detail.marital_history.marital_status %></p>
+	<p><b>Name of Parents</b></p>
+	<table class="table"> 
+		<tr>
+			<th></th>
+			<th>Father</th>
+			<th>Mother's Maiden Name</th>
+		</tr>
+		<tr>
+			<td>First Name</td>
+			<td><%= @personal_detail.family_history.father_first_name %></td>
+			<td><%= @personal_detail.id_form_reservist.mother_maiden_firstname %></td>
+		</tr>
+		<tr>
+			<td>Middle Name</td>
+			<td><%= @personal_detail.family_history.father_middle_name %></td>
+			<td><%= @personal_detail.id_form_reservist.mother_maiden_middlename %></td>
+		</tr>
+		<tr>
+			<td>Last Name</td>
+			<td><%= @personal_detail.family_history.father_last_name %></td>
+			<td><%= @personal_detail.id_form_reservist.mother_maiden_lastname %></td>
+		</tr>
+	</table>
+	<p><b>PERSON TO BE NOTIFIED IN CASE OF EMERGENCY AND RELATIONSHIP: </b><%= @personal_detail.rid.person_to_notify %>, (<%= @personal_detail.rid.relation_to_notify %>)</p>
+	<p><b>ADDRESS OF PERSON TO BE NOTIFIED: </b><%= @personal_detail.rid.address_to_notify %></p>
+	<p><b>CONTACT NO: </b><%= @personal_detail.rid.contact_to_notify %></p>
+	<% end %>
+</div>
