@@ -14,7 +14,7 @@
       <% else %>
           <li>
             <a class="dropdown-toggle" data-toggle="dropdown" href="#">RIDS<b class="caret"></b> </a>
-            <ul class="dropdown-menu">
+            <ul class="dropdown-menu pull-right">
               <li><%= link_to "RIDS", @aadt.personal_detail.rid %></li>
               <% if @aadt.personal_detail.rid.rids_short.city.present? || @aadt.personal_detail.rid.rids_short.zip_code.present? %>
                   <li><%= link_to "RIDS Short Assembly Test", @aadt.personal_detail.rid.rids_short %></li>
@@ -35,9 +35,10 @@
     <h4>Application Forms</h4>
   </div>
   <div class="modal-body">
-    <ul>
-      <li><%= link_to "Security Application", @aadt.personal_detail.security_tag_application %></li>
-      <li><%= link_to "Vehicle Passcard/Sticker Application", vehicle_passcard_personal_detail_path(@aadt.personal_detail.id) %></li>
+    <ul class="customUl">
+        <li><%= link_to "ID Form Reservist", id_form_reservist_personal_detail_path %></li>
+        <li><%= link_to "Security Application", @aadt.personal_detail.security_tag_application %></li>
+        <li><%= link_to "Vehicle Passcard/Sticker Application", vehicle_passcard_personal_detail_path %></li>
     </ul>
   </div>
   <div class="modal-footer">

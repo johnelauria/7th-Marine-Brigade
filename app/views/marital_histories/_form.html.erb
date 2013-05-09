@@ -13,7 +13,7 @@
   <%= f.hidden_field :personal_detail_id, value: @personal_detail.id if @marital_history.personal_detail_id.nil? %>
   <div class="field">
     <%= f.label :marital_status %><br />
-    <%= f.select :marital_status, "<option>Single</option><option>Married</option><option>Separated</option><option>Divorced</option>".html_safe %>
+    <%= f.select :marital_status, "<option>Single</option><option>Married</option><option>Separated by Court Order</option><option>Anulled</option>".html_safe %>
   </div>
 
     <div class="row">

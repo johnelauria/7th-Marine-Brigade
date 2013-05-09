@@ -555,7 +555,7 @@
             <td><%= @personal_detail.general_information.reference_address5 %></td>
           </tr>
         </table>
-        <b>List down three (3) neighbors at your present address or residence:</b>
+        <b>Three (3) neighbors at your present address or residence:</b>
         <table class="table table-bordered">
           <tr>
             <th>Name</th>
@@ -574,6 +574,7 @@
             <td><%= @personal_detail.general_information.neighbor_address3 %></td>
           </tr>
         </table>
+        <%= link_to "Edit", edit_general_information_path(@personal_detail.general_information.id) %>
       <% end %>
     </div>
     <div id="organization" class="tab-pane">
