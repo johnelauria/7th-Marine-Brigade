@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130509021439) do
+ActiveRecord::Schema.define(:version => 20130517131349) do
 
   create_table "aadts", :force => true do |t|
     t.integer  "personal_detail_id"
@@ -380,7 +380,6 @@ ActiveRecord::Schema.define(:version => 20130509021439) do
     t.string   "first_name"
     t.string   "middle_name"
     t.string   "rank"
-    t.string   "AFPSN"
     t.string   "BR_SVC"
     t.string   "assignment"
     t.string   "duty_address"
@@ -390,7 +389,6 @@ ActiveRecord::Schema.define(:version => 20130509021439) do
     t.string   "place_of_birth"
     t.string   "change_in_name"
     t.string   "nationality"
-    t.integer  "tin"
     t.integer  "national_reg_cards_no"
     t.datetime "created_at",            :null => false
     t.datetime "updated_at",            :null => false
@@ -399,6 +397,8 @@ ActiveRecord::Schema.define(:version => 20130509021439) do
     t.integer  "street_number"
     t.string   "telephone_area_code"
     t.string   "mobile_number"
+    t.integer  "tin"
+    t.integer  "AFPSN"
   end
 
   create_table "place_of_residences", :force => true do |t|
