@@ -14,7 +14,7 @@
     <h5><li>PERSONAL DATA:</li></h5>
     <p><b>Name: </b><%= @personal_detail.last_name %>, <%= @personal_detail.first_name %>, <%= @personal_detail.middle_name %></p>
     <p><b>Grade/Rank: </b><%= @personal_detail.rank %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Br/Svc: </b><%= @personal_detail.BR_SVC %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>AFPSN: </b><%= @personal_detail.AFPSN %></p>
-    <p><b>Residence Address: </b><%= @personal_detail.street_number %>, <%= @personal_detail.street_name %>, <%= @personal_detail.home_address %> <b>Tel #: </b>(<%= @personal_detail.telephone_area_code %>) <%= @personal_detail.telephone %></p>
+    <p><b>Residence Address: </b><%= @personal_detail.street_number %>, <%= @personal_detail.street_name %>, <%= @personal_detail.subdivision %>, <%= @personal_detail.city %>, <%= @personal_detail.province %> <b>Tel #: </b>(<%= @personal_detail.telephone_area_code %>) <%= @personal_detail.telephone %></p>
     <p><b>Designation/Office: </b><%= @personal_detail.security_tag_application.office_division %></p>
     <p><b>Date of Retirement: </b><%= @personal_detail.soi_form.date_of_compulsory_retirement.strftime("%B %m, %Y") unless @personal_detail.soi_form.date_of_compulsory_retirement.nil? %></p>
     <h5><li>VEHICLE DATA:</li></h5>

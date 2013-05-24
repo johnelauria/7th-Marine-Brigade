@@ -19,9 +19,9 @@
         <li>Request to undergo Thirty (30) Days <%= @aadt.undergo_thirty_days %> and Annual Active Duty Training effective <%= @aadt.aadt_effective.strftime("%m-%d-%Y") %> </li>
         <li>Following are the information pertaining to personal circumstances:</li>
         <ol style="list-style: lower-alpha;">
-          <li><b>Source and date of commission / enlistment: </b><%= @aadt.source_of_commission %>, <%= @aadt.date_of_commission.strftime("%m-%d-%Y") %></li>
+          <li><b>Source and date of commission / enlistment: </b><%= @aadt.source_of_commission %>, <%= @aadt.date_of_commission.strftime("%B %d, %Y") %></li>
           <li><b>Authority: </b><%= @aadt.authority %></li>
-          <li><b>Date of last promotion: </b><%= @aadt.date_of_last_promotion.strftime("%m-%d-%Y") %></li>
+          <li><b>Date of last promotion: </b><%= @aadt.date_of_last_promotion.strftime("%B %d, %Y") %></li>
           <li><b>Permanent address: </b><%= @aadt.permanent_address %></li>
           <li><b>Residence Tel No: </b><%= @aadt.residence_tel_no %></li>
           <li><b>Assignment mobilization center: </b><%= @aadt.assignment_mobilization_center %></li>
@@ -46,11 +46,11 @@
       <ol>
         <li><b>Name: </b><%= @aadt.name %></li>
         <li><b>Rank: </b><%= @aadt.rank %> &nbsp; &nbsp; &nbsp; &nbsp;  <b>AFPSN: </b><%= @aadt.afpsn %> &nbsp; &nbsp; &nbsp; &nbsp;  <b>Br. of Svc:</b> <%= @aadt.personal_detail.BR_SVC %></li>
-        <li><b>Date of Birth: </b><%= @aadt.personal_detail.birthdate.strftime("%m-%d-%Y") %> &nbsp; &nbsp; &nbsp; <b>Place of Birth: </b><%= @aadt.personal_detail.place_of_birth %></li>
+        <li><b>Date of Birth: </b><%= @aadt.personal_detail.birthdate.strftime("%B %d, %Y") %> &nbsp; &nbsp; &nbsp; <b>Place of Birth: </b><%= @aadt.personal_detail.place_of_birth %></li>
         <li><b>Sex: </b><%= @aadt.personal_detail.personal_characteristic.sex %> &nbsp; &nbsp; &nbsp; <b>Weight: </b><%= @aadt.personal_detail.personal_characteristic.weight %> &nbsp; &nbsp; &nbsp; <b>Height: </b><%= @aadt.personal_detail.personal_characteristic.height %></li>
-        <li><b>Civil Status: </b><%= @aadt.personal_detail.marital_history.marital_status %></li>
-        <li><b>Home Address/Telephone Number: </b><%= @aadt.personal_detail.home_address %>, <%= @aadt.personal_detail.telephone %></li>
-        <li><b>Source and Date of Commission/Enlistment: <%= @aadt.date_of_commission %></b></li>
+        <li><b>Civil Status: </b><%= @aadt.personal_detail.marital_histories.last.marital_status %></li>
+        <li><b>Home Address/Telephone Number: </b><%= @aadt.personal_detail.street_number %>, <%= @aadt.personal_detail.street_name %>, <%= @aadt.personal_detail.subdivision %>, <%= @aadt.personal_detail.city %>, (<%= @aadt.personal_detail.telephone_area_code %>) <%= @aadt.personal_detail.telephone %></li>
+        <li><b>Source and Date of Commission/Enlistment: <%= @aadt.date_of_commission.strftime("%B %d, %Y") %></b></li>
         <li><b>Authority of Commission/Enlistment: </b><%= @aadt.authority %></li>
         <li><b>Present Reserve Unit Assignment: </b><%= @aadt.present_reserve_unit_assignment %></li>
         <li><b>Assignment Mobilization Center: </b><%= @aadt.assignment_mobilization_center %></li>
@@ -65,22 +65,10 @@
             <th>Degree/Course</th>
             <th>School and Address</th>
           </tr>
-          <% if @aadt.personal_detail.educational_background.other_location.present? %>
+          <% @aadt.personal_detail.educational_backgrounds.where("educational_backgrounds.degree IS NOT NULL").each do |education| %>
           <tr>
-            <td><%= @aadt.personal_detail.educational_background.other_course %></td>
-            <td><%= @aadt.personal_detail.educational_background.other_location %></td>
-          </tr>
-          <% end %>
-          <% if @aadt.personal_detail.educational_background.post_graduate_location.present? %>
-          <tr>
-            <td><%= @aadt.personal_detail.educational_background.postgraduate_course %></td>
-            <td><%= @aadt.personal_detail.educational_background.post_graduate_location %></td>
-          </tr>
-          <% end %>
-          <% if @aadt.personal_detail.educational_background.college_location.present? %>
-          <tr>
-            <td><%= @aadt.personal_detail.educational_background.college_course %></td>
-            <td><%= @aadt.personal_detail.educational_background.college_location %></td>
+            <td><%= education.degree %></td>
+            <td><%= education.location %></td>
           </tr>
           <% end %>
         </table>

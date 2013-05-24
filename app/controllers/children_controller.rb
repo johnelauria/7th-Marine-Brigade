@@ -44,10 +44,11 @@ class ChildrenController < ApplicationController
 
     respond_to do |format|
       if @child.save
-        format.html { redirect_to PersonalDetail.find(@child.marital_history.personal_detail_id), notice: 'Child was successfully created.' }
+        format.html { redirect_to :back, notice: 'Child was successfully created.' }
         format.json { render json: @child, status: :created, location: @child }
       else
-        format.html { render action: "new" }
+        format.html { redirect_to :back }
+        flash[:error] = "You left some fields blank, Please try again."
         format.json { render json: @child.errors, status: :unprocessable_entity }
       end
     end
@@ -76,7 +77,7 @@ class ChildrenController < ApplicationController
     @child.destroy
 
     respond_to do |format|
-      format.html { redirect_to PersonalDetail.find(@child.marital_history.personal_detail_id) }
+      format.html { redirect_to :back }
       format.json { head :no_content }
     end
   end

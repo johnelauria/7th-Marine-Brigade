@@ -43,9 +43,12 @@
     </div>
   <div class="field">
     <%= f.label :home_address %><br />
-    <%= f.text_field :street_number, class: "input-small", placeholder: "street number" %>
-    <%= f.text_field :street_name, placeholder: "street name", class: "input-small" %>
-    <%= f.text_field :home_address, placeholder: "Village & Municipality" %>
+    <%= f.text_field :street_number, class: "input-small", placeholder: "Street number" %>
+    <%= f.text_field :street_name, placeholder: "Street name", class: "input-small" %>
+    <%= f.text_field :subdivision, placeholder: "Subdivision", class: "input-small" %>
+    <%= f.text_field :city, placeholder: "City", class: "input-small" %>
+    <%= f.text_field :province, placeholder: "Province", class: "input-small" %>
+    <%= f.text_field :zip_code, placeholder: "Zip code", class: "input-small" %>
   </div>
   <div class="field">
     <%= f.label :birthdate %><br />

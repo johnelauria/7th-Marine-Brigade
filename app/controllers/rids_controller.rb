@@ -17,6 +17,7 @@ class RidsController < ApplicationController
     @dependent = Dependent.new
     @civilian_military_award = CivilianMilitaryAward.new
     @promotion_demotion = PromotionDemotion.new
+    @personal_detail = @rid.personal_detail
 
     respond_to do |format|
       format.html # show.html.erb

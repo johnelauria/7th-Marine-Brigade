@@ -33,7 +33,7 @@
   <p><b>PRC Board/License: </b><%= @rid.personal_detail.aadt.licence %></p>
   <p><b>Civilian Occupation/Designation: </b><%= @rid.civilian_occupation %></p>
   <p><b>Office Address: </b><%= @rid.civilian_office_address %> &nbsp; &nbsp; &nbsp; &nbsp; <b>Contact number: </b><%= @rid.civilian_contact_number %></p>
-  <p><b>Home Address: </b><%= @rid.personal_detail.home_address %></p>
+  <p><b>Home Address: </b><%= @rid.personal_detail.street_number %>, <%= @rid.personal_detail.street_name %>, <%= @rid.personal_detail.subdivision %>, <%= @rid.personal_detail.city %>, <%= @rid.personal_detail.province %></p>
 
   <p>
       <b>Province:</b>
@@ -44,7 +44,7 @@
 
   <p>
     <b>Sex: </b><%= @rid.personal_detail.personal_characteristic.sex %>&nbsp;&nbsp;&nbsp;&nbsp;
-    <b>Marital Status: </b><%= @rid.personal_detail.marital_history.marital_status %>&nbsp;&nbsp;&nbsp;&nbsp;
+    <b>Marital Status: </b><%= @rid.personal_detail.marital_histories.last.marital_status %>&nbsp;&nbsp;&nbsp;&nbsp;
     <b>Nationality: </b><%= @rid.personal_detail.nationality %>
   </p>
     <p>
@@ -151,26 +151,12 @@
       <th>School</th>
       <th>Date Completed</th>
     </tr>
-    <% if @rid.personal_detail.educational_background.post_graduate_location.present? %>
-    <tr>
-      <td><%= @rid.personal_detail.educational_background.postgraduate_course %></td>
-      <td><%= @rid.personal_detail.educational_background.post_graduate_location %></td>
-      <td><%= @rid.personal_detail.educational_background.post_graduate_date_of_attendance2.strftime("%m-%d-%Y") %></td>
-    </tr>
-    <% end %>
-    <% if @rid.personal_detail.educational_background.college_location.present? %>
-        <tr>
-          <td><%= @rid.personal_detail.educational_background.college_course %></td>
-          <td><%= @rid.personal_detail.educational_background.college_location %></td>
-          <td><%= @rid.personal_detail.educational_background.college_date_of_attendance2.strftime("%m-%d-%Y") %></td>
-        </tr>
-    <% end %>
-    <% if @rid.personal_detail.educational_background.other_location.present? %>
-        <tr>
-          <td><%= @rid.personal_detail.educational_background.other_course %></td>
-          <td><%= @rid.personal_detail.educational_background.other_location %></td>
-          <td><%= @rid.personal_detail.educational_background.other_date_of_attendance2.strftime("%m-%d-%Y") %></td>
-        </tr>
+    <% @rid.personal_detail.educational_backgrounds.each do |education| %>
+      <tr>
+        <td><%= education.degree %></td>
+        <td><%= education.location %></td>
+        <td><%= education.year_graduate %></td>
+      </tr>
     <% end %>
 
   </table>

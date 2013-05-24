@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130517131349) do
+ActiveRecord::Schema.define(:version => 20130524123602) do
 
   create_table "aadts", :force => true do |t|
     t.integer  "personal_detail_id"
@@ -77,6 +77,7 @@ ActiveRecord::Schema.define(:version => 20130517131349) do
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false
     t.integer  "marital_history_id"
+    t.integer  "personal_detail_id"
   end
 
   create_table "civilian_military_awards", :force => true do |t|
@@ -138,43 +139,17 @@ ActiveRecord::Schema.define(:version => 20130517131349) do
   end
 
   create_table "educational_backgrounds", :force => true do |t|
-    t.string   "elementary_location"
-    t.date     "elementary_date_of_attendance1"
-    t.date     "elementary_date_of_attendance2"
-    t.integer  "elementary_year_graduate"
-    t.string   "high_school_location"
-    t.date     "high_school_date_of_attendance1"
-    t.date     "high_school_date_of_attendance2"
-    t.integer  "high_school_year_graduate"
-    t.string   "college_location"
-    t.date     "college_date_of_attendance1"
-    t.date     "college_date_of_attendance2"
-    t.integer  "college_year_graduate"
-    t.string   "post_graduate_location"
-    t.date     "post_graduate_date_of_attendance1"
-    t.date     "post_graduate_date_of_attendance2"
-    t.integer  "post_graduate_year_graduate"
-    t.string   "other_location"
-    t.date     "other_date_of_attendance1"
-    t.date     "other_date_of_attendance2"
-    t.string   "other_year_graduate"
-    t.text     "civil_service_eligibility"
-    t.datetime "created_at",                                          :null => false
-    t.datetime "updated_at",                                          :null => false
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
     t.integer  "personal_detail_id"
-    t.string   "college_course"
-    t.string   "postgraduate_course"
-    t.string   "other_course"
-    t.string   "elementary_standing"
-    t.boolean  "elementary_completed",              :default => true
-    t.string   "high_school_standing"
-    t.boolean  "high_school_completed",             :default => true
-    t.string   "college_standing"
-    t.boolean  "college_completed",                 :default => true
-    t.string   "post_grad_standing"
-    t.boolean  "post_grad_completed",               :default => true
-    t.string   "other_standing"
-    t.boolean  "other_completed",                   :default => true
+    t.text     "location"
+    t.date     "date_of_attendance1"
+    t.date     "date_of_attendance2"
+    t.string   "level"
+    t.string   "standing"
+    t.boolean  "completed"
+    t.integer  "year_graduate"
+    t.string   "degree"
   end
 
   create_table "employments", :force => true do |t|
@@ -187,6 +162,7 @@ ActiveRecord::Schema.define(:version => 20130517131349) do
     t.text     "nature_of_leaving"
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false
+    t.string   "position"
   end
 
   create_table "family_histories", :force => true do |t|
@@ -356,6 +332,8 @@ ActiveRecord::Schema.define(:version => 20130517131349) do
     t.date     "date_of_membership"
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false
+    t.text     "function"
+    t.string   "position_held"
   end
 
   create_table "personal_characteristics", :force => true do |t|
@@ -384,7 +362,6 @@ ActiveRecord::Schema.define(:version => 20130517131349) do
     t.string   "assignment"
     t.string   "duty_address"
     t.string   "telephone"
-    t.string   "home_address"
     t.date     "birthdate"
     t.string   "place_of_birth"
     t.string   "change_in_name"
@@ -399,6 +376,10 @@ ActiveRecord::Schema.define(:version => 20130517131349) do
     t.string   "mobile_number"
     t.integer  "tin"
     t.integer  "AFPSN"
+    t.integer  "zip_code"
+    t.string   "subdivision"
+    t.string   "province"
+    t.string   "city"
   end
 
   create_table "place_of_residences", :force => true do |t|

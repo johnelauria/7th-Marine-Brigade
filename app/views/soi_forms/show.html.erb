@@ -18,7 +18,7 @@
     </tr>
     <tr>
       <td>2. SEX</td><td><%= @soi_form.personal_detail.personal_characteristic.sex %></td>
-      <td>3. MARITAL STATUS:</td><td><%= @soi_form.personal_detail.marital_history.marital_status %></td>
+      <td>3. MARITAL STATUS:</td><td><%= @soi_form.personal_detail.marital_histories.last.marital_status %></td>
     </tr>
     <tr>
       <td>4. POSTAL ADDRESS/TEL NR:</td><td colspan="2"><%= @soi_form.postal_address %></td><td>(<%= @soi_form.postal_area_code %>) <%= @soi_form.postal_tel_num %></td>
@@ -81,7 +81,6 @@
   </table><br>
   <p>11. SCHOOLING:</p><br>
   &nbsp;&nbsp;&nbsp;&nbsp;<p>A. CIVILIAN</p>
-  <%= link_to 'Edit Civilian Schooling Information', edit_educational_background_path(@soi_form.personal_detail.educational_background) %>
   <table class="table table-bordered">
     <tr>
       <th>COURSE TAKEN</th>
@@ -90,65 +89,14 @@
       <th>STANDING</th>
       <th>COMPLETED (Y/N)</th>
     </tr>
-    <% if @soi_form.personal_detail.educational_background.post_graduate_location.present? %>
-    <tr>
-      <td><%= @soi_form.personal_detail.educational_background.postgraduate_course %></td>
-      <td><%= @soi_form.personal_detail.educational_background.post_graduate_location %></td>
-      <td><%= @soi_form.personal_detail.educational_background.post_graduate_date_of_attendance1.strftime("%B-%d-%Y") %>
-        <% if @soi_form.personal_detail.educational_background.post_grad_completed? %>
-        until <%= @soi_form.personal_detail.educational_background.post_graduate_date_of_attendance2.strftime("%B-%d-%Y") %></td>
-        <% end %>
-      <td><%= @soi_form.personal_detail.educational_background.post_grad_standing %></td>
-      <td><%= @soi_form.personal_detail.educational_background.post_grad_completed ? 'Yes' : 'No' %></td>
-    </tr>
-    <% end %>
-    <% if @soi_form.personal_detail.educational_background.college_location.present? %>
-    <tr>
-      <td><%= @soi_form.personal_detail.educational_background.college_course %></td>
-      <td><%= @soi_form.personal_detail.educational_background.college_location %></td>
-      <td><%= @soi_form.personal_detail.educational_background.college_date_of_attendance1.strftime("%B-%d-%Y") %>
-        <% if @soi_form.personal_detail.educational_background.college_completed? %>
-        until <%= @soi_form.personal_detail.educational_background.college_date_of_attendance2.strftime("%B-%d-%Y") %></td>
-        <% end %>
-      <td><%= @soi_form.personal_detail.educational_background.college_standing %></td>
-      <td><%= @soi_form.personal_detail.educational_background.college_completed ? 'Yes' : 'No' %></td>
-    </tr>
-    <% end %>
-    <% if @soi_form.personal_detail.educational_background.high_school_location.present? %>
-    <tr>
-      <td>High School</td>
-      <td><%= @soi_form.personal_detail.educational_background.high_school_location %></td>
-      <td><%= @soi_form.personal_detail.educational_background.high_school_date_of_attendance1.strftime("%B-%d-%Y") %>
-        <% if @soi_form.personal_detail.educational_background.high_school_completed? %>
-        until <%= @soi_form.personal_detail.educational_background.high_school_date_of_attendance2.strftime("%B-%d-%Y") %></td>
-        <% end %>
-      <td><%= @soi_form.personal_detail.educational_background.high_school_standing %></td>
-      <td><%= @soi_form.personal_detail.educational_background.high_school_completed ? 'Yes' : 'No' %></td>
-    </tr>
-    <% end %>
-    <% if @soi_form.personal_detail.educational_background.elementary_location.present? %>
-    <tr>
-      <td>Elementary</td>
-      <td><%= @soi_form.personal_detail.educational_background.elementary_location %></td>
-      <td><%= @soi_form.personal_detail.educational_background.elementary_date_of_attendance1.strftime("%B-%d-%Y") %>
-        <% if @soi_form.personal_detail.educational_background.elementary_completed? %>
-        until <%= @soi_form.personal_detail.educational_background.elementary_date_of_attendance2.strftime("%B-%d-%Y") %></td>
-        <% end %>
-      <td><%= @soi_form.personal_detail.educational_background.elementary_standing %></td>
-      <td><%= @soi_form.personal_detail.educational_background.elementary_completed ? 'Yes' : 'No' %></td>
-    </tr>
-    <% end %>
-    <% if @soi_form.personal_detail.educational_background.other_location.present? %>
-        <tr>
-          <td>Elementary</td>
-          <td><%= @soi_form.personal_detail.educational_background.other_location %></td>
-          <td><%= @soi_form.personal_detail.educational_background.other_date_of_attendance1.strftime("%B-%d-%Y") %>
-            <% if @soi_form.personal_detail.educational_background.other_completed? %>
-            until <%= @soi_form.personal_detail.educational_background.other_date_of_attendance2.strftime("%B-%d-%Y") %></td>
-            <% end %>
-          <td><%= @soi_form.personal_detail.educational_background.other_standing %></td>
-          <td><%= @soi_form.personal_detail.educational_background.other_completed ? 'Yes' : 'No' %></td>
-        </tr>
+    <% @soi_form.personal_detail.educational_backgrounds.each do |education| %>
+      <tr>
+        <td><%= education.degree.nil? ? "N/A" : education.degree %></td>
+        <td><%= education.location %></td>
+        <td><%= education.date_of_attendance1.strftime("%B %d, %Y") %> until <%= education.date_of_attendance2.strftime("%B %d, %Y") %> </td>
+        <td><%= education.standing %></td>
+        <td><%= education.completed ? "Yes" : "No" %></td>
+      </tr>
     <% end %>
   </table><br>
   &nbsp;&nbsp;&nbsp;&nbsp;<p>B. MILITARY:</p>

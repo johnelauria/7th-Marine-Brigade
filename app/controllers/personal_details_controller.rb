@@ -19,7 +19,6 @@ class PersonalDetailsController < ApplicationController
     @characteristic = @personal_detail.personal_characteristic
     @personal_characteristic = PersonalCharacteristic.new
     @marital_history = MaritalHistory.new
-    @marital = @personal_detail.marital_history
     @child = Child.new
     @family_history = FamilyHistory.new
     @family = @personal_detail.family_history
@@ -39,6 +38,7 @@ class PersonalDetailsController < ApplicationController
     @general_information = GeneralInformation.new
     @organization = Organization.new
     @miscellaneou = Miscellaneou.new
+    @promotion_demotion = PromotionDemotion.new
 
     respond_to do |format|
       format.html # show.html.erb

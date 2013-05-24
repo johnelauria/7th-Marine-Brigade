@@ -44,7 +44,7 @@ class PromotionDemotionsController < ApplicationController
 
     respond_to do |format|
       if @promotion_demotion.save
-        format.html { redirect_to @promotion_demotion.rid, notice: 'Promotion demotion was successfully created.' }
+        format.html { redirect_to :back, notice: 'Promotion demotion was successfully created.' }
         format.json { render json: @promotion_demotion, status: :created, location: @promotion_demotion }
       else
         format.html { render action: "new" }
@@ -76,7 +76,7 @@ class PromotionDemotionsController < ApplicationController
     @promotion_demotion.destroy
 
     respond_to do |format|
-      format.html { redirect_to @promotion_demotion.rid }
+      format.html { redirect_to :back }
       format.json { head :no_content }
     end
   end

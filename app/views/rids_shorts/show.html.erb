@@ -46,7 +46,7 @@
   <p>
     <b>Place of Birth: </b><%= @rids_short.rid.personal_detail.place_of_birth %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <b>Sex: </b><%= @rids_short.rid.personal_detail.personal_characteristic.sex %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <b>Marital Status: </b><%= @rids_short.rid.personal_detail.marital_history.marital_status %>
+    <b>Marital Status: </b><%= @rids_short.rid.personal_detail.marital_histories.last.marital_status %>
   </p>
 
   <p>

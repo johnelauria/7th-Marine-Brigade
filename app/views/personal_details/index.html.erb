@@ -7,16 +7,20 @@
 <%= link_to 'Create New Personnel Record', new_personal_detail_path, class: "btn btn-primary" %>
 <table class="table">
   <tr>
+    <th>AFPSN</th>
     <th>Last name</th>
     <th>First name</th>
+    <th>Middle Name</th>
     <th>Rank</th>
     <th></th>
   </tr>
 
 <% @personal_detail.each do |personal_detail| %>
   <tr>
+    <td><%= personal_detail.AFPSN %>
     <td><%= link_to personal_detail.last_name, personal_detail %></td>
     <td><%= personal_detail.first_name %></td>
+    <td><%= personal_detail.middle_name %></td>
     <td><%= personal_detail.rank %></td>
     <td><%= link_to 'Remove from list', personal_detail, method: :delete, data: { confirm: "Removing #{personal_detail.rank} #{personal_detail.last_name} from the list. All of his records will be removed. Do you wish to continue?" }, class: "btn btn-mini btn-danger" %></td>
   </tr>

@@ -11,7 +11,8 @@
     </div>
   <% end %>
 
-    <%= f.hidden_field :marital_history_id, value: @personal_detail.marital_history.id %>
+  <%= f.hidden_field :personal_detail_id, value: @personal_detail.id %>
+
   <div class="field">
     <%= f.label :name %><br />
     <%= f.text_field :name %>

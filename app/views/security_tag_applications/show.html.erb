@@ -17,7 +17,8 @@
   <p><b>POSITION: </b><%= @security_tag_application.position %></p>
   <p><b>DATE REPORTED: </b><%= @security_tag_application.date_reported.strftime("%B %m, %Y") %></p>
   <p><b>DATE/PLACE OF BIRTH: </b><%= @security_tag_application.personal_detail.birthdate.strftime("%B %m, %Y") %>, <%= @security_tag_application.personal_detail.place_of_birth %></p>
-  <p><b>HOME ADDRESS/TEL/CEL NR: </b><%= @security_tag_application.personal_detail.home_address %>, (<%= @security_tag_application.personal_detail.telephone_area_code %>) <%= @security_tag_application.personal_detail.telephone %>, <%= @security_tag_application.personal_detail.mobile_number %></p>
+  <p><b>HOME ADDRESS</b><%= @security_tag_application.personal_detail.street_number %>, <%= @security_tag_application.personal_detail.street_name %>, <%= @security_tag_application.personal_detail.subdivision %>, <%= @security_tag_application.personal_detail.city %>, <%= @security_tag_application.personal_detail.province %></p>
+  <p><b>TEL/CEL NUMBER: </b> (<%= @security_tag_application.personal_detail.telephone_area_code %>) <%= @security_tag_application.personal_detail.telephone %>, <%= @security_tag_application.personal_detail.mobile_number %></p>
   <p><b>CITY ADDRESS/TEL/CEL NR: </b><%= @security_tag_application.city_address %>, <%= @security_tag_application.city_telephone %>, <%= @security_tag_application.city_cellphone %></p>
   <p><b>PERSON TO NOTIFY IN CASE OF EMERGENCY: </b></p>
   <p><b>NAME & RELATION: </b><%= @security_tag_application.name_to_notify %> (<%= @security_tag_application.relation_to_notify %>)</p>

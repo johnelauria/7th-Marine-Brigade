@@ -12,7 +12,7 @@
 	<p><b>First Name: </b><%= @personal_detail.first_name %></p>
 	<p><b>Middle Name: </b><%= @personal_detail.middle_name %></p>
 	<p><b>Last Name: </b><%= @personal_detail.last_name %></p>
-	<% if (@personal_detail.marital_history.marital_status == "Married") && (@personal_detail.personal_characteristic.sex == "Female") %>
+	<% if (@personal_detail.marital_histories.last.marital_status == "Married") && (@personal_detail.personal_characteristic.sex == "Female") %>
 		<p><b>Maiden's Middle Name: </b> --Add--</p>
 		<p><b>Maiden's Last Name: </b> --Add--</p>
 	<% end %>
@@ -22,7 +22,7 @@
 	</p>
 	<p><b>AFPSN: </b><%= @personal_detail.AFPSN %></p>
 	<p><b>Unit Assignment: </b><%= @personal_detail.assignment %></p>
-	<p><b>Home Address: </b><%= @personal_detail.home_address %></p>
+	<p><b>Home Address: </b><%= @personal_detail.street_number %>, <%= @personal_detail.street_name %>, <%= @personal_detail.subdivision %>, <%= @personal_detail.city %>, <%= @personal_detail.province %></p>
 	<p>
 		<b>Weight: </b><%= @personal_detail.personal_characteristic.weight %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		<b>Height: </b><%= @personal_detail.personal_characteristic.height %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -37,7 +37,7 @@
 	<p><b>SSS/GSIS No: </b><%= @personal_detail.rid.gsis %></p>
 	<p><b>Date of Birth: </b><%= @personal_detail.birthdate.strftime("%d-%m-%Y") %></p>
 	<p><b>Place of Birth: </b><%= @personal_detail.place_of_birth %></p>
-	<p><b>Marital Status: </b><%= @personal_detail.marital_history.marital_status %></p>
+	<p><b>Marital Status: </b><%= @personal_detail.marital_histories.last.marital_status %></p>
 	<p><b>Name of Parents</b></p>
 	<table class="table"> 
 		<tr>

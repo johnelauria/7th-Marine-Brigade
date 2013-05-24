@@ -3,20 +3,18 @@ class Aadt < ActiveRecord::Base
   belongs_to :personal_detail
 
   def highest_education
-    if self.personal_detail.educational_background.post_graduate_location.present?
-      highest_education = "Postgraduate"
+    if self.personal_detail.educational_backgrounds.find_by_level("Post Graduate").present?
+      highest_education = "Post Graduate"
     else
-      if self.personal_detail.educational_background.college_location.present?
+      if self.personal_detail.educational_backgrounds.find_by_level("College").present?
         highest_education = "College"
       else
-        if self.personal_detail.educational_background.high_school_location.present?
-          highest_education = "High School"
-        else
-          if self.personal_detail.educational_background.elementary_location.present?
-            highest_education = "Elementary"
-          end
-        end
+      if self.personal_detail.educational_backgrounds.find_by_level("High School").present?
+        highest_education = "High School"
+      else
+        highest_education = "Low"
       end
     end
   end
+end
 end

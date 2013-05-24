@@ -86,3 +86,38 @@
     </table>
   </div>
 </div>
+<b>Promotions / Demotions</b>
+<div class="tab-content">
+      <div id="promotionsForm" class="tab-pane">
+        <a href="#promotionsShow" class="btn btn-mini" data-toggle="tab">Close</a>
+        <%= render 'promotion_demotions/form' %>
+      </div>
+      <div id="promotionsShow" class="tab-pane-active">
+        <a href="#promotionsForm" data-toggle="tab" class="btn btn-mini">Add New Promotion/Demotion Record</a>
+        <table class="table table-bordered">
+          <tr>
+            <th>From</th>
+            <th>To</th>
+            <th>Rank</th>
+            <th>Authority</th>
+            <th>Effectivity</th>
+            <th></th>
+          </tr>
+
+        <% @personal_detail.rid.promotion_demotions.each do |promotion_demotion| %>
+          <tr>
+            <td><%= promotion_demotion.from %></td>
+            <td><%= promotion_demotion.to %></td>
+            <td><%= promotion_demotion.rank %></td>
+            <td><%= promotion_demotion.authority %></td>
+            <td><%= promotion_demotion.effectivity.strftime("%B %d, %Y") %></td>
+            <td>
+              <%= link_to promotion_demotion, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-mini btn-danger" do %>
+                <i class="icon-trash icon-white"></i>
+              <% end %>
+            </td>
+          </tr>
+        <% end %>
+        </table>
+      </div>
+    </div>

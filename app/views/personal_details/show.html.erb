@@ -79,9 +79,12 @@
 
         <p>
           <b>Home address:</b>
-          <%= @personal_detail.home_address %>&nbsp;&nbsp;&nbsp;&nbsp;
-          <b>Street number: </b><%= @personal_detail.street_number %>&nbsp;&nbsp;&nbsp;&nbsp;
-          <b>Street name: </b><%= @personal_detail.street_name %>
+          <%= @personal_detail.street_number %>, 
+          <%= @personal_detail.street_name %>, 
+          <%= @personal_detail.subdivision %>,
+          <%= @personal_detail.city %>, 
+          <%= @personal_detail.province %> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <b>Zip Code: </b><%= @personal_detail.zip_code %>
         </p>
 
         <p>
@@ -138,19 +141,46 @@
         <% end %>
       </div>
       <div id="maritalHistory" class="tab-pane">
-        <% if @marital.nil? %>
-            <%= render 'marital_histories/form' %>
-        <% else %>
-            <p><b>Marital Status: </b><%= @marital.marital_status %></p>
-            <p><b>Name of Spouse: </b><%= @marital.name_of_spouse %></p>
-            <p><b>Place of marriage: </b><%= @marital.place_of_marriage %></p>
-            <p><b>Date of marriage: </b><%= @marital.date_of_marriage %></p>
-            <p><b>Place of marriage: </b><%= @marital.place_of_marriage %></p>
-            <p><b>Date of birth: </b><%= @marital.birth_date %></p>
-            <p><b>Place of birth: </b><%= @marital.birth_place %></p>
-            <p><b>Occupation: </b><%= @marital.occupation %></p>
-            <p><b>Place of employment: </b><%= @marital.place_of_employment %></p>
-            <p><%= link_to "Edit Marital history record", edit_marital_history_path(@marital) %></p><br>
+        <div class="accordion" id="spouseForm">
+              <div class="accordion-group">
+                <div class="accordion-heading">
+                  <a class="accordion-toggle" data-toggle="collapse" data-parent="#spouseForm" href="#addSpouse">
+                    Add Spouse
+                  </a>
+                </div>
+                <div id="addSpouse" class="accordion-body collapse">
+                  <div class="accordion-inner">
+                    <%= render 'marital_histories/form' %>
+                  </div>
+                </div>
+              </div>
+            </div>
+        <table class="table table-bordered">
+          <tr>
+            <th>Marital Status</th>
+            <th>Name of spouse</th>
+            <th>Place of marriage</th>
+            <th>Date of marriage</th>
+            <th>Date of birth</th>
+            <th>Place of birth</th>
+            <th>Occupation</th>
+            <th>Place of employment</th>
+            <th></th>
+          </tr>
+        <% @personal_detail.marital_histories.each do |spouse| %>
+          <tr>
+            <td><%= spouse.marital_status %></td>
+            <td><%= spouse.name_of_spouse %></td>
+            <td><%= spouse.place_of_marriage %></td>
+            <td><%= spouse.date_of_marriage.strftime("%B %d, %Y") %></td>
+            <td><%= spouse.birth_date.strftime("%B %d, %Y") %></td>
+            <td><%= spouse.birth_place %></td>
+            <td><%= spouse.occupation %></td>
+            <td><%= spouse.place_of_employment %></td>
+            <td><%= link_to spouse, method: :delete, data: { confirm: "Are you sure you want to delete this record?" }, class: "btn btn-mini btn-danger" do %><i class="icon-trash icon-white"></i><% end %></td>
+          </tr>
+        <% end %>
+        </table>
             <legend>Children</legend>
             <div class="accordion" id="childForm">
               <div class="accordion-group">
@@ -171,14 +201,21 @@
                 <th>Name</th>
                 <th>Birth date</th>
                 <th>Address</th>
+                <th></th>
               </tr>
-              <% MaritalHistory.find_by_personal_detail_id(@personal_detail.id).children.each do |child| %>
+              <% @personal_detail.children.each do |child| %>
+              <tr>
                   <td><%= child.name %></td>
-                  <td><%= child.birth_date %></td>
+                  <td><%= child.birth_date.strftime("%B %d, %Y") %></td>
                   <td><%= child.address %></td>
+                  <td>
+                    <%= link_to child, method: :delete, data: { confirm: "Are you sure you want to delete this?" }, class: "btn btn-mini btn-danger" do %>
+                      <i class="icon-trash icon-white"></i>
+                    <% end %>
+                  </td>
+              </tr>
               <% end %>
             </table>
-        <% end %>
        </div>
       <div id="familyHistory" class="tab-pane">
         <% if @family.nil? %>
@@ -301,82 +338,42 @@
       </table>
       </div>
       <div id="educationalBackground" class="tab-pane">
-        <% unless @personal_detail.educational_background.nil? %>
-            <legend>Elementary</legend>
+        <% if @personal_detail.educational_backgrounds.first.present? %>
+            <div class="accordion" id="educationBgForm">
+              <div class="accordion-group">
+                <div class="accordion-heading">
+                  <a class="accordion-toggle" data-toggle="collapse" data-parent="#EducationBgForm" href="#addEducation">
+                    Add Educational Bacground Information
+                  </a>
+                </div>
+                <div id="addEducation" class="accordion-body collapse">
+                  <div class="accordion-inner">
+                    <%= render 'educational_backgrounds/form' %>
+                  </div>
+                </div>
+              </div>
+            </div>
             <table class="table table-bordered">
               <tr>
                 <th>Location</th>
+                <th>Level</th>
                 <th>Date of Attendance</th>
                 <th>Year Graduate</th>
+                <th></th>
               </tr>
-                <tr>
-                  <td><%= @personal_detail.educational_background.elementary_location %></td>
-                  <td>From <%= @personal_detail.educational_background.elementary_date_of_attendance1.strftime("%m-%d-%Y") %> until <%= @personal_detail.educational_background.elementary_date_of_attendance2.strftime("%m-%d-%Y") %></td>
-                  <td><%= @personal_detail.educational_background.elementary_year_graduate %></td>
-                </tr>
+                <% @personal_detail.educational_backgrounds.each do |education| %>
+                  <tr>
+                    <td><%= education.location %></td>
+                    <td><%= education.level %></td>
+                    <td><%= education.date_of_attendance1.strftime("%B %d, %Y") %> until <%= education.date_of_attendance2.strftime("%B %d, %Y") %> </td>
+                    <td><%= education.year_graduate %></td>
+                    <td>
+                      <%= link_to education, method: :delete, data: { confirm: "Are you sure you want to delete this data?" }, class: "btn btn-mini btn-danger" do %>
+                        <i class="icon-trash icon-white"></i>
+                      <% end %>
+                  </tr>
+                <% end %>
             </table>
-            <% unless @personal_detail.educational_background.high_school_location == "" %>
-            <legend>High School</legend>
-            <table class="table table-bordered">
-              <tr>
-                <th>Location</th>
-                <th>Date of Attendance</th>
-                <th>Year Graduate</th>
-              </tr>
-              <tr>
-                <td><%= @personal_detail.educational_background.high_school_location %></td>
-                <td>From <%= @personal_detail.educational_background.high_school_date_of_attendance1.strftime("%m-%d-%Y") %> until <%= @personal_detail.educational_background.high_school_date_of_attendance2.strftime("%m-%d-%Y") %></td>
-                <td><%= @personal_detail.educational_background.high_school_year_graduate %></td>
-              </tr>
-            </table>
-            <% end %>
-            <% unless @personal_detail.educational_background.college_location == "" %>
-            <legend>College</legend>
-            <table class="table table-bordered">
-              <tr>
-                <th>Location</th>
-                <th>Date of Attendance</th>
-                <th>Year Graduate</th>
-              </tr>
-              <tr>
-                <td><%= @personal_detail.educational_background.college_location %></td>
-                <td>From <%= @personal_detail.educational_background.college_date_of_attendance1.strftime("%m-%d-%Y") %> until <%= @personal_detail.educational_background.college_date_of_attendance2.strftime("%m-%d-%Y") %></td>
-                <td><%= @personal_detail.educational_background.college_year_graduate %></td>
-              </tr>
-            </table>
-            <% end %>
-            <% unless @personal_detail.educational_background.post_graduate_location == "" %>
-                <legend>Post Graduate</legend>
-                <table class="table table-bordered">
-                  <tr>
-                    <th>Location</th>
-                    <th>Date of Attendance</th>
-                    <th>Year Graduate</th>
-                  </tr>
-                  <tr>
-                    <td><%= @personal_detail.educational_background.post_graduate_location %></td>
-                    <td>From <%= @personal_detail.educational_background.post_graduate_date_of_attendance1.strftime("%m-%d-%Y") %> until <%= @personal_detail.educational_background.post_graduate_date_of_attendance2.strftime("%m-%d-%Y") %></td>
-                    <td><%= @personal_detail.educational_background.post_graduate_year_graduate %></td>
-                  </tr>
-                </table>
-            <% end %>
-            <% unless @personal_detail.educational_background.other_location == "" %>
-                <legend>Other School Attended</legend>
-                <table class="table table-bordered">
-                  <tr>
-                    <th>Location</th>
-                    <th>Date of Attendance</th>
-                    <th>Year Graduate</th>
-                  </tr>
-                  <tr>
-                    <td><%= @personal_detail.educational_background.other_location %></td>
-                    <td>From <%= @personal_detail.educational_background.other_date_of_attendance1.strftime("%m-%d-%Y") %> until <%= @personal_detail.educational_background.other_date_of_attendance2.strftime("%m-%d-%Y") %></td>
-                    <td><%= @personal_detail.educational_background.other_year_graduate %></td>
-                  </tr>
-                </table>
-            <% end %>
-            <p><b>CIVIL SERVICE ELIGIBILITY: </b><%= @personal_detail.educational_background.civil_service_eligibility %></p>
-            <%= link_to "Edit Educational Background", edit_educational_background_path(@personal_detail.educational_background) %>
         <% else %>
             <%= render 'educational_backgrounds/form' %>
         <% end %>
@@ -410,6 +407,7 @@
           <tr>
             <th>Inclusive Date</th>
             <th>Type of employment</th>
+            <th>Position</th>
             <th>Name & Address of Employment</th>
             <th>Nature of Leaving</th>
             <th></th>
@@ -418,6 +416,7 @@
           <tr>
             <td>From <%= employment.employment_date.strftime("%m-%d-%Y") %> until <%= employment.retirement.strftime("%m-%d-%Y") %></td>
             <td><%= employment.type_of_employment %></td>
+            <td><%= employment.position %></td>
             <td><%= employment.name %>, <%= employment.address %></td>
             <td><%= employment.nature_of_leaving %></td>
             <td>
@@ -426,8 +425,8 @@
               <% end %>
             </td>
           </tr>
+          <% end %>
           </table>
-        <% end %>
       <% end %>
     </div>
     <div id="foreignCountryVisited" class="tab-pane">
@@ -597,13 +596,15 @@
           <tr>
             <th>Name</th>
             <th>Address</th>
-            <th>Date of membership & Posit Credit</th>
+            <th>Date of membership & Position Held</th>
+            <th>Function</th>
           </tr>
           <% @personal_detail.organizations.each do |organization| %>
           <tr>
             <td><%= organization.name %></td>
             <td><%= organization.address %></td>
-            <td><%= organization.date_of_membership.strftime("%m-%d-%Y") %></td>
+            <td><%= organization.date_of_membership.strftime("%B %d, %Y") %> as <%= organization.position_held %> </td>
+            <td><%= organization.function %></td>
           </tr>
           <% end %>
         </table>
